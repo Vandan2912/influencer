@@ -17,17 +17,50 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  color: black;
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.swiper {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.swiper-wrapper {
+    min-height: 100vh;
   }
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: white !important;
+}
+.swiper-button-next {
+    right: 40px !important;
+}
+.swiper-button-prev {
+    left: 40px !important;
 }
