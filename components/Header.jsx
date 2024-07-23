@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
-    Button,
+  Button,
   Dialog,
   DialogPanel,
   Disclosure,
@@ -19,7 +19,6 @@ import {
   ChartPieIcon,
   CursorArrowRaysIcon,
   FingerPrintIcon,
-  MagnifyingGlassCircleIcon,
   MagnifyingGlassIcon,
   SquaresPlusIcon,
   XMarkIcon,
@@ -70,6 +69,23 @@ const callsToAction = [
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const timeOutRef = useRef()
+  const articlesRef = useRef()
+  const platformRef = useRef()
+  const agenciesRef = useRef()
+  const resourcesRef = useRef()
+  const aboutRef = useRef()
+
+  const handleEnter = (isOpen, ref) => {
+    clearTimeout(timeOutRef.current)
+    !isOpen && ref.current?.click()
+  }
+
+  const handleLeave = (isOpen, ref) => {
+    timeOutRef.current = setTimeout(() => {
+      isOpen && ref.current?.click()
+    }, 400)
+  }
 
   return (
     <header
@@ -107,65 +123,106 @@ const Header = () => {
             Home
           </a>
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
-              Articles
-              <ChevronDownIcon
-                aria-hidden="true"
-                className="h-5 w-5 flex-none text-white"
-              />
-            </PopoverButton>
-            <PopoverElement />
+            {({ open }) => (
+              <div
+                onMouseEnter={() => handleEnter(open, articlesRef)}
+                onMouseLeave={() => handleLeave(open, articlesRef)}
+              >
+                <PopoverButton ref={articlesRef} className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus-visible:outline-none">
+                  Articles
+                  <ChevronDownIcon
+                    aria-hidden="true"
+                    className="h-5 w-5 flex-none text-white transition-all"
+                    style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+                  />
+                </PopoverButton>
+                <PopoverElement />
+              </div>
+            )}
+
           </Popover>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
-              Platforms
-              <ChevronDownIcon
-                aria-hidden="true"
-                className="h-5 w-5 flex-none text-white"
-              />
-            </PopoverButton>
-            <PopoverElement />
+            {({ open }) => (
+              <div
+                onMouseEnter={() => handleEnter(open, platformRef)}
+                onMouseLeave={() => handleLeave(open, platformRef)}
+              >
+                <PopoverButton ref={platformRef} className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus-visible:outline-none">
+                  Platforms
+                  <ChevronDownIcon
+                    aria-hidden="true"
+                    className="h-5 w-5 flex-none text-white transition-all"
+                    style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+                  />
+                </PopoverButton>
+                <PopoverElement />
+              </div>
+            )}
           </Popover>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
-              Agencies
-              <ChevronDownIcon
-                aria-hidden="true"
-                className="h-5 w-5 flex-none text-white"
-              />
-            </PopoverButton>
-            <PopoverElement />
+            {({ open }) => (
+              <div
+                onMouseEnter={() => handleEnter(open, agenciesRef)}
+                onMouseLeave={() => handleLeave(open, agenciesRef)}
+              >
+                <PopoverButton ref={agenciesRef} className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus-visible:outline-none">
+                  Agencies
+                  <ChevronDownIcon
+                    aria-hidden="true"
+                    className="h-5 w-5 flex-none text-white transition-all"
+                    style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+                  />
+                </PopoverButton>
+                <PopoverElement />
+              </div>
+            )}
           </Popover>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
-              Resources
-              <ChevronDownIcon
-                aria-hidden="true"
-                className="h-5 w-5 flex-none text-white"
-              />
-            </PopoverButton>
-            <PopoverElement />
+            {({ open }) => (
+              <div
+                onMouseEnter={() => handleEnter(open, resourcesRef)}
+                onMouseLeave={() => handleLeave(open, resourcesRef)}
+              >
+                <PopoverButton ref={resourcesRef} className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus-visible:outline-none">
+                  Resources
+                  <ChevronDownIcon
+                    aria-hidden="true"
+                    className="h-5 w-5 flex-none text-white transition-all"
+                    style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+                  />
+                </PopoverButton>
+                <PopoverElement />
+              </div>
+            )}
           </Popover>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
-              About Us
-              <ChevronDownIcon
-                aria-hidden="true"
-                className="h-5 w-5 flex-none text-white"
-              />
-            </PopoverButton>
-            <PopoverElement />
+            {({ open }) => (
+              <div
+                onMouseEnter={() => handleEnter(open, aboutRef)}
+                onMouseLeave={() => handleLeave(open, aboutRef)}
+              >
+                <PopoverButton ref={aboutRef} className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus-visible:outline-none">
+                  About Us
+                  <ChevronDownIcon
+                    aria-hidden="true"
+                    className="h-5 w-5 flex-none text-white transition-all"
+                    style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+                  />
+                </PopoverButton>
+                <PopoverElement />
+              </div>
+            )}
           </Popover>
 
           <Button className="bg-[#EB3C75] rounded-full py-2 px-5 text-white">Benchmark Report 2024</Button>
           <Button className="bg-[#EB3C75] rounded-full p-3 text-white">
             <MagnifyingGlassIcon className="text-white h-5 w-5" />
           </Button>
-         
+
         </PopoverGroup>
       </nav>
       <Dialog
