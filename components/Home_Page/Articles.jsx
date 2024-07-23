@@ -34,16 +34,16 @@ const Articles = () => {
           image={image4}
           title="The Ultimate Guide to Performing a Competitive Analysis"
           desc="Business success requires a thorough understanding of your competition. Which is where performing a competitive analysis can help…"
-          className="col-span-12 sm:col-span-6 md:col-span-4"
+          className="col-span-12 sm:col-span-6 md:col-span-3"
         />
         <Card
           image={image5}
           title="What Are Keyword Rankings & How to Improve Them"
           desc="Your website’s keyword rankings can impact how much traffic your website gets. And ultimately how much revenue you…"
-          className="col-span-12 sm:col-span-6 md:col-span-4"
+          className="col-span-12 sm:col-span-6 md:col-span-3"
         />
         <div
-          className="col-span-12 md:col-span-6 bg-[#00000025] rounded-[20px] relative"
+          className="col-span-12 sm:col-span-6 md:col-span-6 min-h-[40vh] sm:min-h-[unset] bg-[#00000025] rounded-[20px] relative"
           style={{
             backgroundImage: "url('/articles6.png')",
             backgroundSize: "cover",

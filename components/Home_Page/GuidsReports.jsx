@@ -5,9 +5,9 @@ import digital_marketing from "../../assets/digital_marketing.png";
 
 const GuidsReports = () => {
   return (
-    <section className="px-28 py-32 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
+    <section className="px-6 py-12 lg:px-28 lg:py-32 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
       <div className="flex justify-between">
-        <p className="text-4xl font-semibold">Guids & Reports</p>
+        <p className="text-2xl lg:text-4xl font-semibold">Guids & Reports</p>
         <div className="text-[#EB3C75] underline">See All</div>
       </div>
       <div className="grid grid-cols-3 gap-6 mt-10">
@@ -38,7 +38,7 @@ export default GuidsReports;
 
 const Card = ({ image, title, desc, tag }) => {
   return (
-    <div className="col-span-1 bg-white rounded-[20px] pb-6">
+    <div className="col-span-3 md:col-span-1 bg-white rounded-[20px] pb-6">
       <img src={image.src} alt="" className="w-full max-h-52 object-cover rounded-ss-[20px] rounded-se-[20px]" />
       <div className="p-5">
         <p className="bg-[#00000020] w-fit px-2 rounded-md">{tag}</p>

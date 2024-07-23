@@ -8,7 +8,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const Agencies = () => {
   return (
-    <section className="px-6 py-12 lg:px-28 lg:py-32 bg-white w-full min-h-[80vh] flex flex-col gap-16">
+    <section className="px-6 py-12 lg:px-28 lg:py-32 bg-white w-full min-h-[80vh] flex flex-col gap-8 lg:gap-16">
       <p className="text-3xl lg:text-4xl text-center font-semibold">Top Agencies</p>
       <div className="grid grid-cols-2 gap-6 lg:mt-10">
         <Card
@@ -47,9 +47,9 @@ export default Agencies;
 
 const Card = ({ image, title, desc, color = "black" }) => {
   return (
-    <div className="col-span-2 bg-white rounded-[20px] flex min-h-[25vh] border border-[#00000033] p-5">
+    <div className="col-span-2 bg-white rounded-[20px] flex flex-col sm:flex-row min-h-[25vh] border border-[#00000033] p-5">
       <div
-        className="w-1/5 rounded-[20px]"
+        className="w-full sm:w-1/5 rounded-[20px]"
         style={{
           backgroundColor: color,
         }}
@@ -61,12 +61,12 @@ const Card = ({ image, title, desc, color = "black" }) => {
         />
       </div>
 
-      <div className="ps-10 pe-5 flex w-4/5 gap-10 flex-col lg:flex-row">
+      <div className="ps-0 sm:ps-10 pe-0 sm:pe-5 flex w-full sm:w-4/5 gap-5 sm:gap-10 flex-col lg:flex-row">
         <div className="flex flex-col">
           <p className="text-lg font-semibold mt-3">{title}</p>
           <p className="text-sm mt-3">{desc}</p>
         </div>
-        <Button className="border border-[#EB3C75] text-[#EB3C75] hover:bg-[#EB3C75] rounded-full py-3 px-7 hover:text-white mt-5 flex items-center gap-3 shrink-0 h-fit">
+        <Button className="w-fit border border-[#EB3C75] text-[#EB3C75] hover:bg-[#EB3C75] rounded-full py-3 px-7 hover:text-white mt-0 sm:mt-5 flex items-center gap-3 shrink-0 h-fit">
           View Details
           <ArrowLongRightIcon className="h-5 w-5" />
         </Button>

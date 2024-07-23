@@ -6,9 +6,9 @@ import ticktok from "../../assets/tiktok.png";
 
 const PopularPool = () => {
   return (
-    <section className="px-28 py-32 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
+    <section className="px-6 py-12 lg:px-28 lg:py-32 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
       <div className="flex justify-between">
-        <p className="text-4xl font-semibold">Popular Pool</p>
+        <p className="text-2xl lg:text-4xl font-semibold">Popular Pool</p>
         <div className="text-[#EB3C75] underline">
           See All Tools
         </div>
@@ -30,15 +30,15 @@ export default PopularPool;
 
 const Card = ({ image, title }) => {
   return (
-    <div className="col-span-1 bg-white rounded-[20px] flex min-h-[20vh]">
-      <div className="w-1/4">
+    <div className="col-span-2 md:col-span-1 bg-white rounded-[20px] flex min-h-[15vh] md:min-h-[20vh]">
+      <div className="w-1/3 md:w-1/4">
         <img
           src={image.src}
           alt=""
           className="w-full h-full object-cover rounded-ss-[20px] rounded-es-[20px]"
         />
       </div>
-      <div className="p-10 flex items-center w-3/4">
+      <div className="p-5 md:p-10 flex items-center w-2/3 md:w-3/4">
         <p className="text-lg font-semibold mt-3">{title}</p>
       </div>
     </div>

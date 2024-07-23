@@ -10,10 +10,10 @@ const News = () => {
   return (
     <section className="px-6 py-12 lg:px-28 lg:py-40 w-full min-h-[80vh]">
       <p className="text-3xl lg:text-4xl text-center font-semibold">Latest News</p>
-      <div className="flex mt-14 gap-20 flex-wrap-reverse">
+      <div className="flex mt-14 gap-20 flex-col-reverse lg:flex-row">
         <div className="w-full lg:w-[55%]">
           <img src={news1.src} alt="" className="w-full" />
-          <p className="text-4xl font-semibold mt-7">
+          <p className="text-2xl lg:text-4xl font-semibold mt-7">
             7 Essential Tools for Forward-Thinking Creative Agencies
           </p>
           <p className="text-base mt-5">
@@ -26,9 +26,9 @@ const News = () => {
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>
         </div>
-        <div className="w-full lg:w-[45%]">
-          <div>
-            <img src={news2.src} alt="" className="w-full" />
+        <div className="w-full lg:w-[45%] flex flex-col md:flex-row lg:flex-col gap-10">
+          <div className="flex-1">
+            <img src={news2.src} alt="" className="w-full h-1/2" />
             <p className="text-2xl font-semibold mt-7">
               8 Trends Shaping the Future of Creative Agencies
             </p>
@@ -38,8 +38,8 @@ const News = () => {
               stretch…
             </p>
           </div>
-          <div className="mt-10">
-            <img src={news3.src} alt="" className="w-full" />
+          <div className="mt-10 md:mt-0 lg:mt-10 flex-1">
+            <img src={news3.src} alt="" className="w-full h-1/2" />
             <p className="text-2xl font-semibold mt-7">
               Ultimate Guide to Choosing Tools for Digital Marketing Agencies...
             </p>

@@ -16,7 +16,7 @@ const HeroSection = () => {
   let slideTo = () => {};
 
   return (
-    <div className="min-h-screen w-full relative">
+    <div className="min-h-[50vh] md:min-h-[80vh] lg:min-h-screen  w-full relative">
       <Swiper
         navigation={true}
         modules={[Navigation, Pagination, Controller]}
@@ -89,14 +89,14 @@ export default HeroSection;
 const TextContainer = ({ number, type="jpg" }) => {
   return (
     <div
-      className="px-16 py-20 lg:px-28 lg:py-32 h-full w-full min-h-screen flex justify-start items-center"
+      className="px-8 py-20 lg:px-28 lg:py-32 h-full w-full min-h-[50vh] md:min-h-[80vh] lg:min-h-screen flex justify-start items-center"
       style={{
         backgroundImage: `url('/carousel_image${number}.${type}')`,
         backgroundSize: "cover",
       }}
     >
       <div className="w-full lg:w-1/2 text-white text-left ms-5">
-        <p className="text-4xl lg:text-6xl font-bold">
+        <p className="text-2xl lg:text-6xl font-bold">
           The leading Social Media resource for Brands
         </p>
         <p className="text-base lg:text-lg mt-5">
@@ -104,12 +104,12 @@ const TextContainer = ({ number, type="jpg" }) => {
           efficitur lorem, ut condimentum nisi. Integer molestie tellus vel nunc
           sagittis dignissim
         </p>
-        <div className="flex gap-8">
-          <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3">
+        <div className="flex gap-0 sm:gap-8 flex-col sm:flex-row">
+          <Button className="bg-[#EB3C75] w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white mt-5 flex items-center gap-3">
             About Us
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>
-          <Button className="hover:bg-white border border-white rounded-full py-3 px-7 text-white hover:text-black mt-5 flex items-center gap-3">
+          <Button className="hover:bg-white w-fit bg-white sm:bg-transparent border border-white text-sm sm:text-base rounded-full py-3 px-7 text-black sm:text-white hover:text-black mt-5 flex items-center gap-3">
             Contact Us
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>

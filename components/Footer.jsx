@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#02021E] text-white">
       <div className="px-6 py-12 lg:px-28 lg:py-16 grid grid-cols-12 gap-6 mt-10">
-        <div className="col-span-3 flex flex-col gap-3">
+        <div className="col-span-6 md:col-span-3 flex flex-col gap-3">
           <p className="text-lg mb-3">Company</p>
 
           <a href="#1">
@@ -27,7 +27,7 @@ const Footer = () => {
             <p className="text-sm">Contact Us</p>
           </a>
         </div>
-        <div className="col-span-4 flex flex-col gap-3">
+        <div className="col-span-6 md:col-span-4 flex flex-col gap-3">
           <p className="text-lg mb-3">Popular</p>
 
           <a href="#1">
@@ -50,7 +50,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="col-span-3 flex flex-col gap-3">
+        <div className="col-span-6 md:col-span-3 flex flex-col gap-3">
           <p className="text-lg mb-3">Free Tools</p>
 
           <a href="#1">
@@ -70,7 +70,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="col-span-2 flex flex-col gap-3">
+        <div className="col-span-6 md:col-span-2 flex flex-col gap-3">
           <p className="text-lg mb-3">Other Links</p>
 
           <a href="#1">
@@ -97,7 +97,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="h-[1px]" />
-      <div className="px-6 py-12 lg:px-28 lg:py-9 flex justify-between items-center w-full">
+      <div className="px-6 py-12 lg:px-28 lg:py-9 flex flex-col-reverse lg:flex-row gap-10 justify-between items-center w-full">
         <p>Copyright 2024 influencermarketinghub. all rights reserved</p>
         <div className="flex gap-5">
           <div className="flex justify-center items-center bg-[#EB3C7526] h-6 w-6">
