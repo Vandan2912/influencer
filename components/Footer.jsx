@@ -7,7 +7,7 @@ import ticktokIcon from "../assets/tiktokIcon.png";
 const Footer = () => {
   return (
     <footer className="bg-[#02021E] text-white">
-      <div className="p-28 pb-16 grid grid-cols-12 gap-6 mt-10">
+      <div className="px-6 py-12 lg:px-28 lg:py-16 grid grid-cols-12 gap-6 mt-10">
         <div className="col-span-3 flex flex-col gap-3">
           <p className="text-lg mb-3">Company</p>
 
@@ -97,7 +97,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="h-[1px]" />
-      <div className="px-28 py-9 flex justify-between items-center w-full">
+      <div className="px-6 py-12 lg:px-28 lg:py-9 flex justify-between items-center w-full">
         <p>Copyright 2024 influencermarketinghub. all rights reserved</p>
         <div className="flex gap-5">
           <div className="flex justify-center items-center bg-[#EB3C7526] h-6 w-6">

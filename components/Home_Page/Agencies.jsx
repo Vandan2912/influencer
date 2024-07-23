@@ -8,9 +8,9 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const Agencies = () => {
   return (
-    <section className="px-28 py-32 bg-white w-full min-h-[80vh] flex flex-col gap-16">
-      <p className="text-4xl text-center font-semibold">Top Agencies</p>
-      <div className="grid grid-cols-2 gap-6 mt-10">
+    <section className="px-6 py-12 lg:px-28 lg:py-32 bg-white w-full min-h-[80vh] flex flex-col gap-16">
+      <p className="text-3xl lg:text-4xl text-center font-semibold">Top Agencies</p>
+      <div className="grid grid-cols-2 gap-6 lg:mt-10">
         <Card
           image={modash}
           title="Modash"
@@ -47,7 +47,7 @@ export default Agencies;
 
 const Card = ({ image, title, desc, color = "black" }) => {
   return (
-    <div className="col-span-2 bg-white rounded-[20px] flex h-[25vh] border border-[#00000033] p-5">
+    <div className="col-span-2 bg-white rounded-[20px] flex min-h-[25vh] border border-[#00000033] p-5">
       <div
         className="w-1/5 rounded-[20px]"
         style={{
@@ -61,7 +61,7 @@ const Card = ({ image, title, desc, color = "black" }) => {
         />
       </div>
 
-      <div className="ps-10 pe-5 flex w-4/5 gap-10">
+      <div className="ps-10 pe-5 flex w-4/5 gap-10 flex-col lg:flex-row">
         <div className="flex flex-col">
           <p className="text-lg font-semibold mt-3">{title}</p>
           <p className="text-sm mt-3">{desc}</p>

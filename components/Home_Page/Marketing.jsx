@@ -6,20 +6,20 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const Marketing = () => {
   return (
-    <section className="px-28 py-40 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
-      <div className="flex w-full justify-center max-h-[60vh] gap-16">
-        <div className="flex-1">
+    <section className="px-6 py-12 lg:px-28 lg:py-40 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
+      <div className="flex flex-col lg:flex-row flex-wrap w-full justify-center max-h-[unset] lg:max-h-[60vh] gap-16">
+        <div className="flex-1 shrink-0">
           <img
             src={ima.src}
             alt=""
-            className="w-full h-[60vh] object-cover rounded-[20px]"
+            className=" w-full max-h-[30vh] lg:max-h-[unset] h-[60vh] object-cover rounded-[20px]"
           />
         </div>
-        <div className="flex-1">
-          <p className="text-5xl font-semibold mt-7">
+        <div className="flex-1 shrink-0 ">
+          <p className="text-2xl lg:text-5xl font-semibold mt-7">
             Influencer Marketing Agencies
           </p>
-          <p className="text-lg mt-5">
+          <p className="text-base lg:text-lg mt-5">
             View a collection of the globe&apos;s leading marketing agencies all
             in one place
           </p>
@@ -29,7 +29,7 @@ const Marketing = () => {
           </Button>
         </div>
       </div>
-      <div className="flex w-full justify-center items-center max-h-[60vh] gap-16">
+      <div className="flex flex-col-reverse lg:flex-row flex-wrap-reverse w-full justify-center items-center max-h-[unset] lg:max-h-[60vh] gap-16">
         <div className="flex-1">
           <p className="text-5xl font-semibold mt-7">
             Influencer Marketing Platforms

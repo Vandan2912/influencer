@@ -8,10 +8,10 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const News = () => {
   return (
-    <section className="px-28 py-40 w-full min-h-[80vh]">
-      <p className="text-4xl text-center font-semibold">Latest News</p>
-      <div className="flex mt-14 gap-20 ">
-        <div className="w-[55%]">
+    <section className="px-6 py-12 lg:px-28 lg:py-40 w-full min-h-[80vh]">
+      <p className="text-3xl lg:text-4xl text-center font-semibold">Latest News</p>
+      <div className="flex mt-14 gap-20 flex-wrap-reverse">
+        <div className="w-full lg:w-[55%]">
           <img src={news1.src} alt="" className="w-full" />
           <p className="text-4xl font-semibold mt-7">
             7 Essential Tools for Forward-Thinking Creative Agencies
@@ -26,7 +26,7 @@ const News = () => {
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>
         </div>
-        <div className="w-[45%]">
+        <div className="w-full lg:w-[45%]">
           <div>
             <img src={news2.src} alt="" className="w-full" />
             <p className="text-2xl font-semibold mt-7">

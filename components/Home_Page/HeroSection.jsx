@@ -29,127 +29,19 @@ const HeroSection = () => {
         }}
       >
         <SwiperSlide className="relative">
-          <div
-            className="px-28 py-32 h-full w-full min-h-screen flex justify-start items-center"
-            style={{
-              backgroundImage: "url('/carousel_image1.jpg')",
-              backgroundSize: "cover",
-            }}
-          >
-            <div className="w-1/2 text-white text-left ms-5">
-              <p className="text-6xl font-bold">
-                The leading Social Media resource for Brands
-              </p>
-              <p className="text-lg mt-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
-                efficitur lorem, ut condimentum nisi. Integer molestie tellus
-                vel nunc sagittis dignissim
-              </p>
-              <div className="flex gap-8">
-                <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3">
-                  About Us
-                  <ArrowLongRightIcon className="h-5 w-5" />
-                </Button>
-                <Button className="hover:bg-white border border-white rounded-full py-3 px-7 text-white hover:text-black mt-5 flex items-center gap-3">
-                  Contact Us
-                  <ArrowLongRightIcon className="h-5 w-5" />
-                </Button>
-              </div>
-            </div>
-          </div>
+          <TextContainer number={1} />
         </SwiperSlide>
         <SwiperSlide>
-          <div
-            className="px-28 py-32 h-full w-full min-h-screen flex justify-start items-center"
-            style={{
-              backgroundImage: "url('/carousel_image2.png')",
-              backgroundSize: "cover",
-            }}
-          >
-            <div className="w-1/2 text-white text-left ms-5">
-              <p className="text-6xl font-bold">
-                The leading Social Media resource for Brands
-              </p>
-              <p className="text-lg mt-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
-                efficitur lorem, ut condimentum nisi. Integer molestie tellus
-                vel nunc sagittis dignissim
-              </p>
-              <div className="flex gap-8">
-                <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3">
-                  About Us
-                  <ArrowLongRightIcon className="h-5 w-5" />
-                </Button>
-                <Button className="hover:bg-white border border-white rounded-full py-3 px-7 text-white hover:text-black mt-5 flex items-center gap-3">
-                  Contact Us
-                  <ArrowLongRightIcon className="h-5 w-5" />
-                </Button>
-              </div>
-            </div>
-          </div>
+          <TextContainer number={2} type="png" />
         </SwiperSlide>
         <SwiperSlide>
-          <div
-            className="px-28 py-32 h-full w-full min-h-screen flex justify-start items-center"
-            style={{
-              backgroundImage: "url('/carousel_image3.jpg')",
-              backgroundSize: "cover",
-            }}
-          >
-            <div className="w-1/2 text-white text-left ms-5">
-              <p className="text-6xl font-bold">
-                The leading Social Media resource for Brands
-              </p>
-              <p className="text-lg mt-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
-                efficitur lorem, ut condimentum nisi. Integer molestie tellus
-                vel nunc sagittis dignissim
-              </p>
-              <div className="flex gap-8">
-                <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3">
-                  About Us
-                  <ArrowLongRightIcon className="h-5 w-5" />
-                </Button>
-                <Button className="hover:bg-white border border-white rounded-full py-3 px-7 text-white hover:text-black mt-5 flex items-center gap-3">
-                  Contact Us
-                  <ArrowLongRightIcon className="h-5 w-5" />
-                </Button>
-              </div>
-            </div>
-          </div>
+          <TextContainer number={3} />
         </SwiperSlide>
         <SwiperSlide>
-          <div
-            className="px-28 py-32 h-full w-full min-h-screen flex justify-start items-center"
-            style={{
-              backgroundImage: "url('/carousel_image4.jpg')",
-              backgroundSize: "cover",
-            }}
-          >
-            <div className="w-1/2 text-white text-left ms-5">
-              <p className="text-6xl font-bold">
-                The leading Social Media resource for Brands
-              </p>
-              <p className="text-lg mt-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
-                efficitur lorem, ut condimentum nisi. Integer molestie tellus
-                vel nunc sagittis dignissim
-              </p>
-              <div className="flex gap-8">
-                <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3">
-                  About Us
-                  <ArrowLongRightIcon className="h-5 w-5" />
-                </Button>
-                <Button className="hover:bg-white border border-white rounded-full py-3 px-7 text-white hover:text-black mt-5 flex items-center gap-3">
-                  Contact Us
-                  <ArrowLongRightIcon className="h-5 w-5" />
-                </Button>
-              </div>
-            </div>
-          </div>
+          <TextContainer number={4} />
         </SwiperSlide>
       </Swiper>
-      <div className="absolute bottom-10 right-10 z-10 flex gap-5 items-end">
+      <div className="absolute bottom-10 right-10 z-10 hidden lg:flex gap-5 items-end">
         {/* <div className=""></div> */}
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <img
@@ -193,3 +85,36 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+const TextContainer = ({ number, type="jpg" }) => {
+  return (
+    <div
+      className="px-16 py-20 lg:px-28 lg:py-32 h-full w-full min-h-screen flex justify-start items-center"
+      style={{
+        backgroundImage: `url('/carousel_image${number}.${type}')`,
+        backgroundSize: "cover",
+      }}
+    >
+      <div className="w-full lg:w-1/2 text-white text-left ms-5">
+        <p className="text-4xl lg:text-6xl font-bold">
+          The leading Social Media resource for Brands
+        </p>
+        <p className="text-base lg:text-lg mt-5">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
+          efficitur lorem, ut condimentum nisi. Integer molestie tellus vel nunc
+          sagittis dignissim
+        </p>
+        <div className="flex gap-8">
+          <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3">
+            About Us
+            <ArrowLongRightIcon className="h-5 w-5" />
+          </Button>
+          <Button className="hover:bg-white border border-white rounded-full py-3 px-7 text-white hover:text-black mt-5 flex items-center gap-3">
+            Contact Us
+            <ArrowLongRightIcon className="h-5 w-5" />
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+};
