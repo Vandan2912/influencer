@@ -49,16 +49,16 @@ const HeroSection = () => {
           className="mySwiper"
         >
           <SwiperSlide className="!w-36 !h-[20vh]">
-            <img src="/carousel_image1.jpg" className={`object-cover rounded-md border border-white ${index === 0 ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
+            <img src="/carousel_image1.jpg" className={`object-cover cursor-pointer rounded-md border border-white ${index === 0 ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
           </SwiperSlide>
           <SwiperSlide className="!w-36 !h-[20vh]">
-            <img src="/carousel_image2.png" className={`object-cover rounded-md border border-white ${index === 1 ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
+            <img src="/carousel_image2.png" className={`object-cover cursor-pointer rounded-md border border-white ${index === 1 ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
           </SwiperSlide>
           <SwiperSlide className="!w-36 !h-[20vh]">
-            <img src="/carousel_image3.jpg" className={`object-cover rounded-md border border-white ${index === 2 ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
+            <img src="/carousel_image3.jpg" className={`object-cover cursor-pointer rounded-md border border-white ${index === 2 ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
           </SwiperSlide>
           <SwiperSlide className="!w-36 !h-[20vh]">
-            <img src="/carousel_image4.jpg" className={`object-cover rounded-md border border-white ${index === 3 ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
+            <img src="/carousel_image4.jpg" className={`object-cover cursor-pointer rounded-md border border-white ${index === 3 ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
           </SwiperSlide>
         </Swiper>
       </div>
