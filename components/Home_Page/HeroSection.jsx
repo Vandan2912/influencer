@@ -2,31 +2,28 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Virtual, Navigation, Pagination, Controller } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
 import { Button } from "@headlessui/react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
-  //   const [swipper, setswipper] = useState(null);
-
-  let slideTo = () => {};
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
     <div className="min-h-[50vh] md:min-h-[80vh] lg:min-h-screen  w-full relative">
       <Swiper
         navigation={true}
-        modules={[Navigation, Pagination, Controller]}
-        className="mySwiper"
-        onSlideChange={(e) => setIndex(e.activeIndex)}
-        onSwiper={(swiper) => {
-          slideTo = (index) => {
-            swiper?.slideTo(index);
-          };
-        }}
+        loop={true}
+        thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Navigation, Thumbs]}
+        onSlideChange={(e) => setIndex(e.realIndex)}
+        onSlideNextTransitionStart={(e) => setIndex(e.realIndex)}
+        onSlidePrevTransitionStart={(e) => setIndex(e.realIndex)}
       >
         <SwiperSlide className="relative">
           <TextContainer number={1} />
@@ -41,52 +38,38 @@ const HeroSection = () => {
           <TextContainer number={4} />
         </SwiperSlide>
       </Swiper>
-      <div className="absolute bottom-10 right-10 z-10 hidden lg:flex gap-5 items-end">
-        {/* <div className=""></div> */}
-        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-        <img
-          src="/carousel_image1.jpg"
-          alt="1"
-          className={`object-cover rounded-md border border-white ${
-            index === 0 ? "h-28 w-36" : "h-20 w-28"
-          }`}
-          onClick={slideTo(0)}
-        />
-        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-        <img
-          src="/carousel_image2.png"
-          alt="1"
-          className={`object-cover rounded-md border border-white ${
-            index === 1 ? "h-28 w-36" : "h-20 w-28"
-          }`}
-          onClick={slideTo(1)}
-        />
-        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-        <img
-          src="/carousel_image3.jpg"
-          alt="1"
-          className={`object-cover rounded-md border border-white ${
-            index === 2 ? "h-28 w-36" : "h-20 w-28"
-          }`}
-          onClick={slideTo(2)}
-        />
-        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-        <img
-          src="/carousel_image4.jpg"
-          alt="1"
-          className={`object-cover rounded-md border border-white ${
-            index === 3 ? "h-28 w-36" : "h-20 w-28"
-          }`}
-          onClick={slideTo(3)}
-        />
+      <div className="absolute bottom-10 right-10 z-10 hidden lg:flex gap-5 items-end w-4/5">
+        <Swiper
+          onSwiper={setThumbsSwiper}
+          // loop={true}
+          // freeMode={true}
+          // watchSlidesProgress={true}
+          slidesPerView={4}
+          modules={[FreeMode, Navigation, Thumbs]}
+          className="mySwiper"
+        >
+          <SwiperSlide className="!w-36 !h-[20vh]">
+            <img src="/carousel_image1.jpg" className={`object-cover rounded-md border border-white ${index === 0 ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
+          </SwiperSlide>
+          <SwiperSlide className="!w-36 !h-[20vh]">
+            <img src="/carousel_image2.png" className={`object-cover rounded-md border border-white ${index === 1 ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
+          </SwiperSlide>
+          <SwiperSlide className="!w-36 !h-[20vh]">
+            <img src="/carousel_image3.jpg" className={`object-cover rounded-md border border-white ${index === 2 ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
+          </SwiperSlide>
+          <SwiperSlide className="!w-36 !h-[20vh]">
+            <img src="/carousel_image4.jpg" className={`object-cover rounded-md border border-white ${index === 3 ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
+          </SwiperSlide>
+        </Swiper>
       </div>
+
     </div>
   );
 };
 
 export default HeroSection;
 
-const TextContainer = ({ number, type="jpg" }) => {
+const TextContainer = ({ number, type = "jpg" }) => {
   return (
     <div
       className="px-8 py-20 lg:px-28 lg:py-32 h-full w-full min-h-[50vh] md:min-h-[80vh] lg:min-h-screen flex justify-start items-center"

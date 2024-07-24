@@ -68,6 +68,40 @@ body {
   left: 40px !important;
 }
 
+.mySwiper {
+  height: 20vh;
+  box-sizing: border-box;
+  padding: 10px 0;
+  min-height: unset !important;
+}
+
+.mySwiper .swiper-wrapper {
+  min-height: unset !important;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+  min-height: unset !important;
+  background: transparent !important;
+  display: flex;
+  align-items: end;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+
 @media only screen and (max-width: 1024px) {
   .swiper-button-next {
     right: 10px !important;
