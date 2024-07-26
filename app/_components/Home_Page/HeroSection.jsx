@@ -74,7 +74,8 @@ const TextContainer = ({ number, type = "jpg" }) => {
     <div
       className="px-8 py-20 lg:px-28 lg:py-32 h-full w-full min-h-[50vh] md:min-h-[80vh] lg:min-h-screen flex justify-start items-center"
       style={{
-        backgroundImage: `url('/carousel_image${number}.${type}')`,
+        background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carousel_image${number}.${type}')`,
+        backgroundRepeat: "inherit",
         backgroundSize: "cover",
       }}
     >

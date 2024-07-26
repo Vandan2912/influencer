@@ -94,15 +94,7 @@ const Header = () => {
                 onMouseEnter={() => handleEnter(open, articlesRef)}
                 onMouseLeave={() => handleLeave(open, articlesRef)}
               >
-                  <button className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none" onClick={()=>{router.push("/articles")}}>
-                  Articles
-                  <ChevronDownIcon
-                    aria-hidden="true"
-                    className="h-5 w-5 flex-none text-white transition-all"
-                    style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
-                  />
-                </button>
-                {/* <PopoverButton ref={articlesRef} className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none" onClick={()=>{router.push("/articles")}}>
+                <PopoverButton ref={articlesRef} className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none" >
                   Articles
                   <ChevronDownIcon
                     aria-hidden="true"
@@ -110,7 +102,7 @@ const Header = () => {
                     style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
                   />
                 </PopoverButton>
-                <PopoverElement array={articles} /> */}
+                <PopoverElement array={articles} />
               </div>
             )}
 
