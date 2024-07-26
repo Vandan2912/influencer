@@ -17,7 +17,6 @@ const plans = [
     { name: 'Guides' },
     { name: 'Tips' },
     { name: 'Statistics' },
-    { name: 'Guides' },
     { name: 'Examples' },
 ]
 
@@ -45,7 +44,7 @@ const Filter = () => {
             : people.filter((person) => {
                 return person.name.toLowerCase().includes(query.toLowerCase())
             })
-
+    console.log("types", types)
     return (
         <div className='w-full border border-[#EEF4F6] rounded-[20px] p-[30px]'>
             <Combobox value={selected} onChange={(value) => setSelected(value)} onClose={() => setQuery('')}>
@@ -113,18 +112,11 @@ const Filter = () => {
                         'text-start w-full rounded-full border-none bg-white/5 text-sm/6 text-black shadow-[0px_0.48px_44.12px_0px_#9098C329] py-1.5 pl-9 pr-5',
                         'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
                     )}
-                        style={{ color: types.name ? "black" : "rgba(0,0,0,0.5)" }}
-                    >{types.name ? types.name : "Types"}</ListboxButton>
-                    {/* <ListboxOptions anchor="bottom" className=" bg-white">
+                        style={{ color: types ? "black" : "rgba(0,0,0,0.5)" }}
+                    >{types ? types : "Types"}</ListboxButton>
+                    <ListboxOptions anchor="bottom" className="w-[var(--button-width)] rounded-xl border border-white/5 bg-gray-100 p-1 [--anchor-gap:var(--spacing-1)] focus:outline-none transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0">
                         {plans.map((person, i) => (
-                            <ListboxOption key={i} value={person.name} className="data-[focus]:bg-blue-100">
-                                {person.name}
-                            </ListboxOption>
-                        ))}
-                    </ListboxOptions> */}
-                    <ListboxOptions anchor="bottom" className="w-[var(--button-width)] rounded-xl border border-white/5 bg-white/5 p-1 [--anchor-gap:var(--spacing-1)] focus:outline-none transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0">
-                        {plans.map((person, i) => (
-                            <ListboxOption key={i} value={person.name} className="group flex gap-2 bg-white data-[focus]:bg-blue-100">
+                            <ListboxOption key={i} value={person.name} className="group cursor-pointer flex items-center gap-2 rounded-lg py-1.5 px-3 select-none data-[focus]:bg-white/10">
                                 <CheckIcon className="invisible size-5 group-data-[selected]:visible" />
                                 {person.name}
                             </ListboxOption>
@@ -132,7 +124,7 @@ const Filter = () => {
                     </ListboxOptions>
                 </Listbox>
             </div>
-            <div className='mt-5'>
+            <div className='mt-5 hidden lg:block'>
                 <p className='text-base font-bold mb-3'>Channel</p>
                 <RadioGroup value={channel} onChange={setChannel} aria-label="Server size" className="flex flex-col w-full gap-3">
                     {channels.map((plan) => (
@@ -150,6 +142,25 @@ const Filter = () => {
                         </Field>
                     ))}
                 </RadioGroup>
+            </div>
+
+            <div className='mt-7 lg:hidden block w-full bg-white/5 text-sm/6 text-black shadow-[0px_0.48px_44.12px_0px_#9098C329]'>
+                <Listbox value={channel} onChange={setChannel}>
+                    <ListboxButton className={clsx(
+                        'text-start w-full rounded-full border-none bg-white/5 text-sm/6 text-black shadow-[0px_0.48px_44.12px_0px_#9098C329] py-1.5 pl-9 pr-5',
+                        'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
+                    )}
+                        style={{ color: channel ? "black" : "rgba(0,0,0,0.5)" }}
+                    >{channel ? channel : "Channel"}</ListboxButton>
+                    <ListboxOptions anchor="bottom" className="w-[var(--button-width)] rounded-xl border border-white/5 bg-gray-100 p-1 [--anchor-gap:var(--spacing-1)] focus:outline-none transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0">
+                        {channels.map((person, i) => (
+                            <ListboxOption key={i} value={person.name} className="group flex cursor-pointer items-center gap-2 rounded-lg py-1.5 px-3 select-none data-[focus]:bg-white/10">
+                                <CheckIcon className="invisible size-5 group-data-[selected]:visible" />
+                                {person.name}
+                            </ListboxOption>
+                        ))}
+                    </ListboxOptions>
+                </Listbox>
             </div>
         </div>
     )
