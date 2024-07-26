@@ -2,6 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/Gotham-Thin.otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/Gotham-ThinItalic.otf");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/Gotham-XLight.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/Gotham-XLightItalic.otf");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/GothamLight.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/GothamLightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/GothamBook.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/GothamBookItalic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/GothamMedium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/GothamMediumItalic.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/GothamBold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/GothamBoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/fonts/Gotham-Black.otf");
+  font-weight: 900;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
