@@ -44,9 +44,9 @@ const Filter = () => {
             : people.filter((person) => {
                 return person.name.toLowerCase().includes(query.toLowerCase())
             })
-    console.log("types", types)
+
     return (
-        <div className='w-full border border-[#EEF4F6] rounded-[20px] p-[30px]'>
+        <div className='w-full border bg-white border-[#EEF4F6] rounded-[20px] p-[30px] lg:sticky lg:top-24'>
             <Combobox value={selected} onChange={(value) => setSelected(value)} onClose={() => setQuery('')}>
                 <div className="relative">
                     <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
@@ -87,6 +87,7 @@ const Filter = () => {
                     ))}
                 </ComboboxOptions>
             </Combobox>
+
             <div className='mt-5 hidden lg:block'>
                 <p className='text-base font-bold mb-3'>Types</p>
                 <RadioGroup value={types} onChange={setTypes} aria-label="Server size" className="flex flex-col w-full gap-3">
@@ -106,7 +107,7 @@ const Filter = () => {
                     ))}
                 </RadioGroup>
             </div>
-            <div className='mt-7 lg:hidden block w-full bg-white/5 text-sm/6 text-black shadow-[0px_0.48px_44.12px_0px_#9098C329]'>
+            <div className='mt-5 lg:hidden block w-full bg-white/5 text-sm/6 text-black shadow-[0px_0.48px_44.12px_0px_#9098C329]'>
                 <Listbox value={types} onChange={setTypes}>
                     <ListboxButton className={clsx(
                         'text-start w-full rounded-full border-none bg-white/5 text-sm/6 text-black shadow-[0px_0.48px_44.12px_0px_#9098C329] py-1.5 pl-9 pr-5',
@@ -124,6 +125,7 @@ const Filter = () => {
                     </ListboxOptions>
                 </Listbox>
             </div>
+
             <div className='mt-5 hidden lg:block'>
                 <p className='text-base font-bold mb-3'>Channel</p>
                 <RadioGroup value={channel} onChange={setChannel} aria-label="Server size" className="flex flex-col w-full gap-3">
@@ -143,8 +145,7 @@ const Filter = () => {
                     ))}
                 </RadioGroup>
             </div>
-
-            <div className='mt-7 lg:hidden block w-full bg-white/5 text-sm/6 text-black shadow-[0px_0.48px_44.12px_0px_#9098C329]'>
+            <div className='mt-5 lg:hidden block w-full bg-white/5 text-sm/6 text-black shadow-[0px_0.48px_44.12px_0px_#9098C329]'>
                 <Listbox value={channel} onChange={setChannel}>
                     <ListboxButton className={clsx(
                         'text-start w-full rounded-full border-none bg-white/5 text-sm/6 text-black shadow-[0px_0.48px_44.12px_0px_#9098C329] py-1.5 pl-9 pr-5',

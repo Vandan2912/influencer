@@ -23,7 +23,7 @@ export default ArticleSections
 
 const Card = ({ data, index }) => {
     return (
-        <div className='flex flex-col gap-2 p-4 shadow-[0px_3.33px_4.44px_0px_#00000012] rounded-md '>
+        <div className='col-span-4 sm:col-span-2 lg:col-span-1 flex flex-col gap-2 p-4 shadow-[0px_3.33px_4.44px_0px_#00000012] rounded-md '>
             <img src={`/eccomerce/${data.image}`} className='max-h-52 h-48 w-full object-cover rounded-md' />
             <p className='text-lg font-bold'>{data.title}</p>
             <p className='text-sm'>{data.desc}</p>

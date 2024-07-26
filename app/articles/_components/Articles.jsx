@@ -6,7 +6,7 @@ import { ecommerce } from '@/Constants/articles.-constants'
 const Articles = () => {
     return (
         <section className='min-h-screen grid grid-cols-4 gap-5 p-7'>
-            <div className='col-span-4 lg:col-span-1'>
+            <div className='col-span-4 lg:col-span-1 '>
                 <Filter />
             </div>
             <div className='col-span-4 lg:col-span-3 grid grid-cols-1 gap-5'>
