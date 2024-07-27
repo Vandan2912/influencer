@@ -182,6 +182,18 @@ body {
   object-fit: cover;
 }
 
+.head2{
+  /* margin-left: 10px; */
+  text-decoration: underline;
+  @apply text-sm font-normal
+  /* list-style-type: circle; */
+}
+.head3{
+  margin-left: 20px;
+  list-style-type: circle;
+  @apply text-sm font-normal
+}
+
 @media only screen and (max-width: 1024px) {
   .swiper-button-next {
     right: 10px !important;
