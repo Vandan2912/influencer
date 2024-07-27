@@ -10,7 +10,7 @@ import 'swiper/css/thumbs';
 import { Button } from "@headlessui/react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
-const HeroSection = () => {
+const HeroSection = ({ data }) => {
   const [index, setIndex] = useState(0);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -25,18 +25,15 @@ const HeroSection = () => {
         onSlideNextTransitionStart={(e) => setIndex(e.realIndex)}
         onSlidePrevTransitionStart={(e) => setIndex(e.realIndex)}
       >
-        <SwiperSlide className="relative">
-          <TextContainer number={1} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TextContainer number={2} type="png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TextContainer number={3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TextContainer number={4} />
-        </SwiperSlide>
+        {
+          data.map((item, i) => {
+            return (
+              <SwiperSlide key={i} className="relative">
+                <TextContainer data={item} />
+              </SwiperSlide>
+            )
+          })
+        }
       </Swiper>
       <div className="absolute bottom-10 right-10 z-10 hidden lg:flex gap-5 items-end w-4/5">
         <Swiper
@@ -48,18 +45,15 @@ const HeroSection = () => {
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper"
         >
-          <SwiperSlide className="!w-36 !h-[20vh]">
-            <img src="/carousel_image1.jpg" className={`object-cover cursor-pointer rounded-md border border-white ${index === 0 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
-          </SwiperSlide>
-          <SwiperSlide className="!w-36 !h-[20vh]">
-            <img src="/carousel_image2.png" className={`object-cover cursor-pointer rounded-md border border-white ${index === 1 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
-          </SwiperSlide>
-          <SwiperSlide className="!w-36 !h-[20vh]">
-            <img src="/carousel_image3.jpg" className={`object-cover cursor-pointer rounded-md border border-white ${index === 2 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
-          </SwiperSlide>
-          <SwiperSlide className="!w-36 !h-[20vh]">
-            <img src="/carousel_image4.jpg" className={`object-cover cursor-pointer rounded-md border border-white ${index === 3 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
-          </SwiperSlide>
+          {
+            data.map((item, i) => {
+              return (
+                <SwiperSlide key={i} className="!w-36 !h-[20vh]">
+                  <img src={item.image} className={`object-cover cursor-pointer rounded-md border border-white ${index === i ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
+                </SwiperSlide>
+              )
+            })
+          }
         </Swiper>
       </div>
 
@@ -69,15 +63,16 @@ const HeroSection = () => {
 
 export default HeroSection;
 
-const TextContainer = ({ number, type = "jpg" }) => {
+const TextContainer = ({ data }) => {
   return (
     <div
       className="px-8 py-20 lg:px-28 lg:py-32 h-full w-full min-h-[50vh] md:min-h-[80vh] lg:min-h-screen flex justify-start items-center"
       style={{
-        background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carousel_image${number}.${type}')`,
+        background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${data.image})`,
         backgroundRepeat: "inherit",
         backgroundSize: "cover",
       }}
+
     >
       <div className="w-full lg:w-1/2 text-white text-left ms-5">
         <p className="text-2xl lg:text-6xl font-bold">
