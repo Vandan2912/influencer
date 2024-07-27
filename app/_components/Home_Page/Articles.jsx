@@ -5,10 +5,11 @@ import image3 from "../../../assets/articles3.png";
 import image4 from "../../../assets/articles4.png";
 import image5 from "../../../assets/articles5.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Articles = () => {
   return (
-    <section className="px-6 py-12 lg:px-28 lg:py-40 w-full min-h-[80vh]">
+    <section className="px-6 py-12 lg:px-28 lg:py-28 w-full min-h-[80vh]">
       <p className="text-3xl lg:text-4xl text-center font-semibold">Latest Articles</p>
       <div className="grid grid-cols-12 gap-6 mt-10">
         <Card
@@ -69,8 +70,10 @@ const Articles = () => {
           </div>
         </div>
       </div>
-      <div className="text-[#EB3C75] text-center mt-10 underline">
-        See All Articles
+      <div className="text-center mt-10">
+        <Link href="/articles" className="text-[#EB3C75] underline">
+          See All Articles
+        </Link>
       </div>
     </section>
   );

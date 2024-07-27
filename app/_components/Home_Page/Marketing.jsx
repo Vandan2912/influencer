@@ -1,10 +1,15 @@
+"use client";
+
 import React from "react";
 import ima from "../../../assets/ima.png";
 import imp from "../../../assets/imp.png";
 import { Button } from "@headlessui/react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
 
 const Marketing = () => {
+  const router = useRouter()
+
   return (
     <section className="px-6 py-12 lg:px-28 lg:py-40 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
       <div className="flex flex-col md:flex-row flex-wrap w-full justify-center max-h-[unset] lg:max-h-[60vh] gap-0 lg:gap-16">
@@ -23,7 +28,7 @@ const Marketing = () => {
             View a collection of the globe&apos;s leading marketing agencies all
             in one place
           </p>
-          <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3">
+          <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3" onClick={() => { router.push("/platform") }}>
             View Agencies
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>
@@ -37,7 +42,7 @@ const Marketing = () => {
           <p className="text-base mt-5">
             All the leading influencer marketing platforms rated and reviewed
           </p>
-          <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3">
+          <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3" onClick={() => { router.push("/platform") }}>
             View Platforms
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>
