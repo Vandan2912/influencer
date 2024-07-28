@@ -20,10 +20,10 @@ const page = () => {
   ]
 
   return (
-    <div className="font-Gotham">
+    <main className="font-Gotham">
       <HeroSection data={carouselData} />
       <Articles />
-    </div>
+    </main>
   );
 };
 

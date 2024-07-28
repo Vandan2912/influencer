@@ -175,7 +175,7 @@ const Header = () => {
                 onMouseLeave={() => handleLeave(open, aboutRef)}
               >
                 <PopoverButton ref={aboutRef} className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none">
-                  About Us
+                  <Link href="/about">About Us</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none text-white transition-all"
