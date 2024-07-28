@@ -26,6 +26,7 @@ import {
 import logo from "../../assets/logo.png";
 import { about, agencies, articles, platforms, products, resources } from "@/Constants/header-constants";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 // const callsToAction = [
 //   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
@@ -95,7 +96,7 @@ const Header = () => {
                 onMouseLeave={() => handleLeave(open, articlesRef)}
               >
                 <PopoverButton ref={articlesRef} className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none" >
-                  Articles
+                  <Link href="/articles">Articles</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none text-white transition-all"
@@ -115,7 +116,7 @@ const Header = () => {
                 onMouseLeave={() => handleLeave(open, platformRef)}
               >
                 <PopoverButton ref={platformRef} className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none">
-                  Platforms
+                  <Link href="/platforms">Platforms</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none text-white transition-all"
@@ -134,7 +135,7 @@ const Header = () => {
                 onMouseLeave={() => handleLeave(open, agenciesRef)}
               >
                 <PopoverButton ref={agenciesRef} className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none">
-                  Agencies
+                  <Link href="/agencies">Agencies</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none text-white transition-all"
@@ -282,13 +283,13 @@ const Header = () => {
 
 export default Header;
 
-const PopoverElement = ({array=[]}) => {
+const PopoverElement = ({ array = [] }) => {
   return (
     <PopoverPanel
       transition
       className="absolute -left-40 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
     >
-     <div className="p-4 grid grid-cols-2 gap-4">
+      <div className="p-4 grid grid-cols-2 gap-4">
         {array.map((item) => (
           <div
             key={item.name}
