@@ -28,7 +28,9 @@ const Marketing = () => {
             View a collection of the globe&apos;s leading marketing agencies all
             in one place
           </p>
-          <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3" onClick={() => { router.push("/platforms") }}>
+          <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3" 
+          // onClick={() => { router.push("/platforms") }}
+          >
             View Agencies
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>

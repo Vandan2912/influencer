@@ -14,17 +14,17 @@ import { PlayIcon } from "@heroicons/react/20/solid";
 
 const Page = () => {
   return (
-    <main className="font-Gotham min-h-screen flex justify-center">
-      <section className="max-w-4xl bg-red-50 w-full pt-24 md:pt-28 pb-10">
+    <main className="font-Gotham min-h-screen flex justify-center px-4 sm:px-10">
+      <section className="max-w-4xl w-full pt-24 md:pt-28 pb-10">
         <h1 className="text-4xl font-bold text-center">Upfluence</h1>
 
         {/* company detail box */}
-        <div className="flex mt-10 items-center justify-between border border-[#00000033] px-8 py-6 rounded-2xl">
-          <div className="text-center max-w-52">
+        <div className="flex mt-10 gap-10 items-center justify-between border border-[#00000033] px-8 py-6 rounded-2xl">
+          <div className="text-center max-w-[40%] sm:max-w-52 ">
             <img src="/platforms/upfluence.png" alt="" />
             <p>4.8 out of 5 stars</p>
           </div>
-          <div className="flex gap-5">
+          <div className="flex flex-1  gap-5 sm:flex-row flex-col sm:justify-evenly">
             <div className="flex flex-col gap-5">
               <div>
                 <p className="font-bold">Best For:</p>
@@ -69,15 +69,15 @@ const Page = () => {
 
         {/* pros and cons */}
         <div className="bg-[#d2f8ef] mt-10 p-5 grid grid-cols-4 gap-5 rounded-xl">
-          <div className="col-span-1 flex flex-col gap-3">
-            <img src="/platforms/upfluence.png" alt="" />
+          <div className="col-span-4 sm:col-span-1 flex flex-col gap-3">
+            <img src="/platforms/upfluence.png" alt="" className="w-1/2 sm:w-full mx-auto sm:mx-0" />
             <p className="text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam.
             </p>
           </div>
-          <div className="col-span-3 grid grid-cols-5 gap-1">
+          <div className="col-span-4 sm:col-span-3 grid grid-cols-5 gap-1">
             {/* 1st column */}
             <div className="col-span-3 flex flex-col gap-1">
               <div className="bg-[#e7fdf8] border-2 border-white p-2 rounded text-sm font-bold">
