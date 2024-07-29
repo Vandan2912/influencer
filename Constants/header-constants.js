@@ -256,7 +256,7 @@ const resources = [
     {
         name: "Courses",
         description: "Your customers’ data will be safe and secure",
-        href: "#",
+        href: "/resources/cources",
         icon: FingerPrintIcon,
     },
     {
@@ -268,7 +268,7 @@ const resources = [
     {
         name: "eBooks / Infographics",
         description: "Build strategic funnels that will convert",
-        href: "#",
+        href: "/resources/ebook",
         icon: ArrowPathIcon,
     },
     {
