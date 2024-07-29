@@ -1,8 +1,11 @@
+"use client"
+
 import { Button } from "@headlessui/react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import React from "react";
 import avatar from "../../../assets/avatar.png";
 import HeroSection from "../_components/HeroSection";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
   const carouselData = [
@@ -66,6 +69,7 @@ const Page = () => {
 export default Page;
 
 const OneSection = ({ title, data }) => {
+  const router = useRouter()
   return (
     <section className="pb-5 px-5 md:pb-11 md:px-16 mt-8">
       <div className="flex justify-between items-center px-5 mb-5">
@@ -80,7 +84,10 @@ const OneSection = ({ title, data }) => {
         <div className="w-full mt-14 grid grid-cols-3 gap-10">
           {data.map((item, i) => (
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-            <div key={i} className="col-span-3 md:col-span-1 text-center bg-[#00000005] rounded-2xl">
+            // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
+            <div key={i} className="col-span-3 md:col-span-1 text-center bg-[#00000005] rounded-2xl cursor-pointer" onClick={() => {
+              router.push("/resources/ebook/123")
+            }}>
               <img src={item.image} alt="" className="w-full h-56 rounded-ss-2xl rounded-se-2xl object-cover" />
               <p className="text-xl font-semibold mt-7 text-[#EB3C75]">
                 Ebooks
