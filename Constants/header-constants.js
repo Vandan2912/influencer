@@ -262,7 +262,7 @@ const resources = [
     {
         name: "Tools",
         description: "Connect with third-party tools",
-        href: "#",
+        href: "/resources/tools",
         icon: SquaresPlusIcon,
     },
     {
@@ -283,7 +283,7 @@ const about = [
     {
         name: "About Our Company",
         description: "Get a better understanding of your traffic",
-        href: "#",
+        href: "/about",
         icon: ChartPieIcon,
     },
     {

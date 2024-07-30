@@ -7,6 +7,7 @@ import Marketing from "./_components/Home_Page/Marketing";
 import News from "./_components/Home_Page/News";
 import PopularPool from "./_components/Home_Page/PopularPool";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
