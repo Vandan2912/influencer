@@ -23,7 +23,7 @@ const Footer = () => {
           <a href="#1">
             <p className="text-sm">Resources</p>
           </a>
-          <a href="#1">
+          <a href="/contact">
             <p className="text-sm">Contact Us</p>
           </a>
         </div>
@@ -73,13 +73,13 @@ const Footer = () => {
         <div className="col-span-6 md:col-span-2 flex flex-col gap-3">
           <p className="text-lg mb-3">Other Links</p>
 
-          <a href="#1">
+          <a href="/cookies">
             <p className="text-sm">Cookie Policy</p>
           </a>
-          <a href="#1">
+          <a href="/privacy">
             <p className="text-sm">Privacy Policy</p>
           </a>
-          <a href="#1">
+          <a href="/terms-conditions">
             <p className="text-sm">Terms & Conditions</p>
           </a>
           <a href="#1">
