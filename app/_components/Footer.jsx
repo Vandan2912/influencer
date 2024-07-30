@@ -11,16 +11,16 @@ const Footer = () => {
         <div className="col-span-6 md:col-span-3 flex flex-col gap-3">
           <p className="text-lg mb-3">Company</p>
 
-          <a href="#1">
+          <a href="/articles">
             <p className="text-sm">Articles</p>
           </a>
-          <a href="#1">
+          <a href="/platforms">
             <p className="text-sm">Platforms</p>
           </a>
-          <a href="#1">
+          <a href="/agencies">
             <p className="text-sm">Agencies</p>
           </a>
-          <a href="#1">
+          <a href="/resources">
             <p className="text-sm">Resources</p>
           </a>
           <a href="/contact">
@@ -30,22 +30,22 @@ const Footer = () => {
         <div className="col-span-6 md:col-span-4 flex flex-col gap-3">
           <p className="text-lg mb-3">Popular</p>
 
-          <a href="#1">
+          <a href="/platforms/influencer">
             <p className="text-sm">Influencer Marketing Platforms</p>
           </a>
-          <a href="#1">
+          <a href="/agencies/influencer">
             <p className="text-sm">Influencer Marketing Agencies</p>
           </a>
-          <a href="#1">
+          <a href="/platforms/social">
             <p className="text-sm">Social Media Marketing Platforms</p>
           </a>
-          <a href="#1">
+          <a href="/agencies/social">
             <p className="text-sm">Social Media Agencies</p>
           </a>
-          <a href="#1">
+          <a href="/platforms/email">
             <p className="text-sm">Email Marketing Software</p>
           </a>
-          <a href="#1">
+          <a href="/agencies/email">
             <p className="text-sm">Digital Marketing Agencies</p>
           </a>
         </div>
@@ -53,19 +53,19 @@ const Footer = () => {
         <div className="col-span-6 md:col-span-3 flex flex-col gap-3">
           <p className="text-lg mb-3">Free Tools</p>
 
-          <a href="#1">
+          <a href="/resources/tools">
             <p className="text-sm">TikTok Engagement Calculator</p>
           </a>
-          <a href="#1">
+          <a href="/resources/tools">
             <p className="text-sm">Instagram Calculator</p>
           </a>
-          <a href="#1">
+          <a href="/resources/tools">
             <p className="text-sm">YouTube Calculator</p>
           </a>
-          <a href="#1">
+          <a href="/resources/tools">
             <p className="text-sm">Glossary</p>
           </a>
-          <a href="#1">
+          <a href="/resources/tools">
             <p className="text-sm">Image Resizer</p>
           </a>
         </div>
