@@ -47,7 +47,7 @@ function SignUpForm({setType}) {
 
   return (
     <div className="form-container bg-white sign-up-container w-full md:w-1/2 flex justify-center items-center">
-      <div className="m-10 md:m-20 p-7 border border-[#EEF4F6] min-w-[80%] lg:min-w-[60%] rounded-2xl">
+      <div className="mx-5 md:m-20 p-7 border border-[#EEF4F6] min-w-[80%] lg:min-w-[60%] rounded-2xl">
         <form onSubmit={handleOnSubmit} className="text-start">
           <h1 className="text-3xl font-bold">Sign up</h1>
           <div className="social-container w-full">

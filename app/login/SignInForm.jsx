@@ -34,7 +34,7 @@ function SignInForm({ setType }) {
 
   return (
     <div className="form-container bg-white sign-in-container w-full md:w-1/2 flex justify-center items-center">
-      <div className="mx-10 md:mx-20 p-7 border border-[#EEF4F6] min-w-[80%] lg:min-w-[60%] rounded-2xl">
+      <div className="mx-5 md:mx-20 p-7 border border-[#EEF4F6] min-w-[80%] lg:min-w-[60%] rounded-2xl">
         <form onSubmit={handleOnSubmit}>
           <h1 className="text-3xl font-bold">Sign in</h1>
           <p className="text-base">Welcome back to your account</p>
