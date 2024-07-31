@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import modash from "../../../assets/modash.png";
 import ubiquitous from "../../../assets/ubiquitous.png";
@@ -5,10 +7,11 @@ import insightIQ from "../../../assets/insightIQ.png";
 import skeepers from "../../../assets/skeepers.png";
 import { Button } from "@headlessui/react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
 
 const Agencies = () => {
   return (
-    <section className="px-6 py-12 lg:px-28 lg:py-32 bg-white w-full min-h-[80vh] flex flex-col gap-8 lg:gap-16">
+    <section className="px-6 py-12 lg:px-28 lg:py-24 bg-white w-full min-h-[80vh] flex flex-col gap-8 lg:gap-16">
       <p className="text-3xl lg:text-4xl text-center font-semibold">Top Agencies</p>
       <div className="grid grid-cols-2 gap-6 lg:mt-10">
         <Card
@@ -46,6 +49,7 @@ const Agencies = () => {
 export default Agencies;
 
 const Card = ({ image, title, desc, color = "black" }) => {
+  const router = useRouter()
   return (
     <div className="col-span-2 bg-white rounded-[20px] flex flex-col sm:flex-row min-h-[25vh] border border-[#00000033] p-5">
       <div
@@ -66,7 +70,9 @@ const Card = ({ image, title, desc, color = "black" }) => {
           <p className="text-lg font-semibold mt-3">{title}</p>
           <p className="text-sm mt-3">{desc}</p>
         </div>
-        <Button className="w-fit border border-[#EB3C75] text-[#EB3C75] hover:bg-[#EB3C75] rounded-full py-3 px-7 hover:text-white mt-0 sm:mt-5 flex items-center gap-3 shrink-0 h-fit">
+        <Button className="w-fit border border-[#EB3C75] text-[#EB3C75] hover:bg-[#EB3C75] rounded-full py-3 px-7 hover:text-white mt-0 sm:mt-5 flex items-center gap-3 shrink-0 h-fit" onClick={()=>{
+          router.push(`/agencies/${title}`)
+        }}>
           View Details
           <ArrowLongRightIcon className="h-5 w-5" />
         </Button>

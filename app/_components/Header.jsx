@@ -27,6 +27,8 @@ import logo from "../../assets/logo.png";
 import { about, agencies, articles, platforms, products, resources } from "@/Constants/header-constants";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
+import { SearchBar } from "./SearchBar";
+import { SearchResultsList } from "./SearchResultsList";
 
 // const callsToAction = [
 //   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
@@ -36,6 +38,8 @@ import Link from "next/link";
 const Header = () => {
   const router = useRouter()
   const pathname = usePathname()
+  const [searchbar, setSearchbar] = useState(false)
+  const [results, setResults] = useState([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const timeOutRef = useRef()
   const articlesRef = useRef()
@@ -43,7 +47,7 @@ const Header = () => {
   const agenciesRef = useRef()
   const resourcesRef = useRef()
   const aboutRef = useRef()
-
+console.log("results", results)
   const handleEnter = (isOpen, ref) => {
     clearTimeout(timeOutRef.current)
     !isOpen && ref.current?.click()
@@ -55,13 +59,17 @@ const Header = () => {
     }, 400)
   }
 
+  const close = () => {
+    setSearchbar(false)
+  }
+
   return (
     <header
       className="fixed z-20 w-full"
       style={{
         background:
           "linear-gradient(180deg, rgba(0, 0, 0, 0.91) 9.37%, rgba(0, 0, 0, 0.01) 100%)",
-          display: pathname == "/login" && "none",
+        display: pathname === "/login" && "none",
       }}
     >
       <nav
@@ -189,8 +197,12 @@ const Header = () => {
             )}
           </Popover>
 
-          <Button className="bg-[#EB3C75] rounded-full py-2 px-5 text-white">Benchmark Report 2024</Button>
-          <Button className="bg-[#EB3C75] rounded-full p-3 text-white">
+          <Button className="bg-[#EB3C75] rounded-full py-2 px-5 text-white" onClick={() => {
+            router.push("/resources/benchmark-report")
+          }}>Benchmark Report 2024</Button>
+          <Button className="bg-[#EB3C75] rounded-full p-3 text-white" onClick={() => {
+            setSearchbar(true)
+          }}>
             <MagnifyingGlassIcon className="text-white h-5 w-5" />
           </Button>
 
@@ -337,6 +349,21 @@ const Header = () => {
             </div>
           </div>
         </DialogPanel>
+      </Dialog>
+      <Dialog open={searchbar} as="div" className="relative z-10 focus:outline-none" onClose={close}>
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div className="flex min-h-full items-start justify-center p-4 pt-32">
+            <DialogPanel
+              transition
+              className="w-full max-w-md rounded-xl bg-white p-6  duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+            >
+              <div className="search-bar-container">
+                <SearchBar setResults={setResults} />
+                {results && results.length > 0 && <SearchResultsList results={results} />}
+              </div>
+            </DialogPanel>
+          </div>
+        </div>
       </Dialog>
     </header>
   );

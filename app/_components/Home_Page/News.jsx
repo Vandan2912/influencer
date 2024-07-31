@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import React from "react";
 import news1 from "../../../assets/news1.png";
@@ -5,8 +7,10 @@ import news2 from "../../../assets/news2.png";
 import news3 from "../../../assets/news3.png";
 import { Button } from "@headlessui/react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
 
 const News = () => {
+  const router = useRouter()
   return (
     <section className="px-6 py-12 lg:px-28 lg:py-40 w-full min-h-[80vh]">
       <p className="text-3xl lg:text-4xl text-center font-semibold">Latest News</p>
@@ -21,7 +25,7 @@ const News = () => {
             advanced project management tools necessary. However, many agencies
             are still…
           </p>
-          <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3">
+          <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3" onClick={()=>{router.push('/resources/tools')}}>
             Read More
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>

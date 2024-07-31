@@ -29,7 +29,7 @@ const Marketing = () => {
             in one place
           </p>
           <Button className="bg-[#EB3C75] rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3" 
-          // onClick={() => { router.push("/platforms") }}
+          onClick={() => { router.push("/agencies") }}
           >
             View Agencies
             <ArrowLongRightIcon className="h-5 w-5" />

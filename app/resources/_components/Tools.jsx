@@ -1,14 +1,20 @@
+"use client"
+
 import { Button } from '@headlessui/react'
 import { ArrowLongRightIcon } from '@heroicons/react/24/outline'
 import React from 'react'
+import { useRouter } from "next/navigation";
 
 const Tools = () => {
+    const router = useRouter()
     return (
         <section className="py-5 px-5 md:py-11 md:px-16">
 
             <div className="flex justify-between items-center px-5 mb-5">
                 <h1 className='text-3xl font-bold'>Tools</h1>
-                <Button className="bg-[#EB3C75] w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white flex items-center gap-3">
+                <Button className="bg-[#EB3C75] w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white flex items-center gap-3" onClick={()=>{
+                    router.push("/resources/tools")
+                }}>
                     View All
                     <ArrowLongRightIcon className="h-5 w-5" />
                 </Button>

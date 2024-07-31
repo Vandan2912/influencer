@@ -250,7 +250,7 @@ const resources = [
     {
         name: "Benchmark Report 2024",
         description: "Speak directly to your customers",
-        href: "#",
+        href: "/resources/benchmark-report",
         icon: CursorArrowRaysIcon,
     },
     {

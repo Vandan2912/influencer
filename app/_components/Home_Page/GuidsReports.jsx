@@ -1,14 +1,20 @@
+"use client"
+
 import React from "react";
 import ai from "../../../assets/ai.png";
 import inflation from "../../../assets/inflation.png";
 import digital_marketing from "../../../assets/digital_marketing.png";
+import { useRouter } from "next/navigation";
 
 const GuidsReports = () => {
+  const router = useRouter()
   return (
-    <section className="px-6 py-12 lg:px-28 lg:py-32 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
+    <section className="px-6 py-12 lg:px-28 lg:py-24 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
       <div className="flex justify-between">
         <p className="text-2xl lg:text-4xl font-semibold">Guids & Reports</p>
-        <div className="text-[#EB3C75] underline">See All</div>
+        <div className="text-[#EB3C75] underline cursor-pointer" onClick={() => {
+          router.push("/articles");
+        }}>See All</div>
       </div>
       <div className="grid grid-cols-3 gap-6 mt-10">
         <Card
