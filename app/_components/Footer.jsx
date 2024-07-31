@@ -1,12 +1,18 @@
+"use client"
+
 import React from "react";
 import twitterIcon from "../../assets/x.png";
 import facebookIcon from "../../assets/facebook.png";
 import instagramIcon from "../../assets/instagram.png";
 import ticktokIcon from "../../assets/tiktokIcon.png";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname()
   return (
-    <footer className="bg-[#02021E] text-white">
+    <footer className="bg-[#02021E] text-white" style={{
+      display: pathname == "/login" && "none",
+    }}>
       <div className="px-6 py-12 lg:px-28 lg:py-16 grid grid-cols-12 gap-6">
         <div className="col-span-6 md:col-span-3 flex flex-col gap-3">
           <p className="text-lg mb-3">Company</p>

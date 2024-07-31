@@ -25,7 +25,7 @@ import {
 } from "@heroicons/react/20/solid";
 import logo from "../../assets/logo.png";
 import { about, agencies, articles, platforms, products, resources } from "@/Constants/header-constants";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
 // const callsToAction = [
@@ -35,6 +35,7 @@ import Link from "next/link";
 
 const Header = () => {
   const router = useRouter()
+  const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const timeOutRef = useRef()
   const articlesRef = useRef()
@@ -60,6 +61,7 @@ const Header = () => {
       style={{
         background:
           "linear-gradient(180deg, rgba(0, 0, 0, 0.91) 9.37%, rgba(0, 0, 0, 0.01) 100%)",
+          display: pathname == "/login" && "none",
       }}
     >
       <nav

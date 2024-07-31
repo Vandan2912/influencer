@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import Head from "next/head";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,9 +34,11 @@ export default function RootLayout({
         />
       </Head>
       <body className={inter.className}>
+      <GoogleOAuthProvider clientId="<your_client_id>">
         <Header />
         {children}
         <Footer />
+      </GoogleOAuthProvider>
       </body>
     </html>
   );
