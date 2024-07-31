@@ -47,7 +47,7 @@ function SignUpForm({setType}) {
 
   return (
     <div className="form-container bg-white sign-up-container w-full md:w-1/2 flex justify-center items-center">
-      <div className="mx-10 md:mx-20 p-7 border border-[#EEF4F6] min-w-[80%] lg:min-w-[60%] rounded-2xl">
+      <div className="m-10 md:m-20 p-7 border border-[#EEF4F6] min-w-[80%] lg:min-w-[60%] rounded-2xl">
         <form onSubmit={handleOnSubmit} className="text-start">
           <h1 className="text-3xl font-bold">Sign up</h1>
           <div className="social-container w-full">
@@ -64,7 +64,7 @@ function SignUpForm({setType}) {
             OR
             <hr className="flex-1 h-[2px] bg-[#808285]" />
           </div>
-          <div className="w-full flex items-center gap-5">
+          <div className="w-full flex flex-col md:flex-row items-center md:gap-5">
             <div>
               <label for="first-name">First Name</label>
               <input
@@ -98,7 +98,7 @@ function SignUpForm({setType}) {
             />
           </div>
 
-          <div className="w-full flex items-center gap-5">
+          <div className="w-full flex flex-col md:flex-row items-center md:gap-5">
             <div>
               <label for="password">Password</label>
               <input

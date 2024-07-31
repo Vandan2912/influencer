@@ -244,7 +244,7 @@ const resources = [
     {
         name: "Agencies",
         description: "Get a better understanding of your traffic",
-        href: "#",
+        href: "/agencies",
         icon: ChartPieIcon,
     },
     {
@@ -274,7 +274,7 @@ const resources = [
     {
         name: "Member Login",
         description: "Build strategic funnels that will convert",
-        href: "#",
+        href: "/login",
         icon: ArrowPathIcon,
     },
 ];
