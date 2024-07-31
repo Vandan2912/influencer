@@ -91,13 +91,13 @@ const Footer = () => {
           <a href="#1">
             <p className="text-sm">Affiliate Disclaimer</p>
           </a>
-          <a href="#1">
+          <a href="/login">
             <p className="text-sm">Member Login</p>
           </a>
           <a href="#1">
             <p className="text-sm">Authors and Experts</p>
           </a>
-          <a href="#1">
+          <a href="/about">
             <p className="text-sm">Agency Hub</p>
           </a>
         </div>
