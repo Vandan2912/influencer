@@ -1,6 +1,6 @@
 import { useGoogleLogin } from "@react-oauth/google";
 import React from "react";
-function SignUpForm({setType}) {
+function SignUpForm({ setType }) {
   const [state, setState] = React.useState({
     fname: "",
     lname: "",
@@ -65,7 +65,7 @@ function SignUpForm({setType}) {
             <hr className="flex-1 h-[2px] bg-[#808285]" />
           </div>
           <div className="w-full flex flex-col md:flex-row items-center md:gap-5">
-            <div>
+            <div className="w-full">
               <label for="first-name">First Name</label>
               <input
                 id="first-name"
@@ -75,7 +75,7 @@ function SignUpForm({setType}) {
                 onChange={handleChange}
               />
             </div>
-            <div>
+            <div className="w-full">
               <label for="last-name">Last Name</label>
               <input
                 id="last-name"
@@ -99,7 +99,7 @@ function SignUpForm({setType}) {
           </div>
 
           <div className="w-full flex flex-col md:flex-row items-center md:gap-5">
-            <div>
+            <div className="w-full">
               <label for="password">Password</label>
               <input
                 id="password"
@@ -109,7 +109,7 @@ function SignUpForm({setType}) {
                 onChange={handleChange}
               />
             </div>
-            <div>
+            <div className="w-full">
               <label for="confirm-password">Confirm Password</label>
               <input
                 id="confirm-password"

@@ -289,13 +289,13 @@ const about = [
     {
         name: "Software Testing Methodology",
         description: "Speak directly to your customers",
-        href: "#",
+        href: "/about/software-testing-methodology",
         icon: CursorArrowRaysIcon,
     },
     {
         name: "Agencies Testing Methodology",
         description: "Speak directly to your customers",
-        href: "#",
+        href: "/about/agencies-testing-methodology",
         icon: CursorArrowRaysIcon,
     },
 ];
