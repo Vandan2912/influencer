@@ -88,15 +88,15 @@ const Footer = () => {
           <a href="/terms-conditions">
             <p className="text-sm">Terms & Conditions</p>
           </a>
-          <a href="#1">
+          <a href="/affiliate-disclaimer">
             <p className="text-sm">Affiliate Disclaimer</p>
           </a>
           <a href="/login">
             <p className="text-sm">Member Login</p>
           </a>
-          <a href="#1">
+          {/* <a href="#1">
             <p className="text-sm">Authors and Experts</p>
-          </a>
+          </a> */}
           <a href="/about">
             <p className="text-sm">Agency Hub</p>
           </a>
@@ -106,20 +106,20 @@ const Footer = () => {
       <div className="px-6 py-12 lg:px-28 lg:py-9 flex flex-col-reverse lg:flex-row gap-10 justify-between items-center w-full">
         <p>Copyright 2024 influencermarketinghub. all rights reserved</p>
         <div className="flex gap-5">
-          <div className="flex justify-center items-center bg-[#EB3C7526] h-6 w-6">
+          <div className="flex justify-center items-center bg-[#EB3C7526] h-6 w-6 cursor-pointer">
             <img src={twitterIcon.src} alt="twitterIcon" className="h-4 w-4" />
           </div>
-          <div className="flex justify-center items-center bg-[#EB3C7526] h-6 w-6">
+          <div className="flex justify-center items-center bg-[#EB3C7526] h-6 w-6 cursor-pointer">
             <img src={facebookIcon.src} alt="twitterIcon" className="h-4 w-4" />
           </div>
-          <div className="flex justify-center items-center bg-[#EB3C7526] h-6 w-6">
+          <div className="flex justify-center items-center bg-[#EB3C7526] h-6 w-6 cursor-pointer">
             <img
               src={instagramIcon.src}
               alt="twitterIcon"
               className="h-4 w-4"
             />
           </div>
-          <div className="flex justify-center items-center bg-[#EB3C7526] h-6 w-6">
+          <div className="flex justify-center items-center bg-[#EB3C7526] h-6 w-6 cursor-pointer">
             <img src={ticktokIcon.src} alt="twitterIcon" className="h-4 w-4" />
           </div>
         </div>

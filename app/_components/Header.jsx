@@ -24,7 +24,14 @@ import {
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
 import logo from "../../assets/logo.png";
-import { about, agencies, articles, platforms, products, resources } from "@/Constants/header-constants";
+import {
+  about,
+  agencies,
+  articles,
+  platforms,
+  products,
+  resources,
+} from "@/Constants/header-constants";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { SearchBar } from "./SearchBar";
@@ -36,32 +43,32 @@ import { SearchResultsList } from "./SearchResultsList";
 // ];
 
 const Header = () => {
-  const router = useRouter()
-  const pathname = usePathname()
-  const [searchbar, setSearchbar] = useState(false)
+  const router = useRouter();
+  const pathname = usePathname();
+  const [searchbar, setSearchbar] = useState(false);
   const [results, setResults] = useState([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const timeOutRef = useRef()
-  const articlesRef = useRef()
-  const platformRef = useRef()
-  const agenciesRef = useRef()
-  const resourcesRef = useRef()
-  const aboutRef = useRef()
-console.log("results", results)
+  const timeOutRef = useRef();
+  const articlesRef = useRef();
+  const platformRef = useRef();
+  const agenciesRef = useRef();
+  const resourcesRef = useRef();
+  const aboutRef = useRef();
+  console.log("results", results);
   const handleEnter = (isOpen, ref) => {
-    clearTimeout(timeOutRef.current)
-    !isOpen && ref.current?.click()
-  }
+    clearTimeout(timeOutRef.current);
+    !isOpen && ref.current?.click();
+  };
 
   const handleLeave = (isOpen, ref) => {
     timeOutRef.current = setTimeout(() => {
-      isOpen && ref.current?.click()
-    }, 400)
-  }
+      isOpen && ref.current?.click();
+    }, 400);
+  };
 
   const close = () => {
-    setSearchbar(false)
-  }
+    setSearchbar(false);
+  };
 
   return (
     <header
@@ -83,16 +90,26 @@ console.log("results", results)
             <img alt="logo" src={logo.src} className="h-8 w-auto" />
           </a>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden gap-5 items-center">
+          <Button
+            className="rounded-full text-white"
+            onClick={() => {
+              setSearchbar(true);
+            }}
+          >
+            <MagnifyingGlassIcon className="text-white h-5 w-5" />
+          </Button>
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
           >
             <span className="sr-only">Open main menu</span>
-            {
-              mobileMenuOpen ? <XMarkIcon aria-hidden="true" className="h-6 w-6" /> : <Bars3Icon aria-hidden="true" className="h-6 w-6" />
-            }
+            {mobileMenuOpen ? (
+              <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+            ) : (
+              <Bars3Icon aria-hidden="true" className="h-6 w-6" />
+            )}
           </button>
         </div>
 
@@ -107,18 +124,22 @@ console.log("results", results)
                 onMouseEnter={() => handleEnter(open, articlesRef)}
                 onMouseLeave={() => handleLeave(open, articlesRef)}
               >
-                <PopoverButton ref={articlesRef} className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none" >
+                <PopoverButton
+                  ref={articlesRef}
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                >
                   <Link href="/articles">Articles</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none text-white transition-all"
-                    style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+                    style={{
+                      transform: open ? "rotate(180deg)" : "rotate(0deg)",
+                    }}
                   />
                 </PopoverButton>
                 <PopoverElement array={articles} />
               </div>
             )}
-
           </Popover>
 
           <Popover className="relative">
@@ -127,12 +148,17 @@ console.log("results", results)
                 onMouseEnter={() => handleEnter(open, platformRef)}
                 onMouseLeave={() => handleLeave(open, platformRef)}
               >
-                <PopoverButton ref={platformRef} className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none">
+                <PopoverButton
+                  ref={platformRef}
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                >
                   <Link href="/platforms">Platforms</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none text-white transition-all"
-                    style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+                    style={{
+                      transform: open ? "rotate(180deg)" : "rotate(0deg)",
+                    }}
                   />
                 </PopoverButton>
                 <PopoverElement array={platforms} />
@@ -146,12 +172,17 @@ console.log("results", results)
                 onMouseEnter={() => handleEnter(open, agenciesRef)}
                 onMouseLeave={() => handleLeave(open, agenciesRef)}
               >
-                <PopoverButton ref={agenciesRef} className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none">
+                <PopoverButton
+                  ref={agenciesRef}
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                >
                   <Link href="/agencies">Agencies</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none text-white transition-all"
-                    style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+                    style={{
+                      transform: open ? "rotate(180deg)" : "rotate(0deg)",
+                    }}
                   />
                 </PopoverButton>
                 <PopoverElement array={agencies} />
@@ -165,12 +196,17 @@ console.log("results", results)
                 onMouseEnter={() => handleEnter(open, resourcesRef)}
                 onMouseLeave={() => handleLeave(open, resourcesRef)}
               >
-                <PopoverButton ref={resourcesRef} className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none">
+                <PopoverButton
+                  ref={resourcesRef}
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                >
                   <Link href="/resources">Resources</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none text-white transition-all"
-                    style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+                    style={{
+                      transform: open ? "rotate(180deg)" : "rotate(0deg)",
+                    }}
                   />
                 </PopoverButton>
                 <PopoverElement array={resources} />
@@ -184,12 +220,17 @@ console.log("results", results)
                 onMouseEnter={() => handleEnter(open, aboutRef)}
                 onMouseLeave={() => handleLeave(open, aboutRef)}
               >
-                <PopoverButton ref={aboutRef} className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none">
+                <PopoverButton
+                  ref={aboutRef}
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                >
                   <Link href="/about">About Us</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none text-white transition-all"
-                    style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+                    style={{
+                      transform: open ? "rotate(180deg)" : "rotate(0deg)",
+                    }}
                   />
                 </PopoverButton>
                 <PopoverElement array={about} />
@@ -197,15 +238,22 @@ console.log("results", results)
             )}
           </Popover>
 
-          <Button className="bg-[#EB3C75] rounded-full py-2 px-5 text-white" onClick={() => {
-            router.push("/resources/benchmark-report")
-          }}>Benchmark Report 2024</Button>
-          <Button className="bg-[#EB3C75] rounded-full p-3 text-white" onClick={() => {
-            setSearchbar(true)
-          }}>
+          <Button
+            className="bg-[#EB3C75] rounded-full py-2 px-5 text-white"
+            onClick={() => {
+              router.push("/resources/benchmark-report");
+            }}
+          >
+            Benchmark Report 2024
+          </Button>
+          <Button
+            className="bg-[#EB3C75] rounded-full p-3 text-white"
+            onClick={() => {
+              setSearchbar(true);
+            }}
+          >
             <MagnifyingGlassIcon className="text-white h-5 w-5" />
           </Button>
-
         </PopoverGroup>
       </nav>
       <Dialog
@@ -228,9 +276,17 @@ console.log("results", results)
               <XMarkIcon aria-hidden="true" className="h-6 w-6" />
             </button>
           </div>
-          <div className="mt-16 flow-root">
+          <div className="mt-10 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+                <Button
+                  className="bg-[#EB3C75] rounded-lg py-2 px-5 text-white w-full"
+                  onClick={() => {
+                    router.push("/resources/benchmark-report");
+                  }}
+                >
+                  Benchmark Report 2024
+                </Button>
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                     Articles
@@ -350,16 +406,23 @@ console.log("results", results)
           </div>
         </DialogPanel>
       </Dialog>
-      <Dialog open={searchbar} as="div" className="relative z-10 focus:outline-none" onClose={close}>
+      <Dialog
+        open={searchbar}
+        as="div"
+        className="relative z-50 focus:outline-none"
+        onClose={close}
+      >
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-          <div className="flex min-h-full items-start justify-center p-4 pt-32">
+          <div className="flex min-h-full items-start justify-center p-4 pt-24 md:pt-32 ">
             <DialogPanel
               transition
-              className="w-full max-w-md rounded-xl bg-white p-6  duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+              className="w-full max-w-md rounded-xl bg-gray-100 p-6  duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
             >
               <div className="search-bar-container">
                 <SearchBar setResults={setResults} />
-                {results && results.length > 0 && <SearchResultsList results={results} />}
+                {results && results.length > 0 && (
+                  <SearchResultsList results={results} />
+                )}
               </div>
             </DialogPanel>
           </div>
