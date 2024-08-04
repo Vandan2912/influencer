@@ -48,8 +48,8 @@ const HeroSection = ({ data }) => {
           {
             data.map((item, i) => {
               return (
-                <SwiperSlide key={i} className="!w-36 !h-[20vh]">
-                  <img src={item.image} className={`object-cover cursor-pointer rounded-md border border-white ${index === i ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
+                <SwiperSlide key={i} className={`!w-36 !h-[20vh] ${index===i? "opacity-100" : "opacity-40 hover:opacity-80"}`}>
+                  <img src={item.image} className={`object-cover cursor-pointer rounded-md duration-300 border border-white ${index === i ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
                 </SwiperSlide>
               )
             })
@@ -84,11 +84,11 @@ const TextContainer = ({ data }) => {
           sagittis dignissim
         </p>
         <div className="flex gap-0 sm:gap-8 flex-col sm:flex-row">
-          <Button className="bg-[#EB3C75] w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white mt-5 flex items-center gap-3">
+          <Button className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white mt-5 flex items-center gap-3">
             About Us
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>
-          <Button className="hover:bg-white w-fit bg-white sm:bg-transparent border border-white text-sm sm:text-base rounded-full py-3 px-7 text-black sm:text-white hover:text-black mt-5 flex items-center gap-3">
+          <Button className="hover:bg-white w-fit duration-300 bg-white sm:bg-transparent border border-white text-sm sm:text-base rounded-full py-3 px-7 text-black sm:text-white hover:text-black mt-5 flex items-center gap-3">
             Contact Us
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>
