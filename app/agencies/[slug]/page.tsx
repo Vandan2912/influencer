@@ -107,7 +107,7 @@ const Page = () => {
           </p>
           <div className="flex gap-7">
             <Button
-              className="bg-[#EB3C75] border border-[#EB3C75] rounded-md w-fit py-1 px-8 text-white flex items-center gap-3 text-sm sm:text-base"
+              className="bg-[#EB3C75] hover:bg-[#860e35] hover:border-[#860e35] duration-300 border border-[#EB3C75] rounded-md w-fit py-1 px-8 text-white flex items-center gap-3 text-sm sm:text-base"
               onClick={() => {
                 // router.push(``);
               }}
@@ -115,7 +115,7 @@ const Page = () => {
               Tiktok
             </Button>
             <Button
-              className="bg-[#EB3C75] border border-[#EB3C75] rounded-md w-fit py-1 px-8 text-white flex items-center gap-3 text-sm sm:text-base"
+              className="bg-[#EB3C75] hover:bg-[#860e35] hover:border-[#860e35] duration-300 border border-[#EB3C75] rounded-md w-fit py-1 px-8 text-white flex items-center gap-3 text-sm sm:text-base"
               onClick={() => {
                 // router.push(``);
               }}
