@@ -35,7 +35,7 @@ const Page = () => {
                 <p>From $478</p>
               </div>
             </div>
-            <Button className="group hover:bg-[#EB3C75] bg-white border h-fit w-fit border-[#EB3C75] rounded-full py-1 px-5 md:px-8 text-[#EB3C75] hover:text-white mt-5 flex items-center gap-3">
+            <Button className="group hover:bg-[#EB3C75] duration-300 bg-white border h-fit w-fit border-[#EB3C75] rounded-full py-1 px-5 md:px-8 text-[#EB3C75] hover:text-white mt-5 flex items-center gap-3">
               Summarize
               <ArrowLongRightIcon className="h-6 w-6 text-[#EB3C75] group-hover:text-white" />
             </Button>
