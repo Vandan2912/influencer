@@ -41,7 +41,7 @@ const HeroSection = () => {
       <div className="absolute bottom-10 right-10 z-10 hidden lg:flex gap-5 items-end w-4/5">
         <Swiper
           onSwiper={setThumbsSwiper}
-          // loop={true}
+          loop={true}
           // freeMode={true}
           // watchSlidesProgress={true}
           slidesPerView={4}

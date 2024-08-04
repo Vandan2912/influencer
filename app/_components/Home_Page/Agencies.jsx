@@ -54,9 +54,9 @@ export default Agencies;
 const Card = ({ image, title, desc, color = "black" }) => {
   const router = useRouter()
   return (
-    <div className="col-span-2 bg-white rounded-[20px] flex flex-col sm:flex-row min-h-[25vh] border border-[#00000033] p-5 hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300">
+    <div className="group col-span-2 bg-white rounded-[20px] flex flex-col sm:flex-row min-h-[25vh] border border-[#00000033] p-5 hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300">
       <div
-        className="w-full sm:w-1/5 rounded-[20px]"
+        className="w-full sm:w-1/5 rounded-[20px] overflow-hidden"
         style={{
           backgroundColor: color,
         }}
@@ -64,7 +64,7 @@ const Card = ({ image, title, desc, color = "black" }) => {
         <img
           src={image.src}
           alt=""
-          className="w-full h-full object-contain rounded-[20px]"
+          className="w-full h-full object-contain rounded-[20px] group-hover:scale-110 duration-300"
         />
       </div>
 

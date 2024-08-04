@@ -13,7 +13,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 const HeroSection = ({ data }) => {
   const [index, setIndex] = useState(0);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
+console.log('index', index)
   return (
     <div className="min-h-[50vh] md:min-h-[80vh] lg:min-h-screen  w-full relative">
       <Swiper
@@ -38,7 +38,7 @@ const HeroSection = ({ data }) => {
       <div className="absolute bottom-10 right-10 z-10 hidden lg:flex gap-5 items-end w-4/5">
         <Swiper
           onSwiper={setThumbsSwiper}
-          // loop={true}
+          loop={true}
           // freeMode={true}
           // watchSlidesProgress={true}
           slidesPerView={4}
