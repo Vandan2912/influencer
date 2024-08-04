@@ -12,7 +12,7 @@ const GuidsReports = () => {
     <section className="px-6 py-12 lg:px-28 lg:py-24 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
       <div className="flex justify-between">
         <p className="text-2xl lg:text-4xl font-semibold">Guids & Reports</p>
-        <div className="text-[#EB3C75] underline cursor-pointer" onClick={() => {
+        <div className="cursor-pointer linkHoverEffect" onClick={() => {
           router.push("/articles");
         }}>See All</div>
       </div>
@@ -43,12 +43,13 @@ const GuidsReports = () => {
 export default GuidsReports;
 
 const Card = ({ image, title, desc, tag }) => {
+  const router = useRouter()
   return (
-    <div className="col-span-3 md:col-span-1 bg-white rounded-[20px] pb-6">
-      <img src={image.src} alt="" className="w-full max-h-52 object-cover rounded-ss-[20px] rounded-se-[20px]" />
+    <div className="col-span-3 md:col-span-1 bg-white rounded-[20px] pb-6 hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 ">
+      <img src={image.src} alt="" className="w-full max-h-52 object-cover rounded-ss-[20px] rounded-se-[20px] cursor-pointer" onClick={()=>{router.push("/resources/benchmark-report")}} />
       <div className="p-5">
         <p className="bg-[#00000020] w-fit px-2 rounded-md">{tag}</p>
-        <p className="text-base font-semibold mt-3">{title}</p>
+        <p className="text-base font-semibold mt-3 cursor-pointer hover:text-[#EB3C75]" onClick={()=>{router.push("/resources/benchmark-report")}}>{title}</p>
         <p className="text-sm mt-3">{desc}</p>
       </div>
     </div>

@@ -1,17 +1,21 @@
+"use client"
+
 import React from "react";
 import hashtags from "../../../assets/hashtags.png";
 import instaCost from "../../../assets/post_cost.png";
 import youtube from "../../../assets/youtube.png";
 import ticktok from "../../../assets/tiktok.png";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const PopularPool = () => {
   return (
-    <section className="px-6 py-12 lg:px-28 lg:py-32 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
+    <section className="px-6 py-12 lg:px-28 lg:py-28 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
       <div className="flex justify-between">
-        <p className="text-2xl lg:text-4xl font-semibold">Popular Pool</p>
-        <div className="text-[#EB3C75] underline">
+        <p className="text-2xl lg:text-4xl font-semibold">Popular Tool</p>
+        <Link href="/resources/tools" className="linkHoverEffect">
           See All Tools
-        </div>
+        </Link>
       </div>
       <div className="grid grid-cols-2 gap-6 mt-10">
         <Card image={hashtags} title="Instagram Hashtag Generator" />
@@ -29,8 +33,10 @@ const PopularPool = () => {
 export default PopularPool;
 
 const Card = ({ image, title }) => {
+  const router = useRouter();
   return (
-    <div className="col-span-2 md:col-span-1 bg-white rounded-[20px] flex min-h-[15vh] md:min-h-[20vh]">
+    <div className="col-span-2 md:col-span-1 bg-white rounded-[20px] flex min-h-[15vh] md:min-h-[20vh] cursor-pointer duration-300 hover:shadow-[0_0_11px_rgba(33,33,33,.2)]"
+      onClick={() => { router.push("/resources/tools/123") }}>
       <div className="w-1/3 md:w-1/4">
         <img
           src={image.src}

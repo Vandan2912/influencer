@@ -71,7 +71,7 @@ const Articles = () => {
         </div>
       </div>
       <div className="text-center mt-10">
-        <Link href="/articles" className="text-[#EB3C75] underline">
+        <Link href="/articles" className=" linkHoverEffectWhite">
           See All Articles
         </Link>
       </div>
@@ -89,7 +89,7 @@ const Card = ({ image, title, desc, className }) => {
         <p className="bg-[#00000035] w-fit px-2 rounded-md">
           Digital Marketing
         </p>
-        <p className="text-base font-semibold mt-3">{title}</p>
+        <Link href="#" className="text-base font-semibold mt-3 hover:text-[#EB3C75]">{title}</Link>
         <p className="text-sm mt-3">{desc}</p>
       </div>
     </div>

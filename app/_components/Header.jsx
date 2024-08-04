@@ -81,13 +81,13 @@ const Header = () => {
     >
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-[90rem] items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-[90rem] items-center justify-between py-3 px-6 lg:px-8"
       >
         <div className="flex lg:flex-1 shrink-0">
           {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
           <a href="/" className="-m-1.5 p-1.5 shrink-0">
             <span className="sr-only">Your Company</span>
-            <img alt="logo" src={logo.src} className="h-8 w-auto" />
+            <img alt="logo" src={logo.src} className="h-12 w-auto" />
           </a>
         </div>
         <div className="flex lg:hidden gap-5 items-center">
@@ -126,12 +126,12 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={articlesRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white hover:text-[#EB3C75] hover:underline focus-visible:outline-none"
                 >
                   <Link href="/articles">Articles</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
-                    className="h-5 w-5 flex-none text-white transition-all"
+                    className="h-5 w-5 flex-none transition-all"
                     style={{
                       transform: open ? "rotate(180deg)" : "rotate(0deg)",
                     }}
@@ -150,12 +150,12 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={platformRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white hover:text-[#EB3C75] hover:underline focus-visible:outline-none"
                 >
                   <Link href="/platforms">Platforms</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
-                    className="h-5 w-5 flex-none text-white transition-all"
+                    className="h-5 w-5 flex-none transition-all"
                     style={{
                       transform: open ? "rotate(180deg)" : "rotate(0deg)",
                     }}
@@ -174,12 +174,12 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={agenciesRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white hover:text-[#EB3C75] hover:underline focus-visible:outline-none"
                 >
                   <Link href="/agencies">Agencies</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
-                    className="h-5 w-5 flex-none text-white transition-all"
+                    className="h-5 w-5 flex-none transition-all"
                     style={{
                       transform: open ? "rotate(180deg)" : "rotate(0deg)",
                     }}
@@ -198,12 +198,12 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={resourcesRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white hover:text-[#EB3C75] hover:underline focus-visible:outline-none"
                 >
                   <Link href="/resources">Resources</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
-                    className="h-5 w-5 flex-none text-white transition-all"
+                    className="h-5 w-5 flex-none transition-all"
                     style={{
                       transform: open ? "rotate(180deg)" : "rotate(0deg)",
                     }}
@@ -222,12 +222,12 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={aboutRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white hover:text-[#EB3C75] hover:underline focus-visible:outline-none"
                 >
                   <Link href="/about">About Us</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
-                    className="h-5 w-5 flex-none text-white transition-all"
+                    className="h-5 w-5 flex-none transition-all"
                     style={{
                       transform: open ? "rotate(180deg)" : "rotate(0deg)",
                     }}
@@ -239,7 +239,7 @@ const Header = () => {
           </Popover>
 
           <Button
-            className="bg-[#EB3C75] rounded-full py-2 px-5 text-white"
+            className="bg-[#EB3C75] rounded-full py-2 px-5 text-white hover:bg-[#860e35] duration-300 "
             onClick={() => {
               router.push("/resources/benchmark-report");
             }}
@@ -247,7 +247,7 @@ const Header = () => {
             Benchmark Report 2024
           </Button>
           <Button
-            className="bg-[#EB3C75] rounded-full p-3 text-white"
+            className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 rounded-full p-3 text-white"
             onClick={() => {
               setSearchbar(true);
             }}
