@@ -12,8 +12,7 @@ const Tools = () => {
 
             <div className="flex justify-between items-center px-5 mb-5">
                 <h1 className='text-3xl font-bold'>Tools</h1>
-                <Button className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white flex items-center gap-3" onClick={()=>{
-                    router.push("/resources/tools")
+                <Button className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white flex items-center gap-3" onClick={()=>{                    router.push("/resources/tools")
                 }}>
                     View All
                     <ArrowLongRightIcon className="h-5 w-5" />
@@ -29,7 +28,7 @@ const Tools = () => {
                             <p className="text-xl font-semibold mt-7 text-[#EB3C75] text-center">
                                 Influencer Marketing
                             </p>
-                            <p className="text-2xl lg:text-3xl font-semibold mt-7">
+                            <p className="text-2xl hover:text-[#EB3C75] duration-300 cursor-pointer lg:text-3xl font-semibold mt-7">
                                 TikTok Money Calculator [Influencer Engagement & Earnings]
                             </p>
                             <p className="text-base mt-5">
@@ -41,7 +40,7 @@ const Tools = () => {
                             <p className="text-xl font-semibold mt-7 text-[#EB3C75] text-center">
                                 Influencer Marketing
                             </p>
-                            <p className="text-2xl lg:text-3xl font-semibold mt-7">
+                            <p className="text-2xl hover:text-[#EB3C75] duration-300 cursor-pointer lg:text-3xl font-semibold mt-7">
                                 TikTok Money Calculator [Influencer Engagement & Earnings]
                             </p>
                             <p className="text-base mt-5">

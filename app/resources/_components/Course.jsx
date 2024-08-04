@@ -12,7 +12,7 @@ const Course = ({ title, cources }) => {
 
             <div className="flex justify-between items-center px-5 mb-5">
                 <h1 className='text-xl sm:text-2xl md:text-3xl font-bold'>{title}</h1>
-                <Button className="bg-[#EB3C75] w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white flex items-center gap-3" onClick={()=>{
+                <Button className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white flex items-center gap-3" onClick={()=>{
                     router.push("/resources/cources")
                 }}>
                     View All
