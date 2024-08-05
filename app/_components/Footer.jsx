@@ -18,41 +18,41 @@ const Footer = () => {
           <p className="text-lg mb-3">Company</p>
 
           <a href="/articles">
-            <p className="text-sm hover:text-[#EB3C75]">Articles</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Articles</p>
           </a>
           <a href="/platforms">
-            <p className="text-sm hover:text-[#EB3C75]">Platforms</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Platforms</p>
           </a>
           <a href="/agencies">
-            <p className="text-sm hover:text-[#EB3C75]">Agencies</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Agencies</p>
           </a>
           <a href="/resources">
-            <p className="text-sm hover:text-[#EB3C75]">Resources</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Resources</p>
           </a>
           <a href="/contact">
-            <p className="text-sm hover:text-[#EB3C75]">Contact Us</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Contact Us</p>
           </a>
         </div>
         <div className="col-span-6 md:col-span-4 flex flex-col gap-3">
           <p className="text-lg mb-3">Popular</p>
 
           <a href="/platforms/influencer">
-            <p className="text-sm hover:text-[#EB3C75]">Influencer Marketing Platforms</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Influencer Marketing Platforms</p>
           </a>
           <a href="/agencies/influencer">
-            <p className="text-sm hover:text-[#EB3C75]">Influencer Marketing Agencies</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Influencer Marketing Agencies</p>
           </a>
           <a href="/platforms/social">
-            <p className="text-sm hover:text-[#EB3C75]">Social Media Marketing Platforms</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Social Media Marketing Platforms</p>
           </a>
           <a href="/agencies/social">
-            <p className="text-sm hover:text-[#EB3C75]">Social Media Agencies</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Social Media Agencies</p>
           </a>
           <a href="/platforms/email">
-            <p className="text-sm hover:text-[#EB3C75]">Email Marketing Software</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Email Marketing Software</p>
           </a>
           <a href="/agencies/email">
-            <p className="text-sm hover:text-[#EB3C75]">Digital Marketing Agencies</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Digital Marketing Agencies</p>
           </a>
         </div>
 
@@ -60,19 +60,19 @@ const Footer = () => {
           <p className="text-lg mb-3">Free Tools</p>
 
           <a href="/resources/tools">
-            <p className="text-sm hover:text-[#EB3C75]">TikTok Engagement Calculator</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">TikTok Engagement Calculator</p>
           </a>
           <a href="/resources/tools">
-            <p className="text-sm hover:text-[#EB3C75]">Instagram Calculator</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Instagram Calculator</p>
           </a>
           <a href="/resources/tools">
-            <p className="text-sm hover:text-[#EB3C75]">YouTube Calculator</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">YouTube Calculator</p>
           </a>
           <a href="/resources/tools">
-            <p className="text-sm hover:text-[#EB3C75]">Glossary</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Glossary</p>
           </a>
           <a href="/resources/tools">
-            <p className="text-sm hover:text-[#EB3C75]">Image Resizer</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Image Resizer</p>
           </a>
         </div>
 
@@ -80,25 +80,25 @@ const Footer = () => {
           <p className="text-lg mb-3">Other Links</p>
 
           <a href="/cookies">
-            <p className="text-sm hover:text-[#EB3C75]">Cookie Policy</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Cookie Policy</p>
           </a>
           <a href="/privacy">
-            <p className="text-sm hover:text-[#EB3C75]">Privacy Policy</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Privacy Policy</p>
           </a>
           <a href="/terms-conditions">
-            <p className="text-sm hover:text-[#EB3C75]">Terms & Conditions</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Terms & Conditions</p>
           </a>
           <a href="/affiliate-disclaimer">
-            <p className="text-sm hover:text-[#EB3C75]">Affiliate Disclaimer</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Affiliate Disclaimer</p>
           </a>
           <a href="/login">
-            <p className="text-sm hover:text-[#EB3C75]">Member Login</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Member Login</p>
           </a>
           {/* <a href="#1">
-            <p className="text-sm hover:text-[#EB3C75]">Authors and Experts</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Authors and Experts</p>
           </a> */}
           <a href="/about">
-            <p className="text-sm hover:text-[#EB3C75]">Agency Hub</p>
+            <p className="text-sm hover:text-[#EB3C75] w-fit">Agency Hub</p>
           </a>
         </div>
       </div>
