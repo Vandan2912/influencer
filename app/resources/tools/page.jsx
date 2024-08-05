@@ -116,7 +116,7 @@ const ArticleSections = ({ title, data }) => {
     <div className=''>
       <div className='flex justify-between items-center'>
         <p className='text-2xl font-bold'>{title}</p>
-        <Button className="hover:bg-[#EB3C75] border border-[#EB3C75] bg-white b rounded-full py-1 px-8 text-[#EB3C75] hover:text-white mt-5 flex items-center gap-3">
+        <Button className="hover:bg-[#EB3C75] duration-300 border border-[#EB3C75] bg-white b rounded-full py-1 px-8 text-[#EB3C75] hover:text-white mt-5 flex items-center gap-3">
           See all
         </Button>
       </div>
@@ -134,9 +134,9 @@ const Card = ({ data, index }) => {
   const router = useRouter()
   return (
     // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
-    <div className='col-span-4 sm:col-span-2 lg:col-span-1 flex flex-col gap-2 p-4 shadow-[0px_3.33px_4.44px_0px_#00000012] rounded-md cursor-pointer' onClick={() => { router.push("/resources/tools/123") }}>
-      <img src={`/eccomerce/${data.image}`} alt="" className='max-h-52 h-48 w-full object-cover rounded-md' />
-      <p className='text-lg font-bold'>{data.title}</p>
+    <div className='col-span-4 sm:col-span-2 lg:col-span-1 group flex flex-col gap-2 p-4 border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 rounded-md cursor-pointer' onClick={() => { router.push("/resources/tools/123") }}>
+      <img src={`/eccomerce/${data.image}`} alt="" className='max-h-52 group-hover:scale-105 duration-300 h-48 w-full object-cover rounded-md' />
+      <p className='text-lg font-bold hover:text-[#EB3C75] duration-300'>{data.title}</p>
       <p className='text-sm'>{data.desc}</p>
     </div>
   )

@@ -17,7 +17,7 @@ const Marketing = () => {
           <img
             src={ima.src}
             alt=""
-            className=" w-full max-h-[30vh] lg:max-h-[unset] h-[60vh] object-cover rounded-[20px]"
+            className=" w-full hover:scale-105 duration-300 max-h-[30vh] lg:max-h-[unset] h-[60vh] object-cover rounded-[20px]"
           />
         </div>
         <div className="flex-1 shrink-0 ">
@@ -53,7 +53,7 @@ const Marketing = () => {
           <img
             src={imp.src}
             alt=""
-            className="w-full max-h-[30vh] lg:max-h-[unset] h-[60vh] object-cover rounded-[20px]"
+            className="w-full hover:scale-105 duration-300 max-h-[30vh] lg:max-h-[unset] h-[60vh] object-cover rounded-[20px]"
           />
         </div>
       </div>

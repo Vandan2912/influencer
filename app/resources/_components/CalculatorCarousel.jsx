@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { Autoplay, FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
@@ -16,11 +16,15 @@ const CalculatorCarousel = ({ data }) => {
     <div className="  w-full relative">
       <Swiper
         className="CalculatorCarousel"
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         slidesPerView={3}
         spaceBetween={20}
         navigation={true}
         loop={true}
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[Autoplay, FreeMode, Navigation, Thumbs]}
       >
         {
           data.map((item, i) => {
