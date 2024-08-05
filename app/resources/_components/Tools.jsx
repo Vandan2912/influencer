@@ -24,11 +24,17 @@ const Tools = () => {
                 <div className="flex mt-14 gap-20 flex-col-reverse lg:flex-row">
                     <div className="w-full lg:w-[55%] flex flex-col md:flex-row lg:flex-col gap-10">
                         <div className="">
-                            <img src="/resources/tool1.png" alt="" className="w-full rounded-2xl object-cover" />
-                            <p className="text-xl font-semibold mt-7 text-[#EB3C75] text-center">
+                            <img src="/resources/tool1.png" alt="" className="w-full rounded-2xl object-cover cursor-pointer hover:scale-105 duration-300" onClick={()=>{
+                                router.push("/resources/tools/influencer")
+                            }} />
+                            <p className="text-xl font-semibold mt-7 text-[#EB3C75] text-center" onClick={()=>{
+                                router.push("/resources/tools/influencer")
+                            }}>
                                 Influencer Marketing
                             </p>
-                            <p className="text-2xl hover:text-[#EB3C75] duration-300 cursor-pointer lg:text-3xl font-semibold mt-7">
+                            <p className="text-2xl hover:text-[#EB3C75] duration-300 cursor-pointer lg:text-3xl font-semibold mt-7" onClick={()=>{
+                                router.push("/resources/tools/influencer")
+                            }}>
                                 TikTok Money Calculator [Influencer Engagement & Earnings]
                             </p>
                             <p className="text-base mt-5">
@@ -36,11 +42,17 @@ const Tools = () => {
                             </p>
                         </div>
                         <div className="">
-                            <img src="/resources/tool2.jpeg" alt="" className="w-full rounded-2xl object-cover" />
-                            <p className="text-xl font-semibold mt-7 text-[#EB3C75] text-center">
+                            <img src="/resources/tool2.jpeg" alt="" className="w-full rounded-2xl object-cover hover:scale-105 duration-300 cursor-pointer " onClick={()=>{
+                                router.push("/resources/tools/influencer")
+                            }} />
+                            <p className="text-xl font-semibold mt-7 text-[#EB3C75] text-center" onClick={()=>{
+                                router.push("/resources/tools/influencer")
+                            }}>
                                 Influencer Marketing
                             </p>
-                            <p className="text-2xl hover:text-[#EB3C75] duration-300 cursor-pointer lg:text-3xl font-semibold mt-7">
+                            <p className="text-2xl hover:text-[#EB3C75] duration-300 cursor-pointer lg:text-3xl font-semibold mt-7" onClick={()=>{
+                                router.push("/resources/tools/influencer")
+                            }}>
                                 TikTok Money Calculator [Influencer Engagement & Earnings]
                             </p>
                             <p className="text-base mt-5">
@@ -50,29 +62,35 @@ const Tools = () => {
                     </div>
                     <div className="w-full lg:w-[45%] flex flex-col md:flex-row lg:flex-col gap-10">
                         <div className="text-center">
-                            <img src="/resources/tool3.png" alt="" className="w-full max-h-56 rounded-2xl object-cover" />
+                            <img src="/resources/tool3.png" alt="" className="w-full max-h-56 rounded-2xl object-cover hover:scale-105 duration-300 cursor-pointer" />
                             <p className="text-xl font-semibold mt-7 text-[#EB3C75]">
                                 Influencer Marketing
                             </p>
-                            <p className="text-lg mt-5">
+                            <p className="text-2xl font-bold mt-3 hover:text-[#EB3C75] cursor-pointer" onClick={()=>{
+                                router.push("/resources/tools/influencer")
+                            }}>
                                 Instagram Hashtag Generator
                             </p>
                         </div>
                         <div className="mt-10 md:mt-0 text-center">
-                            <img src="/resources/tool4.jpeg" alt="" className="w-full max-h-56 rounded-2xl object-cover" />
+                            <img src="/resources/tool4.jpeg" alt="" className="w-full max-h-56 rounded-2xl object-cover hover:scale-105 duration-300 cursor-pointer" />
                             <p className="text-xl font-semibold mt-7 text-[#EB3C75]">
                                 Influencer Marketing
                             </p>
-                            <p className="text-lg mt-5">
+                            <p className="text-2xl font-bold mt-3 hover:text-[#EB3C75] cursor-pointer" onClick={()=>{
+                                router.push("/resources/tools/influencer")
+                            }}>
                                 Instagram Hashtag Generator
                             </p>
                         </div>
                         <div className="mt-10 md:mt-0 text-center">
-                            <img src="/resources/tool5.jpeg" alt="" className="w-full max-h-56 rounded-2xl object-cover" />
+                            <img src="/resources/tool5.jpeg" alt="" className="w-full max-h-56 rounded-2xl object-cover hover:scale-105 duration-300 cursor-pointer" />
                             <p className="text-xl font-semibold mt-7 text-[#EB3C75]">
                                 Influencer Marketing
                             </p>
-                            <p className="text-lg mt-5">
+                            <p className="text-2xl font-bold mt-3 hover:text-[#EB3C75] cursor-pointer" onClick={()=>{
+                                router.push("/resources/tools/influencer")
+                            }}>
                                 Instagram Hashtag Generator
                             </p>
                         </div>
