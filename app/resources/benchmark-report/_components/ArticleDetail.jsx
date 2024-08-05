@@ -15,7 +15,7 @@ const ArticleDetail = () => {
             <hr className='h-1 bg-black mt-2 mb-8' />
             <p className='text-[#413F3F]'>The Influencer Marketing Benchmark Report 2024 is our latest overview of the influencer marketing industry. It summarizes the thoughts of more than 3000 marketing agencies, brands, and other relevant professionals regarding the current state of influencer marketing, along with some predictions of how people expect it to move over the next year and into the future. </p>
 
-            <Button className="bg-[#EB3C75] w-fit rounded-xl py-5 px-8 text-sm sm:text-base text-white my-8 flex items-center gap-3 mx-auto">
+            <Button className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 w-fit rounded-xl py-5 px-8 text-sm sm:text-base text-white my-8 flex items-center gap-3 mx-auto">
                 Download the Benchmark Report Here
             </Button>
 
