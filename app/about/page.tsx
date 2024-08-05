@@ -24,7 +24,7 @@ const Page = () => {
       </section>
       <section className="my-10 flex justify-center">
         <div className="grid grid-cols-2 gap-3">
-          <div className="col-span-2 sm:col-span-1 p-5 rounded-lg bg-[#EB3C7599] text-white">
+          <div className="col-span-2 sm:col-span-1 border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 p-5 rounded-lg bg-[#EB3C7599] text-white">
             <h5 className="text-xl font-bold"> Our Research </h5>
             <p>
               At Influencer Marketing Hub, we are at the forefront of
@@ -37,7 +37,7 @@ const Page = () => {
               insights into marketing trends.
             </p>
           </div>
-          <div className="col-span-2 sm:col-span-1 p-5 rounded-lg bg-[#E9E0E0]">
+          <div className="col-span-2 sm:col-span-1 border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 p-5 rounded-lg bg-[#E9E0E0]">
             <h5 className="text-xl font-bold"> Mission statement </h5>
             <p>
               Influencer Marketing Hub aims to provide the most comprehensive
@@ -48,7 +48,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="my-10 bg-[#F3EDED] p-10 rounded-lg">
+      <section className="my-10 bg-[#F3EDED] p-10 rounded-lg border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300">
         <h5 className="text-lg font-bold">How We Make Money</h5>
         <p>
           At Influencer Marketing Hub, we forge partnerships that may influence
@@ -164,7 +164,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="my-10 bg-[#F3EDED] p-7 rounded-lg">
+      <section className="my-10 bg-[#F3EDED] p-7 rounded-lg border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300">
         <h5 className="text-lg font-bold text-center">The Core Team</h5>
         <p>
           In an era where misinformation and intransparency are all too common,
@@ -210,7 +210,7 @@ const Page = () => {
             </p>
           </div>
           <Button
-            className="bg-[#EB3C75] border border-[#EB3C75] rounded-md w-fit py-1 px-8 text-white flex items-center gap-3 text-sm sm:text-base"
+            className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 hover:border-[#860e35] border border-[#EB3C75] rounded-md w-fit py-1 px-8 text-white flex items-center gap-3 text-sm sm:text-base"
             // onClick={() => {
             //   // router.push(``);
             // }}
@@ -241,7 +241,7 @@ const Page = () => {
             </p>
           </div>
           <Button
-            className="bg-[#EB3C75] border border-[#EB3C75] rounded-md w-fit py-1 px-8 text-white flex items-center gap-3 text-sm sm:text-base"
+            className="bg-[#EB3C75] hover:bg-[#860e35] hover:border-[#860e35] duration-300 border border-[#EB3C75] rounded-md w-fit py-1 px-8 text-white flex items-center gap-3 text-sm sm:text-base"
             // onClick={() => {
             //   // router.push(``);
             // }}
@@ -259,7 +259,7 @@ export default Page;
 
 const Card = () => {
   return (
-    <div className="bg-[#F3EDED] col-span-6 sm:col-span-3 md:col-span-2 rounded-md flex flex-col items-center justify-center gap-3 p-6 text-sm text-center">
+    <div className="bg-[#F3EDED] border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 col-span-6 sm:col-span-3 md:col-span-2 rounded-md flex flex-col items-center justify-center gap-3 p-6 text-sm text-center">
       <img
         src={avatar.src}
         alt=""
