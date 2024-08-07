@@ -18,41 +18,41 @@ const Footer = () => {
           <p className="text-lg mb-3">Company</p>
 
           <a className="cursor-default" href="/articles">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Articles</p>
+            <p className="text-sm cursor-pointer w-fit">Articles</p>
           </a>
           <a className="cursor-default" href="/platforms">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Platforms</p>
+            <p className="text-sm cursor-pointer w-fit">Platforms</p>
           </a>
           <a className="cursor-default" href="/agencies">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Agencies</p>
+            <p className="text-sm cursor-pointer w-fit">Agencies</p>
           </a>
           <a className="cursor-default" href="/resources">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Resources</p>
+            <p className="text-sm cursor-pointer w-fit">Resources</p>
           </a>
           <a className="cursor-default" href="/contact">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Contact Us</p>
+            <p className="text-sm cursor-pointer w-fit">Contact Us</p>
           </a>
         </div>
         <div className="col-span-6 md:col-span-4 flex flex-col gap-3">
           <p className="text-lg mb-3">Popular</p>
 
           <a className="cursor-default" href="/platforms/influencer">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Influencer Marketing Platforms</p>
+            <p className="text-sm cursor-pointer w-fit">Influencer Marketing Platforms</p>
           </a>
           <a className="cursor-default" href="/agencies/influencer">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Influencer Marketing Agencies</p>
+            <p className="text-sm cursor-pointer w-fit">Influencer Marketing Agencies</p>
           </a>
           <a className="cursor-default" href="/platforms/social">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Social Media Marketing Platforms</p>
+            <p className="text-sm cursor-pointer w-fit">Social Media Marketing Platforms</p>
           </a>
           <a className="cursor-default" href="/agencies/social">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Social Media Agencies</p>
+            <p className="text-sm cursor-pointer w-fit">Social Media Agencies</p>
           </a>
           <a className="cursor-default" href="/platforms/email">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Email Marketing Software</p>
+            <p className="text-sm cursor-pointer w-fit">Email Marketing Software</p>
           </a>
           <a className="cursor-default" href="/agencies/email">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Digital Marketing Agencies</p>
+            <p className="text-sm cursor-pointer w-fit">Digital Marketing Agencies</p>
           </a>
         </div>
 
@@ -60,19 +60,19 @@ const Footer = () => {
           <p className="text-lg mb-3">Free Tools</p>
 
           <a className="cursor-default" href="/resources/tools">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">TikTok Engagement Calculator</p>
+            <p className="text-sm cursor-pointer w-fit">TikTok Engagement Calculator</p>
           </a>
           <a className="cursor-default" href="/resources/tools">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Instagram Calculator</p>
+            <p className="text-sm cursor-pointer w-fit">Instagram Calculator</p>
           </a>
           <a className="cursor-default" href="/resources/tools">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">YouTube Calculator</p>
+            <p className="text-sm cursor-pointer w-fit">YouTube Calculator</p>
           </a>
           <a className="cursor-default" href="/resources/tools">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Glossary</p>
+            <p className="text-sm cursor-pointer w-fit">Glossary</p>
           </a>
           <a className="cursor-default" href="/resources/tools">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Image Resizer</p>
+            <p className="text-sm cursor-pointer w-fit">Image Resizer</p>
           </a>
         </div>
 
@@ -80,25 +80,25 @@ const Footer = () => {
           <p className="text-lg mb-3">Other Links</p>
 
           <a className="cursor-default" href="/cookies">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Cookie Policy</p>
+            <p className="text-sm cursor-pointer w-fit">Cookie Policy</p>
           </a>
           <a className="cursor-default" href="/privacy">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Privacy Policy</p>
+            <p className="text-sm cursor-pointer w-fit">Privacy Policy</p>
           </a>
           <a className="cursor-default" href="/terms-conditions">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Terms & Conditions</p>
+            <p className="text-sm cursor-pointer w-fit">Terms & Conditions</p>
           </a>
           <a className="cursor-default" href="/affiliate-disclaimer">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Affiliate Disclaimer</p>
+            <p className="text-sm cursor-pointer w-fit">Affiliate Disclaimer</p>
           </a>
           <a className="cursor-default" href="/login">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Member Login</p>
+            <p className="text-sm cursor-pointer w-fit">Member Login</p>
           </a>
           {/* <a className="cursor-default" href="#1">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Authors and Experts</p>
+            <p className="text-sm cursor-pointer w-fit">Authors and Experts</p>
           </a> */}
           <a className="cursor-default" href="/about">
-            <p className="text-sm hover:text-[#EB3C75] cursor-pointer w-fit">Agency Hub</p>
+            <p className="text-sm cursor-pointer w-fit">Agency Hub</p>
           </a>
         </div>
       </div>

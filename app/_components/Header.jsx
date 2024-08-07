@@ -126,7 +126,7 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={articlesRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white hover:text-[#EB3C75] hover:underline focus-visible:outline-none"
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
                 >
                   <Link href="/articles">Articles</Link>
                   <ChevronDownIcon
@@ -150,7 +150,7 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={platformRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white hover:text-[#EB3C75] hover:underline focus-visible:outline-none"
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
                 >
                   <Link href="/platforms">Platforms</Link>
                   <ChevronDownIcon
@@ -174,7 +174,7 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={agenciesRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white hover:text-[#EB3C75] hover:underline focus-visible:outline-none"
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
                 >
                   <Link href="/agencies">Agencies</Link>
                   <ChevronDownIcon
@@ -198,7 +198,7 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={resourcesRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white hover:text-[#EB3C75] hover:underline focus-visible:outline-none"
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
                 >
                   <Link href="/resources">Resources</Link>
                   <ChevronDownIcon
@@ -222,7 +222,7 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={aboutRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white hover:text-[#EB3C75] hover:underline focus-visible:outline-none"
+                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
                 >
                   <Link href="/about">About Us</Link>
                   <ChevronDownIcon

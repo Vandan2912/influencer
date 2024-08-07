@@ -16,9 +16,9 @@ const News = () => {
     <section className="px-6 py-12 lg:px-28 lg:py-28 w-full min-h-[80vh]">
       <p className="text-3xl lg:text-4xl text-center font-semibold">Latest News</p>
       <div className="flex mt-14 gap-20 flex-col-reverse lg:flex-row">
-        <div className="w-full lg:w-[55%] overflow-hidden group">
+        <div className="w-full lg:w-[55%] group">
           <img src={news1.src} alt="" className="w-full mb-7 group-hover:scale-105 duration-300" />
-          <Link href="/resources/tools/123" className="text-2xl lg:text-4xl font-semibold hover:text-[#EB3C75]">
+          <Link href="/resources/tools/123" className="text-2xl lg:text-4xl font-semibold">
             7 Essential Tools for Forward-Thinking Creative Agencies
           </Link>
           <p className="text-base mt-5">
@@ -32,9 +32,9 @@ const News = () => {
           </Button>
         </div>
         <div className="w-full lg:w-[45%] flex flex-col md:flex-row lg:flex-col gap-10">
-          <div className="flex-1 group overflow-hidden">
+          <div className="flex-1 group">
             <img src={news2.src} alt="" className="w-full h-1/2 mb-7 group-hover:scale-105 duration-300" />
-            <Link href="/resources/tools/123" className="text-2xl font-semibold hover:text-[#EB3C75]">
+            <Link href="/resources/tools/123" className="text-2xl font-semibold">
               8 Trends Shaping the Future of Creative Agencies
             </Link>
             <p className="text-base mt-5">
@@ -43,9 +43,9 @@ const News = () => {
               stretch…
             </p>
           </div>
-          <div className="group overflow-hidden mt-10 md:mt-0 lg:mt-10 flex-1">
+          <div className="group mt-10 md:mt-0 lg:mt-10 flex-1">
             <img src={news3.src} alt="" className="w-full h-1/2 mb-7 group-hover:scale-105 duration-300" />
-            <Link href="/resources/tools/123" className="text-2xl font-semibold hover:text-[#EB3C75]">
+            <Link href="/resources/tools/123" className="text-2xl font-semibold">
               Ultimate Guide to Choosing Tools for Digital Marketing Agencies...
             </Link>
             <p className="text-base mt-5">

@@ -48,16 +48,16 @@ const HeroSection = () => {
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper"
         >
-          <SwiperSlide className={`!w-36 !h-[20vh] ${index===0? "opacity-100" : "opacity-40 hover:opacity-80"}`}>
+          <SwiperSlide className={`!w-36 !h-[20vh] ${index===0? "opacity-100" : "opacity-40"}`}>
             <img src="/carousel_image1.jpg" className={`object-cover cursor-pointer rounded-md border duration-300 border-white ${index === 0 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
           </SwiperSlide>
-          <SwiperSlide className={`!w-36 !h-[20vh] ${index===1? "opacity-100" : "opacity-40 hover:opacity-80"}`}>
+          <SwiperSlide className={`!w-36 !h-[20vh] ${index===1? "opacity-100" : "opacity-40"}`}>
             <img src="/carousel_image2.png" className={`object-cover cursor-pointer rounded-md border duration-300 border-white ${index === 1 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
           </SwiperSlide>
-          <SwiperSlide className={`!w-36 !h-[20vh] ${index===2? "opacity-100" : "opacity-40 hover:opacity-80"}`}>
+          <SwiperSlide className={`!w-36 !h-[20vh] ${index===2? "opacity-100" : "opacity-40"}`}>
             <img src="/carousel_image3.jpg" className={`object-cover cursor-pointer rounded-md border duration-300 border-white ${index === 2 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
           </SwiperSlide>
-          <SwiperSlide className={`!w-36 !h-[20vh] ${index===3? "opacity-100" : "opacity-40 hover:opacity-80"}`}>
+          <SwiperSlide className={`!w-36 !h-[20vh] ${index===3? "opacity-100" : "opacity-40"}`}>
             <img src="/carousel_image4.jpg" className={`object-cover cursor-pointer rounded-md border duration-300 border-white ${index === 3 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
           </SwiperSlide>
         </Swiper>

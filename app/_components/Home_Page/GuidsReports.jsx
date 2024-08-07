@@ -49,7 +49,7 @@ const Card = ({ image, title, desc, tag }) => {
       <img src={image.src} alt="" className="w-full max-h-52 object-cover rounded-ss-[20px] rounded-se-[20px] cursor-pointer group-hover:scale-105 duration-300" onClick={()=>{router.push("/resources/benchmark-report")}} />
       <div className="p-5">
         <p className="bg-[#00000020] w-fit px-2 rounded-md">{tag}</p>
-        <p className="text-base font-semibold mt-3 cursor-pointer hover:text-[#EB3C75]" onClick={()=>{router.push("/resources/benchmark-report")}}>{title}</p>
+        <p className="text-base font-semibold mt-3 cursor-pointer" onClick={()=>{router.push("/resources/benchmark-report")}}>{title}</p>
         <p className="text-sm mt-3">{desc}</p>
       </div>
     </div>
