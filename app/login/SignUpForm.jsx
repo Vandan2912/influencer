@@ -53,7 +53,7 @@ function SignUpForm({ setType }) {
           <div className="social-container w-full">
             <button
               type="button"
-              className="bg-white border border-[#EEF4F6] w-full flex justify-center items-center"
+              className="bg-white hover:bg-[#fff0f5] duration-300 border border-[#EEF4F6] w-full flex justify-center items-center"
               onClick={() => login()}
             >
               <img src="/google.png" alt="google" className="h-5 w-5 " />
@@ -145,7 +145,7 @@ function SignUpForm({ setType }) {
             </label>
           </div>
 
-          <button className="w-full">Sign Up</button>
+          <button className="w-full hover:bg-[#860e35]">Sign Up</button>
           <div className="flex justify-center gap-1 mt-3 md:hidden">
             Don’t have an account?{" "}
             <div
