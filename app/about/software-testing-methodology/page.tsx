@@ -1,4 +1,5 @@
 import React from "react";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 const Page = () => {
   return (
@@ -104,6 +105,69 @@ const Page = () => {
           rigor in our quantitative tests. Moving forward, we plan to
           incorporate more robust statistical analyses to ensure the precision
           of our data.
+          <div>
+            <h6 className="text-xl font-bold my-5">
+              We rate and review the following categories software:
+            </h6>
+            <div className="grid grid-cols-4 gap-x-7 gap-y-3 text-sm">
+              <a href="/platforms/Influencer" className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center">
+                <span className="flex-1 bg-white z-10">Influencer Marketing</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a href="/platforms/Influencer" className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center">
+                <span className="flex-1 bg-white z-10">Social Media Monitoring</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a href="/platforms/Influencer" className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center">
+                <span className="flex-1 bg-white z-10">Social Media Marketing</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              
+              <a href="/platforms/Influencer" className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center">
+                <span className="flex-1 bg-white z-10">Affiliate Marketing Software</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a href="/platforms/Influencer" className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center">
+                <span className="flex-1 bg-white z-10">Email Marketing</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a href="" className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center">
+                <span className="flex-1 bg-white z-10">eCommerce</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+
+              <a href="" className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center">
+                <span className="flex-1 bg-white z-10">Online Learning</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a href="" className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center">
+                <span className="flex-1 bg-white z-10">Video Editing Software</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a href="" className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center">
+                <span className="flex-1 bg-white z-10">Creator Tools</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              
+              <a href="" className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center">
+                <span className="flex-1 bg-white z-10">Employee Advocacy</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a href="" className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center">
+                <span className="flex-1 bg-white z-10">AI Marketing</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a href="" className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center">
+                <span className="flex-1 bg-white z-10">Social Commerce Software</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+
+              <a href="" className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center">
+                <span className="flex-1 bg-white z-10">Amazon Marketing Software</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>

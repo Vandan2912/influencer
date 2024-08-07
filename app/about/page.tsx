@@ -2,6 +2,7 @@ import { ArrowLongRightIcon, PlusIcon } from "@heroicons/react/24/outline";
 import React from "react";
 import avatar from "../../assets/avatar.png";
 import { Button } from "@headlessui/react";
+import Link from "next/link";
 
 const Page = () => {
   return (
@@ -24,7 +25,7 @@ const Page = () => {
       </section>
       <section className="my-10 flex justify-center">
         <div className="grid grid-cols-2 gap-3">
-          <div className="col-span-2 sm:col-span-1 border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 p-5 rounded-lg bg-[#EB3C7599] text-white">
+          <div className="col-span-2 sm:col-span-1 p-5 rounded-lg bg-[#EB3C7599] text-white">
             <h5 className="text-xl font-bold"> Our Research </h5>
             <p>
               At Influencer Marketing Hub, we are at the forefront of
@@ -37,7 +38,7 @@ const Page = () => {
               insights into marketing trends.
             </p>
           </div>
-          <div className="col-span-2 sm:col-span-1 border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 p-5 rounded-lg bg-[#E9E0E0]">
+          <div className="col-span-2 sm:col-span-1 p-5 rounded-lg bg-[#E9E0E0]">
             <h5 className="text-xl font-bold"> Mission statement </h5>
             <p>
               Influencer Marketing Hub aims to provide the most comprehensive
@@ -48,7 +49,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="my-10 bg-[#F3EDED] p-10 rounded-lg border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300">
+      <section className="my-10 bg-[#F3EDED] p-10 rounded-lg">
         <h5 className="text-lg font-bold">How We Make Money</h5>
         <p>
           At Influencer Marketing Hub, we forge partnerships that may influence
@@ -176,9 +177,9 @@ const Page = () => {
         </p>
       </section>
       <section className="my-10 p-1 md:p-7 rounded-lg">
-        <p className="text-[#6941C6] text-sm text-center">we&apos;re hiring</p>
+        <p className="text-[#EB3C75] text-sm text-center">we&apos;re hiring</p>
         <h5 className="text-lg font-bold text-center">Meet Our Team</h5>
-        <div className="px-10 md:px-20 grid grid-cols-6 gap-10 mt-7">
+        <div className="grid grid-cols-6 gap-10 mt-7">
           <Card />
           <Card />
           <Card />
@@ -259,23 +260,31 @@ export default Page;
 
 const Card = () => {
   return (
-    <div className="bg-[#F3EDED] border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 col-span-6 sm:col-span-3 md:col-span-2 rounded-md flex flex-col items-center justify-center gap-3 p-6 text-sm text-center">
-      <img
-        src={avatar.src}
-        alt=""
-        className="bg-[#C7B9DA] h-20 w-20 rounded-full"
-      />
+    <div className="group bg-[#F3EDED] border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 col-span-6 sm:col-span-3 md:col-span-2 rounded-md flex flex-col items-center justify-center gap-3 p-6 text-sm text-center">
+      <div className="bg-[#C7B9DA] h-20 w-20 rounded-full overflow-hidden">
+        <img
+          src={avatar.src}
+          alt=""
+          className="bg-[#C7B9DA] h-20 w-20 rounded-full group-hover:scale-105 duration-300"
+        />
+      </div>
       <div>
         <p className="font-bold">Olivia Rhye</p>
-        <p className="text-[#6941C6]">Founder & CEO</p>
+        <p className="text-[#EB3C75]">Founder & CEO</p>
       </div>
       <p className="text-[#667085]">
         Former co-founder of Opendoor. Early staff at Spotify and Clearbit.
       </p>
       <div className="flex gap-3">
-        <img src="/twitter.png" alt="" className="w-5 w-5" />
-        <img src="/linkedin.png" alt="" className="w-5 w-5" />
-        <img src="/dribble.png" alt="" className="w-5 w-5" />
+        <Link href="https://x.com/">
+          <img src="/twitter.png" alt="" className="w-5 w-5" />
+        </Link>
+        <Link href="https://www.instagram.com/">
+          <img src="/linkedin.png" alt="" className="w-5 w-5" />
+        </Link>
+        <Link href="https://dribbble.com/">
+          <img src="/dribble.png" alt="" className="w-5 w-5" />
+        </Link>
       </div>
     </div>
   );
