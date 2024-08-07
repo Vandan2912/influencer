@@ -135,7 +135,9 @@ const Card = ({ data, index }) => {
   return (
     // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
     <div className='col-span-4 sm:col-span-2 lg:col-span-1 group flex flex-col gap-2 p-4 border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 rounded-md cursor-pointer' onClick={() => { router.push("/resources/tools/123") }}>
-      <img src={`/eccomerce/${data.image}`} alt="" className='max-h-52 group-hover:scale-105 duration-300 h-48 w-full object-cover rounded-md' />
+        <div className="max-h-52 h-48 overflow-hidden rounded-md">
+            <img src={`/eccomerce/${data.image}`} alt="" className=' group-hover:scale-105 duration-300 h-full w-full object-cover rounded-md' />
+        </div>
       <p className='text-lg font-bold hover:text-[#EB3C75] duration-300'>{data.title}</p>
       <p className='text-sm'>{data.desc}</p>
     </div>

@@ -30,17 +30,17 @@ const FAQ = () => {
 
     return (
         <section className='mb-10 p-7 px-5 sm:px-10 md:px-20'>
-            <hr className='flex-1 h-[2px] bg-black' />
+            <hr className='flex-1 h-[2px] bg-gray-100' />
             <h2 className='text-4xl my-10'>Frequently Asked Questions</h2>
             {faqs.map((faq, i) => {
                 return (
                     // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                     <div className='' key={i}>
                         <div className="mt-5">
-                            <div className="bg-[#f6f6f6] font-bold p-3 rounded-ss-xl rounded-se-xl border border-black">
+                            <div className="bg-[#f6f6f6] font-bold p-3 rounded-ss-xl rounded-se-xl border border-grabg-gray-100">
                                 {faq.que}
                             </div>
-                            <div className="bg-[#f6f6f6] border-black border-x border-b px-3 py-5 flex flex-col gap-3">
+                            <div className="bg-[#f6f6f6] border-grabg-gray-100 border-x border-b px-3 py-5 flex flex-col gap-3">
                                 {
                                     faq?.ans.map((item, i) => {
                                         if (item.type === "bullet") {

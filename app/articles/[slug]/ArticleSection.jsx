@@ -35,8 +35,10 @@ const Card = ({ data, index }) => {
     const router = useRouter()
 
     return (
-        <div className='col-span-4 sm:col-span-2 lg:col-span-1 flex flex-col gap-2 p-4 shadow-[0px_3.33px_4.44px_0px_#00000012] rounded-md cursor-pointer' onClick={() => { router.push(`/articles/${data.category}/123`) }}>
-            <img src={`/eccomerce/${data.image}`} className='max-h-52 h-48 w-full object-cover rounded-md' />
+        <div className='group col-span-4 sm:col-span-2 lg:col-span-1 flex flex-col gap-2 p-4 hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 rounded-md cursor-pointer' onClick={() => { router.push(`/articles/${data.category}/123`) }}>
+            <div className='max-h-52 h-48 overflow-hidden rounded-md'>
+                <img src={`/eccomerce/${data.image}`} className='h-full w-full object-cover group-hover:scale-105 duration-300 rounded-md' />
+            </div>
             <p className='text-lg font-bold'>{data.title}</p>
             <p className='text-sm'>{data.desc}</p>
         </div>

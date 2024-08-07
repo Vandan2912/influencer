@@ -68,9 +68,13 @@ const Page = () => {
         </p>
 
         {/* pros and cons */}
-        <div className="bg-[#d2f8ef] mt-10 p-5 grid grid-cols-4 gap-5 rounded-xl">
+        <div className="bg-[#fffafc] mt-10 p-5 grid grid-cols-4 gap-5 rounded-xl">
           <div className="col-span-4 sm:col-span-1 flex flex-col gap-3">
-            <img src="/platforms/upfluence.png" alt="" className="w-1/2 sm:w-full mx-auto sm:mx-0" />
+            <img
+              src="/platforms/upfluence.png"
+              alt=""
+              className="w-1/2 sm:w-full mx-auto sm:mx-0"
+            />
             <p className="text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -80,7 +84,7 @@ const Page = () => {
           <div className="col-span-4 sm:col-span-3 grid grid-cols-5 gap-1">
             {/* 1st column */}
             <div className="col-span-3 flex flex-col gap-1">
-              <div className="bg-[#e7fdf8] border-2 border-white p-2 rounded text-sm font-bold">
+              <div className="bg-[#EB3C75] text-white border-2 border-white p-2 rounded text-sm font-bold">
                 Pros and Cons
               </div>
               <div className="flex-1 flex flex-col gap-3 bg-white px-3 py-5">
@@ -105,13 +109,13 @@ const Page = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 </div>
               </div>
-              <div className="bg-[#f4eaff] border-2 border-white p-2 rounded text-sm">
+              <div className="bg-[#f96496] text-white border-2 border-white p-2 rounded text-sm">
                 Best for: E-commerce Business
               </div>
             </div>
             {/* 2nd column */}
             <div className="col-span-2 flex flex-col gap-1">
-              <div className="bg-[#e7fdf8] border-2 border-white p-2 rounded text-sm font-bold">
+              <div className="bg-[#EB3C75] text-white border-2 border-white p-2 rounded text-sm font-bold">
                 Ratings
               </div>
               <div className="flex-1 flex flex-col gap-3 bg-white px-5 py-5">
@@ -152,7 +156,7 @@ const Page = () => {
                   />
                 </div>
               </div>
-              <div className="bg-[#fff2db] border-2 border-white p-2 rounded text-sm flex justify-between">
+              <div className="bg-[#f96496] text-white border-2 border-white p-2 rounded text-sm flex justify-between">
                 <p>Over Score:</p>
                 <p>4.5</p>
               </div>
@@ -165,56 +169,26 @@ const Page = () => {
           Summary By quick jump
         </h1>
         <div className="mt-5">
-          <div className="bg-[#e3ccff] text-lg font-bold p-3 text-center rounded-ss-xl rounded-se-xl border border-black">
+          <div className="bg-[#EB3C75] text-white text-lg font-bold p-3 text-center rounded-ss-xl rounded-se-xl border border-[#EB3C75]">
             Summary
           </div>
-          <div className="bg-white border-black border-x border-b px-3 py-5">
-            <Disclosure as="div" className="p-2">
-              <DisclosureButton className="group flex w-full items-center gap-2">
-                <PlayIcon className="size-5 text-[#e3ccff] group-data-[open]:rotate-90" />
-                <span className="text-sm/6 font-medium text-black">
-                  Pricing
-                </span>
-              </DisclosureButton>
-              <DisclosurePanel className="mt-2 text-sm/5 text-black ps-8">
-                If you&apos;re unhappy with your purchase, we&apos;ll refund you
-                in full.
-              </DisclosurePanel>
-            </Disclosure>
-            <Disclosure as="div" className="p-2">
-              <DisclosureButton className="group flex w-full items-center gap-2">
-                <PlayIcon className="size-5 text-[#e3ccff] group-data-[open]:rotate-90" />
-                <span className="text-sm/6 font-medium text-black">
-                  The Details
-                </span>
-              </DisclosureButton>
-              <DisclosurePanel className="mt-2 text-sm/5 text-black ps-8">
-                If you&apos;re unhappy with your purchase, we&apos;ll refund you
-                in full.
-              </DisclosurePanel>
-            </Disclosure>
-            <Disclosure as="div" className="p-2">
-              <DisclosureButton className="group flex w-full items-center gap-2">
-                <PlayIcon className="size-5 text-[#e3ccff] group-data-[open]:rotate-90" />
-                <span className="text-sm/6 font-medium text-black">
-                  Conclusion
-                </span>
-              </DisclosureButton>
-              <DisclosurePanel className="mt-2 text-sm/5 text-black ps-8">
-                If you&apos;re unhappy with your purchase, we&apos;ll refund you
-                in full.
-              </DisclosurePanel>
-            </Disclosure>
-            <Disclosure as="div" className="p-2">
-              <DisclosureButton className="group flex w-full items-center gap-2">
-                <PlayIcon className="size-5 text-[#e3ccff] group-data-[open]:rotate-90" />
-                <span className="text-sm/6 font-medium text-black">FAQ</span>
-              </DisclosureButton>
-              <DisclosurePanel className="mt-2 text-sm/5 text-black ps-8">
-                If you&apos;re unhappy with your purchase, we&apos;ll refund you
-                in full.
-              </DisclosurePanel>
-            </Disclosure>
+          <div className="bg-white border-[#EB3C75] border-x border-b px-3 py-5">
+            <div className="flex gap-3">
+              <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
+              <span className="text-sm/6 font-medium text-black">Pricing</span>
+            </div>
+            <div className="flex gap-3 mt-2">
+              <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
+              <span className="text-sm/6 font-medium text-black">The Details</span>
+            </div>
+            <div className="flex gap-3 mt-2">
+              <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
+              <span className="text-sm/6 font-medium text-black">Conclusion</span>
+            </div>
+            <div className="flex gap-3 mt-2">
+              <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
+              <span className="text-sm/6 font-medium text-black">FAQ</span>
+            </div>
           </div>
         </div>
       </section>

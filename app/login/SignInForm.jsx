@@ -53,8 +53,8 @@ function SignInForm({ setType }) {
             value={state.password}
             onChange={handleChange}
           />
-          <a href="#">Forgot your password?</a>
-          <button className="w-full">Sign In</button>
+          <a href="#" className="hover:text-[#EB3C75] duration-300">Forgot your password?</a>
+          <button className="w-full hover:bg-[#860e35]">Sign In</button>
           <div className="flex w-full items-center gap-3 text-[#808285] mt-4">
             <hr className="flex-1 h-[2px] bg-[#808285]" />
             OR
@@ -63,7 +63,7 @@ function SignInForm({ setType }) {
           <div className="social-container w-full">
             <button
               type="button"
-              className="bg-white border border-[#EEF4F6] w-full flex justify-center items-center"
+              className="bg-white hover:bg-[#fff0f5] duration-300 border border-[#EEF4F6] w-full flex justify-center items-center"
               onClick={() => login()}
             >
               <img src="/google.png" alt="google" className="h-5 w-5 " />

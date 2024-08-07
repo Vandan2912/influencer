@@ -33,7 +33,7 @@ const TableContent = () => {
 
     console.log('headings', headings)
     return (
-        <div className='bg-[#FBF9F9] px-4 py-6 rounded-2xl lg:sticky lg:top-24'>
+        <div className='bg-[#ffeff4] px-4 py-6 rounded-2xl lg:sticky lg:top-24'>
             <p className='text-lg font-bold text-center mb-5'>Table Of Content</p>
             <ul>
                 {headings.map(heading => (
@@ -59,9 +59,9 @@ const TableContent = () => {
 
                     
                             }}
-                            style={{
-                                fontWeight: activeId === heading.id ? "bold" : "normal"
-                            }}
+                            // style={{
+                            //     fontWeight: activeId === heading.id ? "bold" : "normal"
+                            // }}
                         >
                             {heading.text}
                         </a>
