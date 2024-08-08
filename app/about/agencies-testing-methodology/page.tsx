@@ -1,3 +1,4 @@
+import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
 const Page = () => {
@@ -62,6 +63,114 @@ const Page = () => {
           Transparency is crucial. We disclose any relationships that could
           influence our reviews and ensure that any potential conflicts of
           interest are transparently managed.
+          <div>
+            <h6 className="text-xl font-bold my-8">
+              We rate and review the following categories software:
+            </h6>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-3 text-sm">
+              <a
+                href="/platforms/Influencer"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+              >
+                <span className="flex-1 bg-white z-10">
+                  Influencer Marketing
+                </span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a
+                href="/platforms/Social-media"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+              >
+                <span className="flex-1 bg-white z-10">Social Media</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a
+                href="/platforms/Public-relations"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+              >
+                <span className="flex-1 bg-white z-10">Public Relations</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+
+              <a
+                href="/platforms/UX-UI"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+              >
+                <span className="flex-1 bg-white z-10">UX/UI</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a
+                href="/platforms/Influencer-talent-management"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+              >
+                <span className="flex-1 bg-white z-10">Influencer Talent Management</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a
+                href="/platforms/Crypto-NFT"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+              >
+                <span className="flex-1 bg-white z-10">Crypto & NFT</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+
+              <a
+                href="/platforms/Digital-marketing"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+              >
+                <span className="flex-1 bg-white z-10">Digital Marketing</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a
+                href="/platforms/eCommerce"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+              >
+                <span className="flex-1 bg-white z-10">
+                eCommerce
+                </span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+              <a
+                href="/platforms/Web-Development"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+              >
+                <span className="flex-1 bg-white z-10">Web-Development</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+
+              <a
+                href="/platforms/Branding"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+              >
+                <span className="flex-1 bg-white z-10">Branding</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+              </a>
+            </div>
+            <div>
+              <h6 className="text-xl font-bold my-8">
+                Methodology Limitations
+              </h6>
+              <h6 className="text-xl font-bold my-5">
+                Acknowledging that services are inherently more subjective to
+                review than products, we note the limitations of our review
+                process:
+              </h6>
+              The dynamic and evolving nature of agency-client relationships
+              means that our reviews might not capture every nuance of these
+              engagements. The success metrics are as diverse as the agencies
+              themselves, making standardization challenging. Our reviews are
+              snapshots based on available data, which might not reflect
+              real-time changes within the agencies.
+              <h6 className="text-xl font-bold my-5">
+                We are continuously refining our evaluation criteria
+              </h6>
+              to ensure a comprehensive understanding of each agency’s quality
+              of service. This includes expanding our network of industry
+              contacts for a broader perspective and keeping abreast of the
+              latest developments in digital marketing to adjust our benchmarks
+              and expectations accordingly.
+            </div>
+          </div>
         </div>
       </section>
     </main>
