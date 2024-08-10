@@ -17,6 +17,7 @@ const page = () => {
       image: "/carousel_image3.jpg",
     },
   ];
+  
   return (
     <main className="font-Gotham">
       <HeroSection data={carouselData} />
