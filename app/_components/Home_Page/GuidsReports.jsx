@@ -46,10 +46,12 @@ const Card = ({ image, title, desc, tag }) => {
   const router = useRouter()
   return (
     <div className="group overflow-hidden col-span-3 md:col-span-1 bg-white rounded-[20px] pb-6 hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 ">
+      <div className="w-full overflow-hidden">
       <img src={image.src} alt="" className="w-full max-h-52 object-cover rounded-ss-[20px] rounded-se-[20px] cursor-pointer group-hover:scale-105 duration-300" onClick={()=>{router.push("/resources/benchmark-report")}} />
+      </div>
       <div className="p-5">
         <p className="bg-[#00000020] w-fit px-2 rounded-md">{tag}</p>
-        <p className="text-base font-semibold mt-3 cursor-pointer" onClick={()=>{router.push("/resources/benchmark-report")}}>{title}</p>
+        <p className="text-base font-semibold mt-3 cursor-pointer hover:text-[#EB3C75] duration-300" onClick={()=>{router.push("/resources/benchmark-report")}}>{title}</p>
         <p className="text-sm mt-3">{desc}</p>
       </div>
     </div>

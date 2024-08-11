@@ -13,19 +13,26 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+// console.log("first", index, thumbsSwiper)
 
   return (
     <div className="min-h-[50vh] md:min-h-[80vh] lg:min-h-screen  w-full relative">
-      <Swiper
-        navigation={true}
+
+<Swiper
+        style={{
+          '--swiper-navigation-color': '#fff',
+          '--swiper-pagination-color': '#fff',
+        }}
         loop={true}
+        spaceBetween={10}
+        navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
-        onSlideChange={(e) => setIndex(e.realIndex)}
-        onSlideNextTransitionStart={(e) => setIndex(e.realIndex)}
-        onSlidePrevTransitionStart={(e) => setIndex(e.realIndex)}
+        className="z-0"
+        onSlideChangeTransitionStart={(e)=>setIndex(e.realIndex)}
+        // className="mySwiper"
       >
-        <SwiperSlide className="relative">
+       <SwiperSlide>
           <TextContainer number={1} />
         </SwiperSlide>
         <SwiperSlide>
@@ -42,27 +49,35 @@ const HeroSection = () => {
         <Swiper
           onSwiper={setThumbsSwiper}
           loop={true}
-          // freeMode={true}
-          // watchSlidesProgress={true}
+          spaceBetween={10}
           slidesPerView={4}
+          freeMode={true}
+          watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper"
         >
-          <SwiperSlide className={`!w-36 !h-[20vh] ${index===0? "opacity-100" : "opacity-40"}`}>
-            <img src="/carousel_image1.jpg" className={`object-cover cursor-pointer rounded-md border duration-300 border-white ${index === 0 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
-          </SwiperSlide>
-          <SwiperSlide className={`!w-36 !h-[20vh] ${index===1? "opacity-100" : "opacity-40"}`}>
-            <img src="/carousel_image2.png" className={`object-cover cursor-pointer rounded-md border duration-300 border-white ${index === 1 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
-          </SwiperSlide>
-          <SwiperSlide className={`!w-36 !h-[20vh] ${index===2? "opacity-100" : "opacity-40"}`}>
-            <img src="/carousel_image3.jpg" className={`object-cover cursor-pointer rounded-md border duration-300 border-white ${index === 2 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
-          </SwiperSlide>
-          <SwiperSlide className={`!w-36 !h-[20vh] ${index===3? "opacity-100" : "opacity-40"}`}>
-            <img src="/carousel_image4.jpg" className={`object-cover cursor-pointer rounded-md border duration-300 border-white ${index === 3 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
-          </SwiperSlide>
+          <SwiperSlide className={`!w-36 !h-[20vh]`}>
+            <div className={`${index===0? "opacity-100" : "opacity-40 hover:opacity-80"} duration-300`}>
+              <img src="/carousel_image1.jpg" className={`object-cover cursor-pointer rounded-md border duration-500 border-white ${index === 0 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide className={`!w-36 !h-[20vh]`}>
+            <div className={`${index===1? "opacity-100" : "opacity-40 hover:opacity-80"}`}>
+              <img src="/carousel_image2.png" className={`object-cover cursor-pointer rounded-md border duration-500 border-white ${index === 1 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide className={`!w-36 !h-[20vh]`}>
+            <div className={`${index===2? "opacity-100" : "opacity-40 hover:opacity-80"}`}>
+              <img src="/carousel_image3.jpg" className={`object-cover cursor-pointer rounded-md border duration-500 border-white ${index === 2 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide className={`!w-36 !h-[20vh]`}>
+            <div className={`${index===3? "opacity-100" : "opacity-40 hover:opacity-80"}`}>
+              <img src="/carousel_image4.jpg" className={`object-cover cursor-pointer rounded-md border duration-500 border-white ${index === 3 ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt=""/>
+            </div>
+            </SwiperSlide>
         </Swiper>
       </div>
-
     </div>
   );
 };

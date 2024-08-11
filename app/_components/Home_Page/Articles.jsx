@@ -43,7 +43,7 @@ const Articles = () => {
           className="col-span-12 sm:col-span-6 md:col-span-3"
         />
         <div
-          className="col-span-12 overflow-hidden sm:col-span-6 md:col-span-6 min-h-[40vh] sm:min-h-[unset] bg-[#00000025] rounded-[20px] relative"
+          className="col-span-12 overflow-hidden sm:col-span-6 md:col-span-6 min-h-[40vh] sm:min-h-[unset] bg-[#00000025] rounded-[20px] relative border border-[#00000010] hover:shadow-[0_0_11px_rgba(33,33,33,.2)]"
           style={{
             backgroundImage: "url('/articles6.png')",
             backgroundSize: "cover",
@@ -57,7 +57,7 @@ const Articles = () => {
                 "linear-gradient(271.57deg, rgba(255, 255, 255, 0.8) 3.2%, rgba(245, 245, 245, 0.8) 98.56%)",
             }}
           >
-            <p className="text-lg md:text-5xl font-semibold mt-3">
+            <p className="text-lg md:text-5xl font-semibold mt-3 hover:text-[#EB3C75] duration-300 cursor-pointer">
               How to Get Backlinks: 10 Trusted Methods
             </p>
             <p className="text-base mt-3">
@@ -83,13 +83,15 @@ export default Articles;
 
 const Card = ({ image, title, desc, className }) => {
   return (
-    <div className={`${className} group bg-[#00000015] rounded-[20px] pb-6 cursor-pointer overflow-hidden`}>
-      <img src={image.src} alt="" className="w-full object-cover group-hover:scale-110 scale-105 duration-300" />
-      <div className="p-5 mt-3">
+    <div className={`${className} group bg-[#00000015] rounded-[20px] pb-6 cursor-pointer overflow-hidden border border-[#00000013] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-500`}>
+      <div className="w-full overflow-hidden">        
+        <img src={image.src} alt="" className="w-full object-cover scale-105 group-hover:scale-110 duration-300" />
+      </div>
+      <div className="p-5">
         <p className="bg-[#00000035] w-fit px-2 rounded-md">
           Digital Marketing
         </p>
-        <Link href="#" className="text-base font-semibold mt-3">{title}</Link>
+        <Link href="#" className="text-base font-semibold mt-3 hover:text-[#EB3C75] duration-300">{title}</Link>
         <p className="text-sm mt-3">{desc}</p>
       </div>
     </div>

@@ -14,11 +14,13 @@ const Marketing = () => {
     <section className="px-6 py-12 lg:px-28 lg:py-40 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
       <div className="flex flex-col md:flex-row flex-wrap w-full justify-center max-h-[unset] lg:max-h-[60vh] gap-0 lg:gap-16">
         <div className="flex-1 shrink-0">
+          <div className="w-full rounded-3xl overflow-hidden mb-7">
           <img
             src={ima.src}
             alt=""
             className=" w-full hover:scale-105 duration-300 max-h-[30vh] lg:max-h-[unset] h-[60vh] object-cover rounded-[20px]"
           />
+        </div>
         </div>
         <div className="flex-1 shrink-0 ">
           <p className="text-2xl lg:text-5xl font-semibold mt-7">
@@ -50,11 +52,13 @@ const Marketing = () => {
           </Button>
         </div>
         <div className="flex-1 shrink-0 w-full">
+          <div className="w-full rounded-3xl overflow-hidden mb-7">
           <img
             src={imp.src}
             alt=""
             className="w-full hover:scale-105 duration-300 max-h-[30vh] lg:max-h-[unset] h-[60vh] object-cover rounded-[20px]"
           />
+        </div>
         </div>
       </div>
     </section>
