@@ -37,14 +37,14 @@ const Card = ({ image, title }) => {
   return (
     <div className="group overflow-hidden col-span-2 md:col-span-1 bg-white rounded-[20px] flex min-h-[15vh] md:min-h-[20vh] cursor-pointer duration-300 hover:shadow-[0_0_11px_rgba(33,33,33,.2)]"
       onClick={() => { router.push("/resources/tools/123") }}>
-      <div className="w-1/3 md:w-1/4 overflow-hidden">
+      <div className="w-[40%] overflow-hidden">
         <img
           src={image.src}
           alt=""
           className="w-full h-full object-cover rounded-ss-[20px] rounded-es-[20px] group-hover:scale-105 duration-300"
         />
       </div>
-      <div className="p-5 md:p-10 flex items-center w-2/3 md:w-3/4">
+      <div className="p-5 md:p-10 flex items-center w-[60%]">
         <p className="text-lg font-semibold mt-3">{title}</p>
       </div>
     </div>
