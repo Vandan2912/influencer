@@ -126,9 +126,9 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={articlesRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                  className="flex group items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
                 >
-                  <Link href="/articles">Articles</Link>
+                  <Link href="/articles" className="group-hover:text-[#EB3C75] duration-300">Articles</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none transition-all"
@@ -150,9 +150,9 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={platformRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                  className="group flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
                 >
-                  <Link href="/platforms">Platforms</Link>
+                  <Link href="/platforms"  className="group-hover:text-[#EB3C75] duration-300">Platforms</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none transition-all"
@@ -174,9 +174,9 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={agenciesRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                  className="group flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
                 >
-                  <Link href="/agencies">Agencies</Link>
+                  <Link href="/agencies"  className="group-hover:text-[#EB3C75] duration-300">Agencies</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none transition-all"
@@ -198,9 +198,9 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={resourcesRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                  className="group flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
                 >
-                  <Link href="/resources">Resources</Link>
+                  <Link href="/resources"  className="group-hover:text-[#EB3C75] duration-300">Resources</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none transition-all"
@@ -222,9 +222,9 @@ const Header = () => {
               >
                 <PopoverButton
                   ref={aboutRef}
-                  className="flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
+                  className="group flex items-center gap-x-1 text-sm leading-6 text-white focus-visible:outline-none"
                 >
-                  <Link href="/about">About Us</Link>
+                  <Link href="/about"  className="group-hover:text-[#EB3C75] duration-300">About Us</Link>
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="h-5 w-5 flex-none transition-all"

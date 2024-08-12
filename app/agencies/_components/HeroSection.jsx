@@ -50,8 +50,10 @@ const HeroSection = ({ data }) => {
             data.map((item, i) => {
               return (
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-                <SwiperSlide key={i} className={`!w-36 !h-[20vh] ${index === i ? "opacity-100" : "opacity-40 "}`}>
-                  <img src={item.image} className={`object-cover cursor-pointer duration-300 rounded-md border border-white ${index === i ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt="" />
+                <SwiperSlide key={i} className={`!w-36 !h-[20vh]`}>
+                  <div className={`${index===i? "opacity-100" : "opacity-40 hover:opacity-80"} duration-300`}>
+                    <img src={item.image} className={`object-cover cursor-pointer rounded-md duration-300 border border-white ${index === i ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
+                  </div>
                 </SwiperSlide>
               )
             })
