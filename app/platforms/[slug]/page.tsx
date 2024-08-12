@@ -173,22 +173,52 @@ const Page = () => {
             Summary
           </div>
           <div className="bg-white border-[#EB3C75] border-x border-b px-3 py-5">
-            <div className="flex gap-3">
-              <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
-              <span className="text-sm/6 font-medium text-black">Pricing</span>
-            </div>
-            <div className="flex gap-3 mt-2">
-              <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
-              <span className="text-sm/6 font-medium text-black">The Details</span>
-            </div>
-            <div className="flex gap-3 mt-2">
-              <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
-              <span className="text-sm/6 font-medium text-black">Conclusion</span>
-            </div>
-            <div className="flex gap-3 mt-2">
-              <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
-              <span className="text-sm/6 font-medium text-black">FAQ</span>
-            </div>
+          <Disclosure as="div" className="p-2">
+              <DisclosureButton className="group flex w-full items-center gap-2">
+                <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
+                <span className="text-sm/6 font-medium text-black">
+                  Pricing
+                </span>
+              </DisclosureButton>
+              <DisclosurePanel className="mt-2 text-sm/5 text-black ps-8">
+                If you&apos;re unhappy with your purchase, we&apos;ll refund you
+                in full.
+              </DisclosurePanel>
+            </Disclosure>
+            <Disclosure as="div" className="p-2">
+              <DisclosureButton className="group flex w-full items-center gap-2">
+                <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
+                <span className="text-sm/6 font-medium text-black">
+                  The Details
+                </span>
+              </DisclosureButton>
+              <DisclosurePanel className="mt-2 text-sm/5 text-black ps-8">
+                If you&apos;re unhappy with your purchase, we&apos;ll refund you
+                in full.
+              </DisclosurePanel>
+            </Disclosure>
+            <Disclosure as="div" className="p-2">
+              <DisclosureButton className="group flex w-full items-center gap-2">
+                <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
+                <span className="text-sm/6 font-medium text-black">
+                  Conclusion
+                </span>
+              </DisclosureButton>
+              <DisclosurePanel className="mt-2 text-sm/5 text-black ps-8">
+                If you&apos;re unhappy with your purchase, we&apos;ll refund you
+                in full.
+              </DisclosurePanel>
+            </Disclosure>
+            <Disclosure as="div" className="p-2">
+              <DisclosureButton className="group flex w-full items-center gap-2">
+                <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
+                <span className="text-sm/6 font-medium text-black">FAQ</span>
+              </DisclosureButton>
+              <DisclosurePanel className="mt-2 text-sm/5 text-black ps-8">
+                If you&apos;re unhappy with your purchase, we&apos;ll refund you
+                in full.
+              </DisclosurePanel>
+            </Disclosure>
           </div>
         </div>
       </section>

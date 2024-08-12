@@ -47,13 +47,13 @@ function SignUpForm({ setType }) {
 
   return (
     <div className="form-container bg-white sign-up-container w-full md:w-1/2 flex justify-center items-center">
-      <div className="mx-5 md:m-20 p-7 border border-[#EEF4F6] min-w-[80%] lg:min-w-[60%] rounded-2xl">
+      <div className="mx-5 md:m-20 p-7 border border-gray-300 min-w-[80%] lg:min-w-[60%] rounded-2xl">
         <form onSubmit={handleOnSubmit} className="text-start">
           <h1 className="text-3xl font-bold">Sign up</h1>
           <div className="social-container w-full">
             <button
               type="button"
-              className="bg-white hover:bg-[#fff0f5] duration-300 border border-[#EEF4F6] w-full flex justify-center items-center"
+              className="bg-white hover:bg-[#fff0f5] duration-300 border border-gray-300 w-full flex justify-center items-center"
               onClick={() => login()}
             >
               <img src="/google.png" alt="google" className="h-5 w-5 " />
@@ -71,6 +71,7 @@ function SignUpForm({ setType }) {
                 id="first-name"
                 type="text"
                 name="fname"
+            className="focus:border-gray-700 border-gray-300"
                 value={state.fname}
                 onChange={handleChange}
               />
@@ -81,6 +82,7 @@ function SignUpForm({ setType }) {
                 id="last-name"
                 type="text"
                 name="lname"
+            className="focus:border-gray-700 border-gray-300"
                 value={state.lname}
                 onChange={handleChange}
               />
@@ -93,6 +95,7 @@ function SignUpForm({ setType }) {
               id="email"
               type="email"
               name="email"
+            className="focus:border-gray-700 border-gray-300"
               value={state.email}
               onChange={handleChange}
             />
@@ -105,6 +108,7 @@ function SignUpForm({ setType }) {
                 id="password"
                 type={state.show ? "text" : "password"}
                 name="password"
+            className="focus:border-gray-700 border-gray-300"
                 value={state.password}
                 onChange={handleChange}
               />
@@ -115,6 +119,7 @@ function SignUpForm({ setType }) {
                 id="confirm-password"
                 type={state.show ? "text" : "password"}
                 name="cpassword"
+            className="focus:border-gray-700 border-gray-300"
                 value={state.cpassword}
                 onChange={handleChange}
               />
@@ -127,6 +132,7 @@ function SignUpForm({ setType }) {
               id="referral"
               type="text"
               name="referral"
+            className="focus:border-gray-700 border-gray-300"
               value={state.referral}
               onChange={handleChange}
             />
@@ -138,7 +144,7 @@ function SignUpForm({ setType }) {
               name="show"
               value={state.show}
               onChange={handleChange}
-              className="w-4 h-4 m-0 checked:accent-[#EB3C75]"
+              className="w-4 h-4 m-0 checked:accent-[#EB3C75] focus:border-gray-700 border-gray-300"
             />
             <label for="show" className="flex-1">
               Show Password

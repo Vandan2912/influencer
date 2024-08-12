@@ -18,7 +18,7 @@ const ArticleSection = ({ title, data, loadmore=false }) => {
                 ))}
             </div>
             {
-                loadmore && (<Button className="bg-[#EB3C75] w-fit rounded-full py-2 px-8 text-white mt-10 flex items-center gap-3">
+                loadmore && (<Button className="bg-[#EB3C75] hover:bg-[#860e35] duration-300  w-fit rounded-full py-2 px-8 text-white mt-10 flex items-center gap-3">
                     Load More
                     <ArrowLongRightIcon className="h-5 w-5" />
                 </Button>)
@@ -39,7 +39,7 @@ const Card = ({ data, index }) => {
             <div className='max-h-52 h-48 overflow-hidden rounded-md'>
                 <img src={`/eccomerce/${data.image}`} className='h-full w-full object-cover group-hover:scale-105 duration-300 rounded-md' />
             </div>
-            <p className='text-lg font-bold'>{data.title}</p>
+            <p className='text-lg font-bold hover:text-[#EB3C75] duration-300'>{data.title}</p>
             <p className='text-sm'>{data.desc}</p>
         </div>
     )

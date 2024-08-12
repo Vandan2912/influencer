@@ -33,11 +33,14 @@ const Course = ({ title, cources }) => {
                 router.push("/resources/ebook/123");
               }}
             >
+              <div className="w-full overflow-hidden">
+
               <img
                 src="/resources/tool3.png"
                 alt=""
                 className="w-full h-56 rounded-ss-2xl rounded-se-2xl object-cover group-hover:scale-110 duration-300"
-              />
+                />
+                </div>
               <div className="p-3">
                 <p className="mt-2">
                   Learn How To Build Your Personal Brands On TikTok

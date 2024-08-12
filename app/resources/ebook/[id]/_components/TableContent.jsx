@@ -64,9 +64,11 @@ const TableContent = () => {
 
 
                             }}
-                            // style={{
-                            //     fontWeight: activeId === heading.id ? "bold" : "normal"
-                            // }}
+                            style={{
+                                fontWeight: activeId === heading.id ? "bold" : "normal",
+                                height: '100%',
+                                display: 'block',
+                            }}
                         >
                             {heading.text}
                         </a>

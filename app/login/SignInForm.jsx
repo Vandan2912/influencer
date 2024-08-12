@@ -34,15 +34,16 @@ function SignInForm({ setType }) {
 
   return (
     <div className="form-container bg-white sign-in-container w-full md:w-1/2 flex justify-center items-center">
-      <div className="mx-5 md:mx-20 p-7 border border-[#EEF4F6] min-w-[80%] lg:min-w-[60%] rounded-2xl">
+      <div className="mx-5 md:mx-20 p-7 border border-gray-300 min-w-[80%] lg:min-w-[60%] rounded-2xl">
         <form onSubmit={handleOnSubmit}>
           <h1 className="text-3xl font-bold">Sign in</h1>
-          <p className="text-base">Welcome back to your account</p>
+          <p className="text-base font-normal text-black">Welcome back to your account</p>
           {/* <span>or use your account</span> */}
           <input
             type="email"
             placeholder="Email"
             name="email"
+            className="focus:border-gray-700 border-gray-300"
             value={state.email}
             onChange={handleChange}
           />
@@ -50,6 +51,7 @@ function SignInForm({ setType }) {
             type="password"
             name="password"
             placeholder="Password"
+            className="focus:border-gray-700 border-gray-300"
             value={state.password}
             onChange={handleChange}
           />
@@ -63,7 +65,7 @@ function SignInForm({ setType }) {
           <div className="social-container w-full">
             <button
               type="button"
-              className="bg-white hover:bg-[#fff0f5] duration-300 border border-[#EEF4F6] w-full flex justify-center items-center"
+              className="bg-white hover:bg-[#fff0f5] duration-300 border border-gray-300 w-full flex justify-center items-center"
               onClick={() => login()}
             >
               <img src="/google.png" alt="google" className="h-5 w-5 " />
