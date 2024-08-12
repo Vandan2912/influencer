@@ -119,35 +119,20 @@ const Filter = () => {
           aria-label="Server size"
           className="flex flex-col w-full gap-3"
         >
-          {plans.map((plan) => {
-            let checked = false
-            return <Field
+          {plans.map((plan, i) => (
+            <Field
               key={plan}
               className="flex items-baseline gap-3 justify-between"
             >
-              <div>
-                <Label className="text-sm" onClick={()=>{checked = !checked}}>{plan.name}</Label>
-              </div>
-              <Checkbox
-                checked={checked}
-                onChange={()=>{checked = !checked}}
-                className="group flex items-center justify-center size-4 rounded-[4px] border hover:bg-[#eb3c7670] duration-200 bg-white data-[checked]:bg-[#EB3C75]"
-              >
-                <svg
-                  className="stroke-white opacity-0 group-hover:opacity-100 duration-200 group-data-[checked]:opacity-100"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                >
-                  <path
-                    d="M3 8L6 11L11 3.5"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Checkbox>
+              <label className="flex justify-between w-full flex-row-reverse">
+                <input
+                  type="checkbox"
+                  className="group flex items-center justify-center size-4 rounded-[4px] border hover:bg-[#eb3c7670] duration-200 bg-white data-[checked]:bg-[#EB3C75]"
+                />
+                {plan.name}
+              </label>
             </Field>
-})}
+          ))}
         </RadioGroup>
       </div>
       <div className="mt-5 lg:hidden block w-full bg-white/5 text-sm/6 text-black shadow-[0px_0.48px_44.12px_0px_#9098C329]">
@@ -192,27 +177,13 @@ const Filter = () => {
               key={plan}
               className="flex items-baseline gap-3 justify-between"
             >
-              <div>
-                <Label className="text-sm">{plan.name}</Label>
-              </div>
-              <Checkbox
-                // checked={enabled}
-                // onChange={setEnabled}
-                className="group flex items-center justify-center size-4 rounded-[4px] border bg-white data-[checked]:bg-[#EB3C75]"
-              >
-                <svg
-                  className="stroke-white opacity-0 group-data-[checked]:opacity-100"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                >
-                  <path
-                    d="M3 8L6 11L11 3.5"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Checkbox>
+              <label className="flex justify-between w-full flex-row-reverse">
+                <input
+                  type="checkbox"
+                  className="group flex items-center justify-center size-4 rounded-[4px] border hover:bg-[#eb3c7670] duration-200 bg-white data-[checked]:bg-[#EB3C75]"
+                />
+                {plan.name}
+              </label>
             </Field>
           ))}
         </RadioGroup>

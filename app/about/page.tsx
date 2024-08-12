@@ -165,7 +165,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="my-10 bg-[#F3EDED] p-7 rounded-lg border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300">
+      <section className="my-10 bg-[#F3EDED] p-7 rounded-lg">
         <h5 className="text-lg font-bold text-center">The Core Team</h5>
         <p>
           In an era where misinformation and intransparency are all too common,
@@ -260,7 +260,7 @@ export default Page;
 
 const Card = () => {
   return (
-    <div className="group bg-[#F3EDED] border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 col-span-6 sm:col-span-3 md:col-span-2 rounded-md flex flex-col items-center justify-center gap-3 p-6 text-sm text-center">
+    <div className="group bg-[#F3EDED] border border-[#00000013] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 col-span-6 sm:col-span-3 md:col-span-2 rounded-md flex flex-col items-center justify-center gap-3 p-6 text-sm text-center">
       <div className="bg-[#C7B9DA] h-20 w-20 rounded-full overflow-hidden">
         <img
           src={avatar.src}
