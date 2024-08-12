@@ -18,7 +18,7 @@ const PlatformCard = ({ data }) => {
                 <p className='text-sm sm:text-base'><span className='font-bold'>Channels: </span> {data.channels}</p>
             </div>
             <div className='col-span-12 lg:col-span-3 flex lg:justify-end items-center justify-center sm:justify-end'>
-                <Button className="hover:bg-[#EB3C75] duration-300 border border-[#EB3C75] bg-white b rounded-full w-fit py-1 px-8 text-[#EB3C75] hover:text-white flex items-center gap-3 text-sm sm:text-base" onClick={() => { router.push(`/platforms/${data.category}`) }}>
+                <Button className="hover:bg-[#EB3C75] duration-300 border border-[#EB3C75] bg-white b rounded-full w-fit py-1 px-8 text-[#EB3C75] hover:text-white flex items-center gap-3 text-sm sm:text-base" onClick={() => { router.push(`/platforms/${data.category || "abc"}/123`) }}>
                     View More
                     <ArrowLongRightIcon className="h-5 w-5" />
                 </Button>

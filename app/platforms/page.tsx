@@ -21,7 +21,10 @@ const page = () => {
   return (
     <main className="font-Gotham">
       <HeroSection data={carouselData} />
+      <div className="px-5 sm:px-10 md:px-20">
+
       <Platforms />
+      </div>
     </main>
   );
 };
