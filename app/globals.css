@@ -388,27 +388,59 @@ html::-webkit-scrollbar {
 } */
 
 .linkHoverEffect {
+  position: relative;
   height: fit-content;
-  background-image: linear-gradient(#EFEBEB 50%, #EB3C75 50%);
-  background-size: auto 175%;
+  background-image: linear-gradient(
+    to right,
+    #EB3C75,
+    #EB3C75 50%,
+    #EB3C75 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transition: all .3s ease-in-out;
   color: #EB3C75;
+  font-size: large;
 }
 
+.linkHoverEffect::before {
+  content: '';
+  background: #EB3C75;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all .3s ease-in-out;
+}
 .linkHoverEffect:hover {
-  background-position-y: 100%;
-  color: white;
+  background-position: 0;
+ }
+ .linkHoverEffect:hover::before {
+  width: 100%;
 }
 
-.linkHoverEffectWhite {
+.footerHoverEffect {
+  position: relative;
   height: fit-content;
-  background-image: linear-gradient(white 50%, #EB3C75 50%);
-  background-size: auto 175%;
+  background-image: linear-gradient(
+    to left,
+    /* #EB3C75, */
+    #fff 50%,
+    #EB3C75 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transition: all .3s ease-in-out;
   color: #EB3C75;
+  font-size: medium;
 }
 
-.linkHoverEffectWhite:hover {
-  background-position-y: 100%;
-  color: white;
-}
+.footerHoverEffect:hover {
+  background-position: 0;
+ }

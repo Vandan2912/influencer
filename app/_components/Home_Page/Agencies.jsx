@@ -41,7 +41,7 @@ const Agencies = () => {
         />
       </div>
       <div className="text-center mt-5">
-        <Link href="/agencies" className=" linkHoverEffectWhite">
+        <Link href="/agencies" className=" linkHoverEffect">
         See All Agencies
         </Link>
       </div>
