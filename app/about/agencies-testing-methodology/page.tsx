@@ -70,80 +70,80 @@ const Page = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-3 text-sm">
               <a
                 href="/platforms/Influencer"
-                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center hover:bg-[#EB3C75] duration-300"
               >
-                <span className="flex-1 bg-white z-10">
+                <span className="flex-1 bg-white z-10 group-hover:bg-[#EB3C75] group-hover:text-white duration-300">
                   Influencer Marketing
                 </span>
-                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-white" />
               </a>
               <a
                 href="/platforms/Social-media"
-                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center hover:bg-[#EB3C75] duration-300"
               >
-                <span className="flex-1 bg-white z-10">Social Media</span>
-                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+                <span className="flex-1 bg-white z-10 group-hover:bg-[#EB3C75] group-hover:text-white duration-300">Social Media</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-white" />
               </a>
               <a
                 href="/platforms/Public-relations"
-                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center hover:bg-[#EB3C75] duration-300"
               >
-                <span className="flex-1 bg-white z-10">Public Relations</span>
-                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+                <span className="flex-1 bg-white z-10 group-hover:bg-[#EB3C75] group-hover:text-white duration-300">Public Relations</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-white" />
               </a>
 
               <a
                 href="/platforms/UX-UI"
-                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center hover:bg-[#EB3C75] duration-300"
               >
-                <span className="flex-1 bg-white z-10">UX/UI</span>
-                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+                <span className="flex-1 bg-white z-10 group-hover:bg-[#EB3C75] group-hover:text-white duration-300">UX/UI</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-white" />
               </a>
               <a
                 href="/platforms/Influencer-talent-management"
-                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center hover:bg-[#EB3C75] duration-300"
               >
-                <span className="flex-1 bg-white z-10">Influencer Talent Management</span>
-                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+                <span className="flex-1 bg-white z-10 group-hover:bg-[#EB3C75] group-hover:text-white duration-300">Influencer Talent Management</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-white" />
               </a>
               <a
                 href="/platforms/Crypto-NFT"
-                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center hover:bg-[#EB3C75] duration-300"
               >
-                <span className="flex-1 bg-white z-10">Crypto & NFT</span>
-                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+                <span className="flex-1 bg-white z-10 group-hover:bg-[#EB3C75] group-hover:text-white duration-300">Crypto & NFT</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-white" />
               </a>
 
               <a
                 href="/platforms/Digital-marketing"
-                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center hover:bg-[#EB3C75] duration-300"
               >
-                <span className="flex-1 bg-white z-10">Digital Marketing</span>
-                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+                <span className="flex-1 bg-white z-10 group-hover:bg-[#EB3C75] group-hover:text-white duration-300">Digital Marketing</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-white" />
               </a>
               <a
                 href="/platforms/eCommerce"
-                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center hover:bg-[#EB3C75] duration-300"
               >
-                <span className="flex-1 bg-white z-10">
+                <span className="flex-1 bg-white z-10 group-hover:bg-[#EB3C75] group-hover:text-white duration-300">
                 eCommerce
                 </span>
-                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-white" />
               </a>
               <a
                 href="/platforms/Web-Development"
-                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center hover:bg-[#EB3C75] duration-300"
               >
-                <span className="flex-1 bg-white z-10">Web-Development</span>
-                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+                <span className="flex-1 bg-white z-10 group-hover:bg-[#EB3C75] group-hover:text-white duration-300">Web-Development</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-white" />
               </a>
 
               <a
                 href="/platforms/Branding"
-                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center"
+                className="col-span-1 group border border-[#DEDEDE] p-2 rounded-md flex items-center hover:bg-[#EB3C75] duration-300"
               >
-                <span className="flex-1 bg-white z-10">Branding</span>
-                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-[#EB3C75]" />
+                <span className="flex-1 bg-white z-10 group-hover:bg-[#EB3C75] group-hover:text-white duration-300">Branding</span>
+                <ChevronRightIcon className="h-5 w-5 -translate-x-5 group-hover:translate-x-0 duration-300 text-white" />
               </a>
             </div>
             <div>
