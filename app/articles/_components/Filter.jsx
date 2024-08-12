@@ -124,27 +124,13 @@ const Filter = () => {
               key={plan}
               className="flex items-baseline gap-3 justify-between"
             >
-              <div>
-                <Label className="text-sm">{plan.name}</Label>
-              </div>
-              <Checkbox
-                // checked={enabled}
-                // onChange={setEnabled}
-                className="group flex items-center justify-center size-4 rounded-[4px] border bg-white data-[checked]:bg-[#EB3C75]"
-              >
-                <svg
-                  className="stroke-white opacity-0 group-data-[checked]:opacity-100"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                >
-                  <path
-                    d="M3 8L6 11L11 3.5"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Checkbox>
+               <label className="flex justify-between w-full flex-row-reverse">
+                <input
+                  type="checkbox"
+                  className="checkbox-input group flex items-center justify-center size-4 rounded-[4px] border hover:bg-[#eb3c7670] duration-200 bg-white data-[checked]:bg-[#EB3C75]"
+                />
+                {plan.name}
+              </label>
             </Field>
           ))}
         </RadioGroup>
@@ -191,27 +177,13 @@ const Filter = () => {
               key={plan}
               className="flex items-baseline gap-3 justify-between"
             >
-              <div>
-                <Label className="text-sm">{plan.name}</Label>
-              </div>
-              <Checkbox
-                // checked={enabled}
-                // onChange={setEnabled}
-                className="group flex items-center justify-center size-4 rounded-[4px] border bg-white data-[checked]:bg-[#EB3C75]"
-              >
-                <svg
-                  className="stroke-white opacity-0 group-data-[checked]:opacity-100"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                >
-                  <path
-                    d="M3 8L6 11L11 3.5"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Checkbox>
+              <label className="flex justify-between w-full flex-row-reverse">
+                <input
+                  type="checkbox"
+                  className="checkbox-input group flex items-center justify-center size-4 rounded-[4px] border hover:bg-[#eb3c7670] duration-200 bg-white data-[checked]:bg-[#EB3C75]"
+                />
+                {plan.name}
+              </label>
             </Field>
           ))}
         </RadioGroup>

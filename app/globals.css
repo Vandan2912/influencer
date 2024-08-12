@@ -444,3 +444,66 @@ html::-webkit-scrollbar {
 .footerHoverEffect:hover {
   background-position: 0;
  }
+
+ /* input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+
+input[type=checkbox]:checked+label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  top: 5px;
+  background-color: #FA9E57;
+  font-family: "Montserrat";
+  border-radius: 2px;
+  border: 1px solid rgb(150 150 150 / 30%);
+}
+
+input[type=checkbox]:checked+label::after {
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>');
+  display: block;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+} */
+
+.checkbox-input {
+  appearance: none; /* Remove default checkbox styling */
+  width: 20px; /* Size of the checkbox */
+  height: 20px; /* Size of the checkbox */
+  border: 2px solid #dcdcdc; /* Default border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #ffffff; /* Default background color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.2s, border-color 0.2s; /* Smooth transitions */
+  position: relative;
+}
+
+.checkbox-input:checked {
+  background-color: #EB3C75; /* Background color when checked */
+  border-color: #EB3C75; /* Border color when checked */
+}
+
+.checkbox-input:hover {
+  background-color: #eb3c7644; /* Background color when checked */
+  border-color: #eb3c7644; /* Border color when checked */
+}
+
+.checkbox-input:checked::before {
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>');
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: transparent; /* Checkmark color */
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%); /* Center the checkmark */
+  border-radius: 2px; /* Round the checkmark */
+}
