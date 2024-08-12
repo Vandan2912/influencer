@@ -444,7 +444,7 @@ const PopoverElement = ({ array = [] }) => {
         {array.map((item) => (
           <div
             key={item.name}
-            className="group col-span-2 lg:col-span-1 relative flex items-center gap-x-6 rounded-lg px-4 py-1 text-sm leading-6 hover:bg-gray-200 duration-300"
+            className="group col-span-2 lg:col-span-1 relative flex items-center gap-x-6 rounded-lg px-4 py-1 text-sm leading-6 hover:bg-[#EB3C75] duration-300"
           >
             {/* <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
               <item.icon
@@ -453,7 +453,7 @@ const PopoverElement = ({ array = [] }) => {
               />
             </div> */}
             <div className="flex-auto">
-              <a href={item.href} className="block font-semibold text-gray-900">
+              <a href={item.href} className="block font-semibold text-gray-900 group-hover:text-white duration-300">
                 {item.name}
                 <span className="absolute inset-0" />
               </a>
