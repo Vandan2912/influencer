@@ -13,8 +13,8 @@ import {
   PlusIcon,
 } from "@heroicons/react/24/outline";
 import { PlayIcon } from "@heroicons/react/20/solid";
-import AgenciesCard from "../_components/AgenciesCard";
 import { useRouter } from "next/navigation";
+import AgenciesCard from "../../_components/AgenciesCard";
 
 const agencies = [
   {
