@@ -69,7 +69,7 @@ const Page = () => {
   return (
     <main className="font-Gotham">
       <section
-        className="py-10 px-5 md:pt-28 md:px-16 flex flex-col text-center gap-10 align-middle"
+        className="py-20 px-5 pt-28 md:px-16 flex flex-col text-center gap-10 align-middle"
         style={{
           background:
             "transparent linear-gradient(159deg, #fff 0, #EB3C75 100%)",
@@ -115,7 +115,7 @@ const Page = () => {
       <section className="py-8 px-5 md:py-20 md:px-16">
         <div className="flex my-5 justify-center items-center gap-10 w-full">
           <hr className="w-10 border-black" />
-          <p className="text-lg font-bold">
+          <p className="text-lg font-bold text-center">
             VIEW DIGITAL MARKETING AGENCIES BY LOCATION
           </p>
           <hr className="w-10 border-black" />
@@ -536,7 +536,7 @@ const Card = ({ image, title, desc, minCamp, rate, size, services = [] }) => {
         </ul>
       </div>
 
-      <div className="flex w-full gap-3 justify-center items-center">
+      <div className="flex w-full gap-3 mt-3 justify-center items-center">
         <Button
           className="w-fit border border-[#b8bfd9] text-[#b8bfd9] hover:bg-[#b8bfd9] rounded-md text-sm uppercase py-2 px-3 hover:text-white mt-0 sm:mt-5 flex items-center gap-3 shrink-0 h-fit duration-300"
           onClick={() => {
