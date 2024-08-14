@@ -438,7 +438,7 @@ const page = () => {
           <hr className="w-32 border-black" />
         </div>
 
-        <div className="grid grid-cols-3 mt-20 my-5 justify-center items-center gap-10 w-full">
+        <div className="grid grid-cols-6 mt-20 my-5 justify-center items-center gap-10 w-full">
           <Card
             image="/platforms/D.webp"
             title="Directive Consulting"
@@ -493,7 +493,7 @@ export default page;
 const Card = ({ image, title, desc, minCamp, rate, size, services = [] }) => {
   const router = useRouter();
   return (
-    <div className="group h-full col-span-1 bg-white rounded-[20px] flex flex-col border border-[#00000033] py-5 hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300">
+    <div className="group h-full col-span-6 sm:col-span-3 lg:col-span-2 bg-white rounded-[20px] flex flex-col border border-[#00000033] py-5 hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300">
       <div className="w-full px-5 rounded-[20px] overflow-hidden flex items-center gap-3">
         <img
           src={image}
