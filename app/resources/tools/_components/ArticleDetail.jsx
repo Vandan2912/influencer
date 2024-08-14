@@ -220,15 +220,16 @@ const ArticleDetail = () => {
         Unlike with YouTube, where you sell space on your videos and channel
         page for advertising at a rate decided by Google, Instagram does not
         compensate its users for running ads on their posted photos. Facebook
-        owns Instagram, so it seeds Facebook ads on people's posts. As such,
-        Instagram influencers and brands don’t have an intermediary or set rates
-        if they choose to work together. Brands themselves make deals with
-        influencers, and rates can vary markedly depending on the circumstances.
-        However, one thing is consistent in nearly all cases - Influencers get
-        paid more if they have both a high engagement rate and a high number of
-        followers. Brands have learned that you can easily buy followers of no
-        practical value to anybody. Hence, they are far more interested in you
-        having genuine followers - those who truly interact with your posts.
+        owns Instagram, so it seeds Facebook ads on people&apos;s posts. As
+        such, Instagram influencers and brands don&apos;t have an intermediary
+        or set rates if they choose to work together. Brands themselves make
+        deals with influencers, and rates can vary markedly depending on the
+        circumstances. However, one thing is consistent in nearly all cases -
+        Influencers get paid more if they have both a high engagement rate and a
+        high number of followers. Brands have learned that you can easily buy
+        followers of no practical value to anybody. Hence, they are far more
+        interested in you having genuine followers - those who truly interact
+        with your posts.
         <br />
         <br />
         Compared to other social media channels, Instagram accounts have
@@ -246,7 +247,7 @@ const ArticleDetail = () => {
         by amount of followers in the above graph.
         <br />
         <br />
-        From a brand’s point of view, the niche makes a difference too. For
+        From a brand&apos;s point of view, the niche makes a difference too. For
         instance, fashion firms are far more likely to work with high-profile
         name influencers than firms selling bathroom fittings and businesses set
         their budgets accordingly.
@@ -338,18 +339,19 @@ const ArticleDetail = () => {
         <br />
         <br />
         Of course, to be effective, a sponsored post has to sit well with the
-        influencer’s audience and appear like a genuine recommendation from the
-        influencer. The FTC has gotten involved in recent years, and it is now a
-        requirement that sponsored posts are clearly marked as such. If the
-        product fits well with the Instagrammers audience, it should not matter
-        if a post is marked #sponsored or #ad.
+        influencer&apos;s audience and appear like a genuine recommendation from
+        the influencer. The FTC has gotten involved in recent years, and it is
+        now a requirement that sponsored posts are clearly marked as such. If
+        the product fits well with the Instagrammers audience, it should not
+        matter if a post is marked #sponsored or #ad.
         <br />
         <br />
-        The ideal sponsored post shows how the brand’s product fits perfectly
-        into the Instagrammer’s life and how it can just as easily fit into the
-        lives of his or her followers. It is not unheard of for those with more
-        than 100,000 followers to earn $700-$900 per photo. Those with 500,000
-        followers can command $2,000 to $3,000 per sponsored photo posted.
+        The ideal sponsored post shows how the brand&apos;s product fits
+        perfectly into the Instagrammer&apos;s life and how it can just as
+        easily fit into the lives of his or her followers. It is not unheard of
+        for those with more than 100,000 followers to earn $700-$900 per photo.
+        Those with 500,000 followers can command $2,000 to $3,000 per sponsored
+        photo posted.
         <br />
         <br />
         Then, of course, there are the superstars. Kim Kardashian can command up
@@ -377,8 +379,8 @@ const ArticleDetail = () => {
         Of course, like all influencer marketing, this will only be effective if
         the product you are promoting fits nicely with your followers. If it
         looks like an ad for an unconnected product, your followers will be
-        unimpressed and won't follow the link. They may even unfollow you in
-        protest.
+        unimpressed and won&apos;t follow the link. They may even unfollow you
+        in protest.
         <br />
         <br />
         One technical hurdle with affiliate marketing on Instagram is that you

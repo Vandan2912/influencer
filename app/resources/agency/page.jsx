@@ -46,7 +46,7 @@ const people = [
   { id: 5, name: "Devon Webb" },
 ];
 
-const page = () => {
+const Page = () => {
   const [input, setInput] = useState("");
   const [searchbar, setSearchbar] = useState(false);
   const [results, setResults] = useState([]);
@@ -528,8 +528,10 @@ const Card = ({ image, title, desc, minCamp, rate, size, services = [] }) => {
       <div className="flex-1 flex flex-col gap-2 p-5 bg-[#f3f5f9] text-sm">
         <p className="font-bold ">Services:</p>
         <ul className="list-disc">
-          {services.map((item) => (
-            <li className="ms-9 listStyle">{item}</li>
+          {services.map((item, i) => (
+            <li key={i} className="ms-9 listStyle">
+              {item}
+            </li>
           ))}
         </ul>
       </div>
