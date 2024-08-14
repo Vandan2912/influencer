@@ -4,12 +4,18 @@ import { Button } from "@headlessui/react";
 import React from "react";
 import { useRouter } from "next/navigation";
 
-const ArticleSections = ({ title, data }) => {
+const ArticleSections = ({ title, link, data }) => {
+  const router = useRouter();
   return (
     <div className="">
       <div className="flex justify-between items-center">
         <p className="text-2xl font-bold">{title}</p>
-        <Button className="hover:bg-[#EB3C75] border border-[#EB3C75] bg-white b rounded-full py-1 px-8 text-[#EB3C75] hover:text-white flex items-center gap-3 duration-300">
+        <Button
+          className="hover:bg-[#EB3C75] border border-[#EB3C75] bg-white b rounded-full py-1 px-8 text-[#EB3C75] hover:text-white flex items-center gap-3 duration-300"
+          onClick={() => {
+            router.push(link);
+          }}
+        >
           See all
         </Button>
       </div>
