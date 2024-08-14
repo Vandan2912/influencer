@@ -488,7 +488,7 @@ const Page = () => {
   );
 };
 
-export default page;
+export default Page;
 
 const Card = ({ image, title, desc, minCamp, rate, size, services = [] }) => {
   const router = useRouter();
