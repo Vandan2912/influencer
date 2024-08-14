@@ -244,7 +244,7 @@ const resources = [
     {
         name: "Agencies",
         description: "Get a better understanding of your traffic",
-        href: "/agencies",
+        href: "/resources/agency",
         icon: ChartPieIcon,
     },
     {
