@@ -243,6 +243,18 @@ body {
   .swiper-slide {
     min-height: 80vh;
   }
+
+  .CalculatorCarousel {
+    min-height: auto !important;
+  }
+
+  .CalculatorCarousel .swiper-wrapper {
+    min-height: auto !important;
+  }
+
+  .CalculatorCarousel .swiper-slide {
+    min-height: auto !important;
+  }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 640px) {
@@ -256,6 +268,18 @@ body {
 
   .swiper-slide {
     min-height: 50vh;
+  }
+
+  .CalculatorCarousel {
+    min-height: auto !important;
+  }
+
+  .CalculatorCarousel .swiper-wrapper {
+    min-height: auto !important;
+  }
+
+  .CalculatorCarousel .swiper-slide {
+    min-height: auto !important;
   }
 }
 
@@ -271,6 +295,23 @@ body {
   .swiper-slide {
     min-height: 50vh;
   }
+
+  .CalculatorCarousel {
+    min-height: auto !important;
+  }
+
+  .CalculatorCarousel .swiper-wrapper {
+    min-height: auto !important;
+  }
+
+  .CalculatorCarousel .swiper-slide {
+    min-height: auto !important;
+  }
+
+  /* .pagination-container .page-item {
+    margin: 0 4px !important;
+    padding: 4px 10px !important;
+  } */
 }
 
 .pagination-container {

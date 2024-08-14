@@ -107,8 +107,8 @@ const ArticleDetail = () => {
           >
             Instagram Influencer Earnings Calculator
           </h2>
-          <div className="flex gap-3 mt-3 justify-center items-end">
-            <div className="w-full max-w-md px-4">
+          <div className="grid grid-cols-4 gap-3 mt-3 justify-center items-end">
+            <div className="w-full max-w-md px-4 col-span-4 sm:col-span-2 lg:col-span-1">
               <Field>
                 <Label className="text-sm/6 text-white">Project status</Label>
                 <div className="relative">
@@ -134,7 +134,7 @@ const ArticleDetail = () => {
                 </div>
               </Field>
             </div>
-            <div className="w-full max-w-md px-4">
+            <div className="w-full max-w-md px-4 col-span-4 sm:col-span-2 lg:col-span-1">
               <Field>
                 <Label className="text-sm/6 text-white">Followers</Label>
                 <Input
@@ -146,7 +146,7 @@ const ArticleDetail = () => {
                 />
               </Field>
             </div>
-            <div className="w-full max-w-md px-4">
+            <div className="w-full max-w-md px-4 col-span-4 sm:col-span-2 lg:col-span-1">
               <Field>
                 <Label className="text-sm/6 text-white">
                   Avg. Likes / Posts:
@@ -161,7 +161,7 @@ const ArticleDetail = () => {
               </Field>
             </div>
             <Button
-              className="inline-flex h-[36px] items-center gap-2 rounded-md bg-white py-1.5 px-3 text-sm/6 font-semibold text-black shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-200 duration-300 data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white"
+              className="inline-flex col-span-4 sm:col-span-2 lg:col-span-1 mx-4 h-[36px] items-center gap-2 rounded-md bg-white py-1.5 px-3 text-sm/6 font-semibold text-black shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-200 duration-300 data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white"
               onClick={() => {
                 setShow(true);
               }}

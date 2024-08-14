@@ -8,7 +8,10 @@ import { Button } from "@headlessui/react";
 import { useRouter } from "next/navigation";
 import { ecommerce } from "@/Constants/articles.-constants";
 import { Pagination } from "react-bootstrap";
-import { ArrowLongLeftIcon, ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowLongLeftIcon,
+  ArrowLongRightIcon,
+} from "@heroicons/react/24/outline";
 
 const Page = () => {
   const carouselData = [
@@ -42,7 +45,7 @@ const Page = () => {
   ];
 
   const [currentPage, setCurrentPage] = useState(0);
-  const [pageCount, setPageCount] = useState(5)
+  const [pageCount, setPageCount] = useState(4);
   const [data] = useState([
     // ... your actual data here
   ]);
@@ -85,11 +88,13 @@ const Page = () => {
               <ArrowLongLeftIcon className="h-5 w-5" />
               Prev
             </button>
-            {pageNumbers.map(number => (
+            {pageNumbers.map((number) => (
               <button
                 key={number}
                 onClick={() => onPageChange(number - 1)}
-                className={`page-item ${currentPage === number - 1 ? 'active' : ''}`}
+                className={`page-item ${
+                  currentPage === number - 1 ? "active" : ""
+                }`}
               >
                 {number}
               </button>
@@ -113,33 +118,43 @@ export default Page;
 
 const ArticleSections = ({ title, data }) => {
   return (
-    <div className=''>
-      <div className='flex justify-between items-center'>
-        <p className='text-2xl font-bold'>{title}</p>
+    <div className="">
+      <div className="flex justify-between items-center">
+        <p className="text-2xl font-bold">{title}</p>
         <Button className="hover:bg-[#EB3C75] duration-300 border border-[#EB3C75] bg-white b rounded-full py-1 px-8 text-[#EB3C75] hover:text-white mt-5 flex items-center gap-3">
           See all
         </Button>
       </div>
-      <div className='grid grid-cols-4 gap-5'>
+      <div className="grid grid-cols-4 gap-5">
         {data.map((item, i) => (
           <Card key={i} data={item} index={i} />
         ))}
       </div>
     </div>
-  )
-}
-
+  );
+};
 
 const Card = ({ data, index }) => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
-    <div className='col-span-4 sm:col-span-2 lg:col-span-1 group flex flex-col gap-2 p-4 border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 rounded-md cursor-pointer' onClick={() => { router.push("/resources/tools/123") }}>
-        <div className="max-h-52 h-48 overflow-hidden rounded-md">
-            <img src={`/eccomerce/${data.image}`} alt="" className=' group-hover:scale-105 duration-300 h-full w-full object-cover rounded-md' />
-        </div>
-      <p className='text-lg font-bold hover:text-[#EB3C75] duration-300'>{data.title}</p>
-      <p className='text-sm'>{data.desc}</p>
+    <div
+      className="col-span-4 sm:col-span-2 lg:col-span-1 group flex flex-col gap-2 p-4 border border-[#00000023] hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-300 rounded-md cursor-pointer"
+      onClick={() => {
+        router.push("/resources/tools/123");
+      }}
+    >
+      <div className="max-h-52 h-48 overflow-hidden rounded-md">
+        <img
+          src={`/eccomerce/${data.image}`}
+          alt=""
+          className=" group-hover:scale-105 duration-300 h-full w-full object-cover rounded-md"
+        />
+      </div>
+      <p className="text-lg font-bold hover:text-[#EB3C75] duration-300">
+        {data.title}
+      </p>
+      <p className="text-sm">{data.desc}</p>
     </div>
-  )
-}
+  );
+};
