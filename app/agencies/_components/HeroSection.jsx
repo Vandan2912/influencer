@@ -2,11 +2,11 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 import { Button } from "@headlessui/react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
@@ -25,16 +25,14 @@ const HeroSection = ({ data }) => {
         onSlideNextTransitionStart={(e) => setIndex(e.realIndex)}
         onSlidePrevTransitionStart={(e) => setIndex(e.realIndex)}
       >
-        {
-          data.map((item, i) => {
-            return (
-              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-              <SwiperSlide key={i} className="relative">
-                <TextContainer data={item} />
-              </SwiperSlide>
-            )
-          })
-        }
+        {data.map((item, i) => {
+          return (
+            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+            <SwiperSlide key={i} className="relative">
+              <TextContainer data={item} />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
       <div className="absolute bottom-10 right-10 z-10 hidden lg:flex gap-5 items-end w-4/5">
         <Swiper
@@ -46,21 +44,27 @@ const HeroSection = ({ data }) => {
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper"
         >
-          {
-            data.map((item, i) => {
-              return (
-                // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-                <SwiperSlide key={i} className={`!w-36 !h-[20vh]`}>
-                  <div className={`${index===i? "opacity-100" : "opacity-40 hover:opacity-80"} duration-300`}>
-                    <img src={item.image} className={`object-cover cursor-pointer rounded-md duration-300 border border-white ${index === i ? "!h-28 !w-40" : "!h-24 !w-36"}`} />
-                  </div>
-                </SwiperSlide>
-              )
-            })
-          }
+          {data.map((item, i) => {
+            return (
+              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+              <SwiperSlide key={i} className={`!w-36 !h-[20vh]`}>
+                <div
+                  className={`${
+                    index === i ? "opacity-100" : "opacity-40 hover:opacity-80"
+                  } duration-300`}
+                >
+                  <img
+                    src={item.image}
+                    className={`object-cover cursor-pointer rounded-md duration-300 border border-white hover:!h-28 hover:!w-40 ${
+                      index === i ? "!h-28 !w-40" : "!h-24 !w-36"
+                    }`}
+                  />
+                </div>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
-
     </div>
   );
 };
@@ -76,7 +80,6 @@ const TextContainer = ({ data }) => {
         backgroundRepeat: "inherit",
         backgroundSize: "cover",
       }}
-
     >
       <div className="w-full lg:w-1/2 text-white text-left ms-5">
         <p className="text-2xl lg:text-6xl font-bold">

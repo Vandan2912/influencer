@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import hashtags from "../../../assets/hashtags.png";
@@ -35,16 +35,20 @@ export default PopularPool;
 const Card = ({ image, title }) => {
   const router = useRouter();
   return (
-    <div className="group overflow-hidden col-span-2 md:col-span-1 bg-white rounded-[20px] flex min-h-[15vh] md:min-h-[20vh] cursor-pointer duration-300 hover:shadow-[0_0_11px_rgba(33,33,33,.2)]"
-      onClick={() => { router.push("/resources/tools/123") }}>
-      <div className="w-[40%] overflow-hidden">
+    <div
+      className="group overflow-hidden col-span-2 md:col-span-1 bg-white rounded-[20px] flex md:flex-row flex-col md:h-[20vh] cursor-pointer duration-300 hover:shadow-[0_0_11px_rgba(33,33,33,.2)]"
+      onClick={() => {
+        router.push("/resources/tools/123");
+      }}
+    >
+      <div className="md:w-[50%] w-full md:h-auto h-[20vh] overflow-hidden">
         <img
           src={image.src}
           alt=""
-          className="w-full h-full object-cover rounded-ss-[20px] rounded-es-[20px] group-hover:scale-110 duration-300"
+          className="w-full h-full object-cover rounded-ss-[20px] md:rounded-es-[20px] group-hover:scale-110 duration-300"
         />
       </div>
-      <div className="p-5 md:p-10 flex items-center w-[60%]">
+      <div className="p-3 md:p-4 flex items-center w-full md:w-[50%]">
         <p className="text-lg font-semibold mt-3">{title}</p>
       </div>
     </div>

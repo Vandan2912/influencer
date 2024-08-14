@@ -13,8 +13,9 @@ import {
 import { HeartIcon, PlayIcon, UsersIcon } from "@heroicons/react/20/solid";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import FAQ from "./FAQ";
+import { AnimatePresence, easeOut, motion } from "framer-motion";
 
 const ArticleDetail = () => {
   const [show, setShow] = useState(false);
@@ -38,48 +39,114 @@ const ArticleDetail = () => {
         </div>
         <div className="bg-white border-[#EB3C75] border-x border-b px-3 py-5">
           <Disclosure as="div" className="p-2">
-            <DisclosureButton className="group flex w-full items-center gap-2">
-              <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
-              <span className="text-sm/6 font-medium text-black">Pricing</span>
-            </DisclosureButton>
-            <DisclosurePanel className="mt-2 text-sm/5 text-black ps-8">
-              If you&apos;re unhappy with your purchase, we&apos;ll refund you
-              in full.
-            </DisclosurePanel>
+            {({ open }) => (
+              <>
+                <DisclosureButton className="group w-fit flex items-center gap-2">
+                  <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90 duration-300" />
+                  <span className="text-sm/6 font-medium text-black">
+                    Pricing
+                  </span>
+                </DisclosureButton>
+                <AnimatePresence>
+                  {open && (
+                    <DisclosurePanel static as={Fragment}>
+                      <motion.div
+                        initial={{ opacity: 0, y: -24 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -24 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="mt-2 text-sm/5 text-black ps-8"
+                      >
+                        If you&apos;re unhappy with your purchase, we&apos;ll
+                        refund you in full.
+                      </motion.div>
+                    </DisclosurePanel>
+                  )}
+                </AnimatePresence>
+              </>
+            )}
           </Disclosure>
           <Disclosure as="div" className="p-2">
-            <DisclosureButton className="group flex w-full items-center gap-2">
-              <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
-              <span className="text-sm/6 font-medium text-black">
-                The Details
-              </span>
-            </DisclosureButton>
-            <DisclosurePanel className="mt-2 text-sm/5 text-black ps-8">
-              If you&apos;re unhappy with your purchase, we&apos;ll refund you
-              in full.
-            </DisclosurePanel>
+            {({ open }) => (
+              <>
+                <DisclosureButton className="group w-fit flex items-center gap-2">
+                  <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90 duration-300" />
+                  <span className="text-sm/6 font-medium text-black">
+                    The Details
+                  </span>
+                </DisclosureButton>
+                <AnimatePresence>
+                  {open && (
+                    <DisclosurePanel static as={Fragment}>
+                      <motion.div
+                        initial={{ opacity: 0, y: -24 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -24 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="mt-2 text-sm/5 text-black ps-8"
+                      >
+                        If you&apos;re unhappy with your purchase, we&apos;ll
+                        refund you in full.
+                      </motion.div>
+                    </DisclosurePanel>
+                  )}
+                </AnimatePresence>
+              </>
+            )}
           </Disclosure>
           <Disclosure as="div" className="p-2">
-            <DisclosureButton className="group flex w-full items-center gap-2">
-              <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
-              <span className="text-sm/6 font-medium text-black">
-                Conclusion
-              </span>
-            </DisclosureButton>
-            <DisclosurePanel className="mt-2 text-sm/5 text-black ps-8">
-              If you&apos;re unhappy with your purchase, we&apos;ll refund you
-              in full.
-            </DisclosurePanel>
+            {({ open }) => (
+              <>
+                <DisclosureButton className="group w-fit flex items-center gap-2">
+                  <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90 duration-300" />
+                  <span className="text-sm/6 font-medium text-black">
+                    Conclusion
+                  </span>
+                </DisclosureButton>
+                <AnimatePresence>
+                  {open && (
+                    <DisclosurePanel static as={Fragment}>
+                      <motion.div
+                        initial={{ opacity: 0, y: -24 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -24 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="mt-2 text-sm/5 text-black ps-8"
+                      >
+                        If you&apos;re unhappy with your purchase, we&apos;ll
+                        refund you in full.
+                      </motion.div>
+                    </DisclosurePanel>
+                  )}
+                </AnimatePresence>
+              </>
+            )}
           </Disclosure>
           <Disclosure as="div" className="p-2">
-            <DisclosureButton className="group flex w-full items-center gap-2">
-              <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90" />
-              <span className="text-sm/6 font-medium text-black">FAQ</span>
-            </DisclosureButton>
-            <DisclosurePanel className="mt-2 text-sm/5 text-black ps-8">
-              If you&apos;re unhappy with your purchase, we&apos;ll refund you
-              in full.
-            </DisclosurePanel>
+            {({ open }) => (
+              <>
+                <DisclosureButton className="group w-fit flex items-center gap-2">
+                  <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90 duration-300" />
+                  <span className="text-sm/6 font-medium text-black">FAQ</span>
+                </DisclosureButton>
+                <AnimatePresence>
+                  {open && (
+                    <DisclosurePanel static as={Fragment}>
+                      <motion.div
+                        initial={{ opacity: 0, y: -24 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -24 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="mt-2 text-sm/5 text-black ps-8"
+                      >
+                        If you&apos;re unhappy with your purchase, we&apos;ll
+                        refund you in full.
+                      </motion.div>
+                    </DisclosurePanel>
+                  )}
+                </AnimatePresence>
+              </>
+            )}
           </Disclosure>
         </div>
       </div>
