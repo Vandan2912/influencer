@@ -547,7 +547,7 @@ const Card = ({ image, title, desc, minCamp, rate, size, services = [] }) => {
         <Button
           className="w-fit border border-[#b8bfd9] text-[#b8bfd9] hover:bg-[#b8bfd9] rounded-md text-sm uppercase py-2 px-3 hover:text-white mt-0 sm:mt-5 flex items-center gap-3 shrink-0 h-fit duration-300"
           onClick={() => {
-            router.push(`/agencies/${title}`);
+            router.push("/resources/agency/derective");
           }}
         >
           View Profile
@@ -556,7 +556,7 @@ const Card = ({ image, title, desc, minCamp, rate, size, services = [] }) => {
         <Button
           className="w-fit border border-[#EB3C75] text-[#EB3C75] hover:bg-[#EB3C75] rounded-md text-sm uppercase py-2 px-3 hover:text-white mt-0 sm:mt-5 flex items-center gap-3 shrink-0 h-fit duration-300"
           onClick={() => {
-            router.push(`/agencies/${title}`);
+            // router.push(`/agencies/${title}`);
           }}
         >
           Visit Website

@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Button,
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
@@ -20,17 +19,122 @@ const agencies = [
   {
     category: "momentiq",
     image: "image1.png",
-    desc: "MOMENTiQ is the premier influencer marketing agency. They run campaigns at the largest scale for the world’s leading brands, including The Grammy Awards and TikTok Shop itself. They specialize in launching brands/products on TikTok Shop & automating TikTok Shops marketing...",
+    desc: "SociallyIn offers creative content tailored to each business, offering influencer marketing, social media solutions, social media advertising & more....",
   },
   {
     category: "momentiq",
-    image: "image1.png",
-    desc: "MOMENTiQ is the premier influencer marketing agency. They run campaigns at the largest scale for the world’s leading brands, including The Grammy Awards and TikTok Shop itself. They specialize in launching brands/products on TikTok Shop & automating TikTok Shops marketing...",
+    image: "image2.png",
+    desc: "New Offer: Try before you buy! First 30 days on us, with a 90-day no risk guarantee. Only qualifying brands. AUTHENTICITY WINS™ Disruptive Advertising is the best performance marketing agency for authentic brands and marketers....",
   },
   {
     category: "momentiq",
-    image: "image1.png",
-    desc: "MOMENTiQ is the premier influencer marketing agency. They run campaigns at the largest scale for the world’s leading brands, including The Grammy Awards and TikTok Shop itself. They specialize in launching brands/products on TikTok Shop & automating TikTok Shops marketing...",
+    image: "image3.png",
+    desc: "Thrive Internet Marketing Agency is a full service agency specializing in SEO, PPC, Social Media Management, Web Design, Link Building, and more....",
+  },
+];
+
+const tags = [
+  {
+    title: "Blog",
+    bg: "#000000",
+    color: "#FFFFFF",
+    hoverBg: "#333333",
+  },
+  {
+    title: "Facebook",
+    bg: "#3b5998",
+    color: "#FFFFFF",
+    hoverBg: "#2d4373",
+  },
+  {
+    title: "Google",
+    bg: "#4285F4",
+    color: "#FFFFFF",
+    hoverBg: "#357ae8",
+  },
+  {
+    title: "Google Ads",
+    bg: "#FF9900",
+    color: "#FFF",
+    hoverBg: "#e68a00",
+  },
+  {
+    title: "Instagram",
+    bg: "#C13584",
+    color: "#FFFFFF",
+    hoverBg: "#a02a6f",
+  },
+  {
+    title: "LinkedIn",
+    bg: "#0077B5",
+    color: "#FFFFFF",
+    hoverBg: "#005582",
+  },
+  {
+    title: "Pinterest",
+    bg: "#E60023",
+    color: "#FFFFFF",
+    hoverBg: "#c8102e",
+  },
+  {
+    title: "Podcast",
+    bg: "#D44F72",
+    color: "#FFFFFF",
+    hoverBg: "#b33a5a",
+  },
+  {
+    title: "Quora",
+    bg: "#B92B27",
+    color: "#FFFFFF",
+    hoverBg: "#a11e1b",
+  },
+  {
+    title: "Reddit",
+    bg: "#FF4500",
+    color: "#FFFFFF",
+    hoverBg: "#e03d00",
+  },
+  {
+    title: "Snapchat",
+    bg: "#FFFC00",
+    color: "#000000",
+    hoverBg: "#f7f700",
+  },
+  {
+    title: "Spotify",
+    bg: "#1DB954",
+    color: "#FFFFFF",
+    hoverBg: "#1ed760",
+  },
+  {
+    title: "TikTok",
+    bg: "#000000",
+    color: "#FFFFFF",
+    hoverBg: "#333333",
+  },
+  {
+    title: "Twitter (X)",
+    bg: "#1DA1F2",
+    color: "#FFFFFF",
+    hoverBg: "#0d95e8",
+  },
+  {
+    title: "WhatsApp",
+    bg: "#25D366",
+    color: "#FFFFFF",
+    hoverBg: "#20b15a",
+  },
+  {
+    title: "YouTube",
+    bg: "#FF0000",
+    color: "#FFFFFF",
+    hoverBg: "#cc0000",
+  },
+  {
+    title: "YouTube Advertising",
+    bg: "#FF0000",
+    color: "#FFFFFF",
+    hoverBg: "#cc0000",
   },
 ];
 
@@ -41,54 +145,31 @@ const Page = () => {
     <main className="font-Gotham min-h-screen flex justify-center px-4 sm:px-10">
       <section className="max-w-5xl w-full pt-24 md:pt-28 pb-10">
         <img
-          src="/agencies/image1.png"
+          src="/resources/Directive-Consulting.webp"
           alt=""
           className="w-52 h-24 object-contain"
         />
 
-        {/* <h1 className="text-4xl font-bold text-center">Upfluence</h1> */}
+        {/* <h1 className="text-4xl font-bold">Directive Consulting</h1> */}
 
         <div className="flex flex-col gap-3 my-10">
           <p className="font-bold">
-            MOMENTiQ is the premier influencer marketing agency. They run
-            campaigns at the largest scale for the world’s leading brands,
-            including The Grammy Awards and TikTok Shop itself. They specialize
-            in launching brands/products on TikTok Shop & automating TikTok
-            Shops marketing
+            The world’s largest SaaS brands trust Directive to bring their
+            performance marketing campaigns to life across Paid Media, SEO,
+            Creative, Strategy, Lifecycle Marketing, & Video. Directive’s proven
+            Customer Generation methodology has generated +$1B in revenue for
+            clients.
           </p>
           <p>
-            MOMENTiQ is a team of influencer marketing industry veterans that
-            have created several of today’s leading influencer marketing
-            agencies and platforms. They’ve served billions of impressions, are
-            trusted by the world’s leading brands, and are known for delivering
-            campaigns that create cultural moments. MOMENTiQ specializes in two
-            types of campaigns: 1. TikTok Shop campaigns that drive
-            conversions2. Brand Awareness campaigns at the largest scale
-            <br />
-            <br />
-            They became the foremost leading experts in TikTok Shop early by
-            running influencer marketing campaigns for TikTok Shop itself -
-            launching and scaling Shop to the US.
-            <br />
-            <br />
-            When Bytedance (TikTok’s parent company) launched TikTok Shop in the
-            US, they partnered with MOMENTiQ to run the influencer campaigns
-            that launch & scale TikTok Shop into the US. To this day, MOMENTiQ
-            runs several campaigns for TikTok Shop themselves at a massive
-            scale.
-            <br />
-            <br />
-            Since then, MOMENTiQ has led the Shops revolution in the US.MOMENTiQ
-            runs brands’ TikTok Shop marketing end-to-end. They create & deploy
-            Shops influencer campaigns, as well as performance marketing Shops
-            Ads campaigns that they layer on top of their Shops influencer
-            campaigns.
-            <br />
-            <br />
-            They’ve even created the industry’s first platform for launching
-            products/brands on Shop and managing Shops marketing end-to-end.Put
-            simply - MOMENTiQ is the one stop shop for leading brands on TikTok
-            Shops.
+            The world's largest tech brands trust the global team at Directive
+            Consulting to bring their performance marketing campaign results to
+            life. Directive's proven Customer Generation methodology has
+            generated +$1B in revenue for clients in the last 10 years by
+            blending best-in-class campaigns across Paid Media, SEO, Creative,
+            Strategy, Lifecycle Marketing, and Video. It's time for tech
+            companies to stop guessing about marketing ROI and start predicting
+            sales revenue with industry-leading financial modeling. Build a
+            winning game plan with Directive today.
           </p>
         </div>
 
@@ -105,23 +186,23 @@ const Page = () => {
           <p className="text-sm text-[#A79A9ACF]">
             The agency specializes in marketing in the following areas:
           </p>
-          <div className="flex gap-7">
-            <Button
-              className="bg-[#EB3C75] hover:bg-[#860e35] hover:border-[#860e35] duration-300 border border-[#EB3C75] rounded-md w-fit py-1 px-8 text-white flex items-center gap-3 text-sm sm:text-base"
-              onClick={() => {
-                // router.push(``);
-              }}
-            >
-              Tiktok
-            </Button>
-            <Button
-              className="bg-[#EB3C75] hover:bg-[#860e35] hover:border-[#860e35] duration-300 border border-[#EB3C75] rounded-md w-fit py-1 px-8 text-white flex items-center gap-3 text-sm sm:text-base"
-              onClick={() => {
-                // router.push(``);
-              }}
-            >
-              Youtube
-            </Button>
+          <div className="flex gap-4 flex-wrap">
+            {tags.map((tag, index) => (
+              <Button
+                key={index}
+                style={{
+                  backgroundColor: tag.bg,
+                  color: tag.color,
+                  borderColor: tag.bg,
+                }}
+                className={`border duration-300 hover:bg-[${tag.hoverBg}] hover:border-[${tag.hoverBg}]`}
+                onClick={() => {
+                  // Add navigation or any other action here
+                }}
+              >
+                {tag.title}
+              </Button>
+            ))}
           </div>
         </div>
 
@@ -129,15 +210,31 @@ const Page = () => {
         <div className="flex flex-col gap-3 my-10">
           <hr className="h-1 bg-[#E6E6E6]" />
           <p className="text-lg text-black font-bold">Services:</p>
-          <p className=" text-black ">1. Influencer Marketing</p>
-          <p className=" text-black ">2. UGC Content</p>
+          <ul className="list-disc mx-4 ">
+            <li>PPC Management</li>
+            <li>Content & SEO</li>
+            <li>Lifecycle Marketing (Revenue Operations)</li>
+            <li>Creative</li>
+            <li>Performance Marketing</li>
+            <li>GTM Strategy</li>
+            <li>Video Production</li>
+            <li>SEM (Search Engine Marketing)</li>
+            <li>B2B SaaS Marketing</li>
+            <li>Paid Social</li>
+            <li>Customer Generation</li>
+            <li>LinkedIn Advertising</li>
+            <li>Google Ads Management</li>
+            <li>Microsoft Ads Management</li>
+            <li>Paid Media</li>
+            <li>Integrated Strategy</li>
+          </ul>
         </div>
 
         {/* Offices */}
         <div className="flex flex-col gap-3 my-10">
           <hr className="h-1 bg-[#E6E6E6]" />
           <p className="text-lg text-black font-bold">Offices:</p>
-          <p className=" text-black ">Los Angeles</p>
+          <p className=" text-black ">Irvine, California</p>
         </div>
 
         {/* Brands */}
@@ -146,22 +243,32 @@ const Page = () => {
           <p className="text-2xl text-black font-bold">
             Brands we have worked with:
           </p>
-          <div className="grid grid-cols-3 gap-8">
-            <img
-              src="/agencies/image1.png"
-              alt=""
-              className="w-52 h-24 object-contain"
-            />
-            <img
-              src="/agencies/image1.png"
-              alt=""
-              className="w-52 h-24 object-contain"
-            />
-            <img
-              src="/agencies/image1.png"
-              alt=""
-              className="w-52 h-24 object-contain"
-            />
+          <div className="grid grid-cols-6 gap-8">
+            {Array.from({ length: 3 }, (_, index) => (
+              <>
+                <div className="col-span-6 sm:col-span-3 md:col-span-2 p-5 rounded-lg border border-gray-200">
+                  <img
+                    src="/resources/Gong.webp"
+                    alt=""
+                    className="w-full h-full object-contain sm:grayscale hover:grayscale-0 duration-500"
+                  />
+                </div>
+                <div className="col-span-6 sm:col-span-3 md:col-span-2 p-5 rounded-lg border border-gray-200">
+                  <img
+                    src="/resources/amazon.webp"
+                    alt=""
+                    className="w-full h-full object-contain sm:grayscale hover:grayscale-0 duration-500"
+                  />
+                </div>
+                <div className="col-span-6 sm:col-span-3 md:col-span-2 p-5 rounded-lg border border-gray-200">
+                  <img
+                    src="/resources/adobe.webp"
+                    alt=""
+                    className="w-full h-full object-contain sm:grayscale hover:grayscale-0 duration-500"
+                  />
+                </div>
+              </>
+            )).flat()}
           </div>
         </div>
       </section>
@@ -170,3 +277,23 @@ const Page = () => {
 };
 
 export default Page;
+
+const Button = ({
+  className,
+  style,
+  onClick,
+  children,
+}: {
+  className: any;
+  style: any;
+  onClick: any;
+  children: any;
+}) => (
+  <button
+    className={`rounded-md w-fit py-1 px-4 flex items-center gap-3 text-sm sm:text-base ${className}`}
+    style={style}
+    onClick={onClick}
+  >
+    {children}
+  </button>
+);
