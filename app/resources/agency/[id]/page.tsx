@@ -154,22 +154,22 @@ const Page = () => {
 
         <div className="flex flex-col gap-3 my-10">
           <p className="font-bold">
-            The world’s largest SaaS brands trust Directive to bring their
+            The world&apos;s largest SaaS brands trust Directive to bring their
             performance marketing campaigns to life across Paid Media, SEO,
-            Creative, Strategy, Lifecycle Marketing, & Video. Directive’s proven
-            Customer Generation methodology has generated +$1B in revenue for
-            clients.
+            Creative, Strategy, Lifecycle Marketing, & Video. Directive&apos;s
+            proven Customer Generation methodology has generated +$1B in revenue
+            for clients.
           </p>
           <p>
-            The world's largest tech brands trust the global team at Directive
-            Consulting to bring their performance marketing campaign results to
-            life. Directive's proven Customer Generation methodology has
-            generated +$1B in revenue for clients in the last 10 years by
-            blending best-in-class campaigns across Paid Media, SEO, Creative,
-            Strategy, Lifecycle Marketing, and Video. It's time for tech
-            companies to stop guessing about marketing ROI and start predicting
-            sales revenue with industry-leading financial modeling. Build a
-            winning game plan with Directive today.
+            The world&apos;s largest tech brands trust the global team at
+            Directive Consulting to bring their performance marketing campaign
+            results to life. Directive&apos;s proven Customer Generation
+            methodology has generated +$1B in revenue for clients in the last 10
+            years by blending best-in-class campaigns across Paid Media, SEO,
+            Creative, Strategy, Lifecycle Marketing, and Video. It&apos;s time
+            for tech companies to stop guessing about marketing ROI and start
+            predicting sales revenue with industry-leading financial modeling.
+            Build a winning game plan with Directive today.
           </p>
         </div>
 
