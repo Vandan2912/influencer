@@ -20,7 +20,38 @@ const Page = () => {
             marketing, along with some predictions of how people expect it to
             move over the next year and into the future. 
           </p>
-          <img src="/about-company.png" alt="" className="mx-auto mt-10" />
+          <div className="flex h-auto justify-center items-center gap-5 flex-wrap">
+            <img
+              src="/about/forbes.png"
+              alt=""
+              className="h-full w-24 object-contain"
+            />
+            <img
+              src="/about/McKinsey.avif"
+              alt=""
+              className="h-full w-24 object-contain"
+            />
+            <img
+              src="/about/cnn.png"
+              alt=""
+              className="h-full w-24 object-contain"
+            />
+            <img
+              src="/about/BBC.png"
+              alt=""
+              className="h-full w-24 object-contain"
+            />
+            <img
+              src="/about/5.webp"
+              alt=""
+              className="h-full w-24 object-contain"
+            />
+            <img
+              src="/about/6.webp"
+              alt=""
+              className="h-full w-24 object-contain"
+            />
+          </div>
         </div>
       </section>
       <section className="my-10 flex justify-center">

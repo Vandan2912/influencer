@@ -530,9 +530,9 @@ input[type=checkbox]:checked+label::after {
   border-color: #eb3c75; /* Border color when checked */
 }
 
-.checkbox-input:hover {
-  background-color: #eb3c7644; /* Background color when checked */
-  border-color: #eb3c7644; /* Border color when checked */
+.checkbox-input:checked:hover {
+  background-color: #eb3c75 !important; /* Background color when checked */
+  border-color: #eb3c75 !important; /* Border color when checked */
 }
 
 .checkbox-input:checked::before {

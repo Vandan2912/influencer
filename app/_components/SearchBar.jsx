@@ -5,6 +5,7 @@ import "./SearchBar.css";
 
 export const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
 
   const fetchData = (value) => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -28,12 +29,19 @@ export const SearchBar = ({ setResults }) => {
   };
 
   return (
-    <div className="input-wrapper">
-      <FaSearch id="search-icon" />
+    <div
+      className={`input-wrapper relative duration-300 ${
+        isFocused ? "shadow-md" : ""
+      }`}
+    >
+      <FaSearch id="search-icon" className="absolute left-2" />
       <input
+        className=""
         placeholder="Type to search..."
         value={input}
         onChange={(e) => handleChange(e.target.value)}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
       />
     </div>
   );

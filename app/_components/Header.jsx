@@ -441,7 +441,7 @@ const Header = () => {
           <div className="flex min-h-full items-start justify-center p-4 pt-24 md:pt-32 ">
             <DialogPanel
               transition
-              className="w-full max-w-md rounded-xl bg-gray-100 p-6  duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+              className="w-full max-w-md rounded-xl bg-white p-6  duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
             >
               <div className="search-bar-container">
                 <SearchBar setResults={setResults} />

@@ -53,7 +53,7 @@ function SignUpForm({ setType }) {
           <div className="social-container w-full">
             <button
               type="button"
-              className="bg-white hover:bg-[#fff0f5] duration-300 border border-gray-300 w-full flex justify-center items-center"
+              className="bg-white hover:bg-gray-100 hover:shadow-md duration-300 border border-gray-300 w-full flex justify-center items-center"
               onClick={() => login()}
             >
               <img src="/google.png" alt="google" className="h-5 w-5 " />
@@ -71,7 +71,7 @@ function SignUpForm({ setType }) {
                 id="first-name"
                 type="text"
                 name="fname"
-            className="focus:border-gray-700 border-gray-300"
+                className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
                 value={state.fname}
                 onChange={handleChange}
               />
@@ -82,7 +82,7 @@ function SignUpForm({ setType }) {
                 id="last-name"
                 type="text"
                 name="lname"
-            className="focus:border-gray-700 border-gray-300"
+                className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
                 value={state.lname}
                 onChange={handleChange}
               />
@@ -95,7 +95,7 @@ function SignUpForm({ setType }) {
               id="email"
               type="email"
               name="email"
-            className="focus:border-gray-700 border-gray-300"
+              className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
               value={state.email}
               onChange={handleChange}
             />
@@ -108,7 +108,7 @@ function SignUpForm({ setType }) {
                 id="password"
                 type={state.show ? "text" : "password"}
                 name="password"
-            className="focus:border-gray-700 border-gray-300"
+                className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
                 value={state.password}
                 onChange={handleChange}
               />
@@ -119,7 +119,7 @@ function SignUpForm({ setType }) {
                 id="confirm-password"
                 type={state.show ? "text" : "password"}
                 name="cpassword"
-            className="focus:border-gray-700 border-gray-300"
+                className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
                 value={state.cpassword}
                 onChange={handleChange}
               />
@@ -132,7 +132,7 @@ function SignUpForm({ setType }) {
               id="referral"
               type="text"
               name="referral"
-            className="focus:border-gray-700 border-gray-300"
+              className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
               value={state.referral}
               onChange={handleChange}
             />
@@ -151,7 +151,9 @@ function SignUpForm({ setType }) {
             </label>
           </div>
 
-          <button className="w-full hover:bg-[#860e35]">Sign Up</button>
+          <button className="w-full hover:bg-[#860e35] border hover:shadow-md">
+            Sign Up
+          </button>
           <div className="flex justify-center gap-1 mt-3 md:hidden">
             Don’t have an account?{" "}
             <div

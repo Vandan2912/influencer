@@ -99,7 +99,7 @@ const Page = () => {
             <div className="flex min-h-full items-start justify-center p-4 pt-24 md:pt-32 ">
               <DialogPanel
                 transition
-                className="w-full max-w-md rounded-xl bg-gray-100 p-6  duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+                className="w-full max-w-md rounded-xl bg-white p-6  duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
               >
                 <div className="search-bar-container">
                   <SearchBar setResults={setResults} />
@@ -142,7 +142,7 @@ const Page = () => {
                 <div className="relative mt-5">
                   <ComboboxInput
                     className={clsx(
-                      "w-full rounded-lg bg-white py-1.5 pr-8 pl-3 text-sm/6 text-white",
+                      "w-full rounded-lg bg-white py-1.5 pr-8 pl-3 text-sm/6 text-black",
                       "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25"
                     )}
                     displayValue={(person) => person?.name}
@@ -150,7 +150,7 @@ const Page = () => {
                     style={{ border: "1px solid rgb(209 213 219) !important" }}
                   />
                   <ComboboxButton className="group absolute inset-y-0 right-0 px-2.5">
-                    <ChevronDownIcon className="size-4 fill-white/60 group-data-[hover]:fill-white" />
+                    <ChevronDownIcon className="size-4 group-data-[hover]:fill-white" />
                   </ComboboxButton>
                 </div>
 
@@ -158,7 +158,7 @@ const Page = () => {
                   anchor="bottom"
                   transition
                   className={clsx(
-                    "w-[var(--input-width)] rounded-xl border border-white/5 bg-white/5 p-1 [--anchor-gap:var(--spacing-1)] empty:invisible",
+                    "w-[var(--input-width)] rounded-xl border border-white/5 bg-[#e67198] p-1 [--anchor-gap:var(--spacing-1)] empty:invisible",
                     "transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0"
                   )}
                 >
@@ -168,7 +168,7 @@ const Page = () => {
                       value={person}
                       className="group flex cursor-default items-center gap-2 rounded-lg py-1.5 px-3 select-none data-[focus]:bg-white/10"
                     >
-                      <CheckIcon className="invisible size-4 fill-white group-data-[selected]:visible" />
+                      <CheckIcon className="invisible size-4 text-white group-data-[selected]:visible" />
                       <div className="text-sm/6 text-white">{person.name}</div>
                     </ComboboxOption>
                   ))}
@@ -215,7 +215,7 @@ const Page = () => {
                 <div className="relative mt-5">
                   <ComboboxInput
                     className={clsx(
-                      "w-full rounded-lg bg-white py-1.5 pr-8 pl-3 text-sm/6 text-white",
+                      "w-full rounded-lg bg-white py-1.5 pr-8 pl-3 text-sm/6 text-black",
                       "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25"
                     )}
                     displayValue={(person) => person?.name}
@@ -231,7 +231,7 @@ const Page = () => {
                   anchor="bottom"
                   transition
                   className={clsx(
-                    "w-[var(--input-width)] rounded-xl border border-white/5 bg-white/5 p-1 [--anchor-gap:var(--spacing-1)] empty:invisible",
+                    "w-[var(--input-width)] rounded-xl border border-white/5 bg-[#e67198] p-1 [--anchor-gap:var(--spacing-1)] empty:invisible",
                     "transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0"
                   )}
                 >
@@ -241,7 +241,7 @@ const Page = () => {
                       value={person}
                       className="group flex cursor-default items-center gap-2 rounded-lg py-1.5 px-3 select-none data-[focus]:bg-white/10"
                     >
-                      <CheckIcon className="invisible size-4 fill-white group-data-[selected]:visible" />
+                      <CheckIcon className="invisible size-4 text-white group-data-[selected]:visible" />
                       <div className="text-sm/6 text-white">{person.name}</div>
                     </ComboboxOption>
                   ))}
@@ -508,8 +508,15 @@ const Card = ({ image, title, desc, minCamp, rate, size, services = [] }) => {
         </div>
       </div>
       <p className="min-h-[100px] text-sm my-3 px-5">
-        {desc}
-        <span className="text-[#EB3C75]">Read more</span>{" "}
+        <span>{desc}</span>
+        <span
+          className="text-[#EB3C75] w-fit  cursor-pointer"
+          onClick={() => {
+            router.push("/resources/agency/sociallyin");
+          }}
+        >
+          Read more
+        </span>{" "}
       </p>
       <div className="grid grid-cols-2">
         <div className="border-y border-r border-gray-200"></div>
