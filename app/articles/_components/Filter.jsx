@@ -56,6 +56,7 @@ const Filter = () => {
   const [selected, setSelected] = useState({ id: -1, name: "" });
   const [types, setTypes] = useState("");
   const [channel, setChannel] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
 
   const filteredPeople =
     query === ""
@@ -71,23 +72,28 @@ const Filter = () => {
         onChange={(value) => setSelected(value)}
         onClose={() => setQuery("")}
       >
-        <div className="relative">
+        <div
+          className={`relative  rounded-full duration-200 ${
+            isFocused
+              ? "shadow-[0px_0.48px_44.12px_20px_#9098C329]"
+              : "shadow-[0px_0.48px_44.12px_0px_#9098C329]"
+          }
+          `}
+        >
           <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-            {/* <span className="text-gray-500 sm:text-sm">$</span> */}
             <MagnifyingGlassIcon className="size-4" />
           </div>
           <ComboboxInput
             className={clsx(
-              "z-10 w-full rounded-full border-none bg-white/5 text-sm/6 text-black shadow-[0px_0.48px_44.12px_0px_#9098C329] py-1.5 pl-9 pr-5",
-              "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25"
+              "z-10 w-full rounded-full  bg-white text-sm/6 text-black border border-gray-300 focus:bg-white py-1.5 pl-9 pr-5",
+              "data-[focus]:outline-none data-[focus]:-outline-offset-2 data-[focus]:outline-white/25"
             )}
             displayValue={(person) => person?.name}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search"
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
           />
-          {/* <ComboboxButton className="group absolute inset-y-0 right-0 px-2.5">
-                        <ChevronDownIcon className="size-4 fill-white/60 group-data-[hover]:fill-white" />
-                    </ComboboxButton> */}
         </div>
 
         <ComboboxOptions
@@ -180,7 +186,7 @@ const Filter = () => {
               <label className="flex justify-between w-full flex-row-reverse hover:text-[#EB3C75] duration-300">
                 <input
                   type="checkbox"
-                  className="checkbox-input group flex items-center justify-center size-4 rounded-[4px] border hover:bg-[#eb3c7670] duration-200 bg-white data-[checked]:bg-[#EB3C75]"
+                  className="checkbox-input group flex items-center justify-center size-4 rounded-[4px] border hover:border-gray-200 hover:bg-gray-200 duration-200 bg-white data-[checked]:!bg-[#EB3C75]"
                 />
                 {plan.name}
               </label>

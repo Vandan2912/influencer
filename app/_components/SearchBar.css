@@ -10,19 +10,19 @@
   @apply border-2 border-gray-100;
 }
 
-input {
+.input-wrapper input {
   background-color: transparent;
   border: none;
   height: 100%;
-  font-size: 1.25rem;
+  font-size: 1.25rem !important;
   width: 100%;
-  padding-left: 30px;
-  padding-right: 8px;
-  border-radius: 10px;
+  padding-left: 30px !important;
+  padding-right: 8px !important;
+  border-radius: 10px !important;
   @apply duration-300;
 }
 
-input:focus {
+.input-wrapper input:focus {
   outline: none;
   @apply bg-gray-50;
 }
