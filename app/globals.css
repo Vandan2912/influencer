@@ -544,7 +544,7 @@ input[type=checkbox]:checked+label::after {
   position: absolute;
   top: 40%;
   left: 40%;
-  transform: translate(-50%, -50%); /* Center the checkmark */
+  transform: translate(-55%, -75%); /* Center the checkmark */
   border-radius: 2px; /* Round the checkmark */
 }
 

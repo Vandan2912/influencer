@@ -90,8 +90,8 @@ const ArticleDetail = () => {
             {({ open }) => (
               <>
                 <DisclosureButton className="group w-fit flex items-center gap-2">
-                  <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90 duration-300" />
-                  <span className="text-sm/6 font-medium text-black">
+                  <PlayIcon className="size-5 text-[#EB3C75] group-hover:scale-100 scale-90 group-data-[open]:rotate-90 duration-300" />
+                  <span className="text-sm/6 font-medium text-black group-hover:text-[#EB3C75] duration-300">
                     Pricing
                   </span>
                 </DisclosureButton>
@@ -118,8 +118,8 @@ const ArticleDetail = () => {
             {({ open }) => (
               <>
                 <DisclosureButton className="group w-fit flex items-center gap-2">
-                  <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90 duration-300" />
-                  <span className="text-sm/6 font-medium text-black">
+                  <PlayIcon className="size-5 text-[#EB3C75] group-hover:scale-100 scale-90 group-data-[open]:rotate-90 duration-300" />
+                  <span className="text-sm/6 font-medium text-black group-hover:text-[#EB3C75] duration-300">
                     The Details
                   </span>
                 </DisclosureButton>
@@ -146,8 +146,8 @@ const ArticleDetail = () => {
             {({ open }) => (
               <>
                 <DisclosureButton className="group w-fit flex items-center gap-2">
-                  <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90 duration-300" />
-                  <span className="text-sm/6 font-medium text-black">
+                  <PlayIcon className="size-5 text-[#EB3C75] group-hover:scale-100 scale-90 group-data-[open]:rotate-90 duration-300" />
+                  <span className="text-sm/6 font-medium text-black group-hover:text-[#EB3C75] duration-300">
                     Conclusion
                   </span>
                 </DisclosureButton>
@@ -174,8 +174,10 @@ const ArticleDetail = () => {
             {({ open }) => (
               <>
                 <DisclosureButton className="group w-fit flex items-center gap-2">
-                  <PlayIcon className="size-5 text-[#EB3C75] group-data-[open]:rotate-90 duration-300" />
-                  <span className="text-sm/6 font-medium text-black">FAQ</span>
+                  <PlayIcon className="size-5 text-[#EB3C75] group-hover:scale-100 scale-90 group-data-[open]:rotate-90 duration-300" />
+                  <span className="text-sm/6 font-medium text-black group-hover:text-[#EB3C75] duration-300">
+                    FAQ
+                  </span>
                 </DisclosureButton>
                 <AnimatePresence>
                   {open && (

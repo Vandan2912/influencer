@@ -23,14 +23,16 @@ const Ebooks = () => {
       <hr className="h-1 bg-black" />
       <div className="my-0 px-0 lg:my-10 lg:px-20 mt-5">
         <div className="w-full flex flex-col md:flex-row gap-10 justify-center items-center text-center">
-          <img
-            src="/resources/tool1.png"
-            alt=""
-            className=" md:max-w-[50%] rounded-2xl object-cover cursor-pointer hover:scale-105 duration-300"
-            onClick={() => {
-              router.push("/resources/ebook/123");
-            }}
-          />
+          <div className="md:max-w-[50%] overflow-hidden rounded-2xl">
+            <img
+              src="/resources/tool1.png"
+              alt=""
+              className="rounded-2xl object-cover cursor-pointer hover:scale-105 duration-300"
+              onClick={() => {
+                router.push("/resources/ebook/123");
+              }}
+            />
+          </div>
           <div>
             <p className="text-xl font-semibold mt-7 text-[#EB3C75] text-center">
               Ebooks
@@ -48,14 +50,16 @@ const Ebooks = () => {
         {/* <div className="flex mt-14 gap-20"> */}
         <div className="w-full mt-14 grid grid-cols-3 gap-10">
           <div className="col-span-3 md:col-span-1 overflow-hidden group text-center bg-[#00000005] rounded-2xl">
-            <img
-              src="/resources/tool3.png"
-              alt=""
-              className="w-full h-56 rounded-ss-2xl rounded-se-2xl object-cover cursor-pointer group-hover:scale-105 duration-300"
-              onClick={() => {
-                router.push("/resources/ebook/123");
-              }}
-            />
+            <div className="w-full h-56 overflow-hidden rounded-ss-2xl rounded-se-2xl">
+              <img
+                src="/resources/tool3.png"
+                alt=""
+                className="w-full h-56 rounded-ss-2xl rounded-se-2xl object-cover cursor-pointer group-hover:scale-105 duration-300"
+                onClick={() => {
+                  router.push("/resources/ebook/123");
+                }}
+              />
+            </div>
             <p className="text-xl font-semibold mt-7 text-[#EB3C75]">Ebooks</p>
             <p
               className="text-xl mt-5 font-bold mb-8 hover:text-[#EB3C75] duration-300 cursor-pointer"
@@ -67,14 +71,16 @@ const Ebooks = () => {
             </p>
           </div>
           <div className="mt-10 md:mt-0 col-span-3 md:col-span-1 overflow-hidden group text-center bg-[#00000005] rounded-2xl">
-            <img
-              src="/resources/tool4.jpeg"
-              alt=""
-              className="w-full h-56 rounded-ss-2xl rounded-se-2xl object-cover cursor-pointer group-hover:scale-105 duration-300"
-              onClick={() => {
-                router.push("/resources/ebook/123");
-              }}
-            />
+            <div className="w-full h-56 overflow-hidden rounded-ss-2xl rounded-se-2xl">
+              <img
+                src="/resources/tool4.jpeg"
+                alt=""
+                className="w-full h-56 rounded-ss-2xl rounded-se-2xl object-cover cursor-pointer group-hover:scale-105 duration-300"
+                onClick={() => {
+                  router.push("/resources/ebook/123");
+                }}
+              />
+            </div>
             <p className="text-xl font-semibold mt-7 text-[#EB3C75]">Ebooks</p>
             <p
               className="text-xl mt-5 font-bold mb-8 hover:text-[#EB3C75] duration-300 cursor-pointer"
@@ -86,14 +92,16 @@ const Ebooks = () => {
             </p>
           </div>
           <div className="mt-10 md:mt-0 col-span-3 md:col-span-1 overflow-hidden group text-center bg-[#00000005] rounded-2xl">
-            <img
-              src="/resources/tool5.jpeg"
-              alt=""
-              className="w-full h-56 rounded-ss-2xl rounded-se-2xl object-cover cursor-pointer group-hover:scale-105 duration-300"
-              onClick={() => {
-                router.push("/resources/ebook/123");
-              }}
-            />
+            <div className="w-full h-56 overflow-hidden rounded-ss-2xl rounded-se-2xl">
+              <img
+                src="/resources/tool5.jpeg"
+                alt=""
+                className="w-full h-56 rounded-ss-2xl rounded-se-2xl object-cover cursor-pointer group-hover:scale-105 duration-300"
+                onClick={() => {
+                  router.push("/resources/ebook/123");
+                }}
+              />
+            </div>
             <p className="text-xl font-semibold mt-7 text-[#EB3C75]">Ebooks</p>
             <p
               className="text-xl mt-5 font-bold mb-8 hover:text-[#EB3C75] duration-300 cursor-pointer"
