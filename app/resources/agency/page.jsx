@@ -510,7 +510,7 @@ const Card = ({ image, title, desc, minCamp, rate, size, services = [] }) => {
       <p className="min-h-[100px] text-sm my-3 px-5">
         <span>{desc}</span>
         <span
-          className="text-[#EB3C75] w-fit  cursor-pointer"
+          className="text-[#EB3C75] w-fit  cursor-pointer hover:text-[#bb134a] hover:underline duration-300"
           onClick={() => {
             router.push("/resources/agency/sociallyin");
           }}

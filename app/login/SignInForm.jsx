@@ -45,7 +45,7 @@ function SignInForm({ setType }) {
             type="email"
             placeholder="Email"
             name="email"
-            className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
+            className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300 focus-visible:outline-none duration-300"
             value={state.email}
             onChange={handleChange}
           />
@@ -53,7 +53,7 @@ function SignInForm({ setType }) {
             type="password"
             name="password"
             placeholder="Password"
-            className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
+            className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300 focus-visible:outline-none duration-300"
             value={state.password}
             onChange={handleChange}
           />

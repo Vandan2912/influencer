@@ -538,13 +538,13 @@ input[type=checkbox]:checked+label::after {
 .checkbox-input:checked::before {
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>');
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   background-color: transparent; /* Checkmark color */
   position: absolute;
-  top: 40%;
-  left: 40%;
-  transform: translate(-55%, -75%); /* Center the checkmark */
+  top: -2px;
+  left: 1px;
+  /* transform: translate(-55%, -75%); */
   border-radius: 2px; /* Round the checkmark */
 }
 

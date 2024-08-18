@@ -49,7 +49,7 @@ const Articles = () => {
           className="col-span-12 sm:col-span-6 md:col-span-3"
         />
         <div
-          className="col-span-12 overflow-hidden sm:col-span-6 md:col-span-6 min-h-[40vh] sm:min-h-[unset] bg-[#00000025] rounded-[20px] relative hover:shadow-[0_0_11px_rgba(33,33,33,.2)]"
+          className="col-span-12 overflow-hidden sm:col-span-6 md:col-span-6 min-h-[40vh] sm:min-h-[unset] bg-[#00000025] rounded-[20px] relative hover:shadow-[0_0_11px_rgba(33,33,33,.2)] duration-500"
           style={{
             backgroundImage: "url('/articles6.png')",
             backgroundSize: "cover",

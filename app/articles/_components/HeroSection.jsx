@@ -59,7 +59,7 @@ const HeroSection = ({ data }) => {
                 >
                   <img
                     src={item.image}
-                    className={`object-cover cursor-pointer rounded-md duration-300 border border-white hover:!h-28 hover:!w-40 ${
+                    className={`object-cover cursor-pointer rounded-md duration-300 border border-white ${
                       index === i ? "!h-28 !w-40" : "!h-24 !w-36"
                     }`}
                   />

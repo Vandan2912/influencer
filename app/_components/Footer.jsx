@@ -153,20 +153,20 @@ const Footer = () => {
       <div className="px-6 py-12 lg:px-28 lg:py-9 flex flex-col-reverse lg:flex-row gap-10 justify-between items-center w-full">
         <p>Copyright 2024 influencer marketing hub. all rights reserved</p>
         <div className="flex gap-5">
-          <div className="flex justify-center items-center bg-[#EB3C7526] h-8 w-8 cursor-pointer hover:shadow-[0_0_50px_-4px_#EB3C75] hover:border border-0 rounded border-[#eb3c762b] duration-100">
+          <div className="flex justify-center items-center bg-[#EB3C7526] h-8 w-8 cursor-pointer hover:shadow-[0_0_15px_0px_#EB3C75] hover:border border-0 rounded border-[#eb3c762b] duration-100">
             <img src={twitterIcon.src} alt="twitterIcon" className="h-4 w-4" />
           </div>
-          <div className="flex justify-center items-center bg-[#EB3C7526] h-8 w-8 cursor-pointer hover:shadow-[0_0_50px_-4px_#EB3C75] hover:border border-0 rounded border-[#EB3C752b] duration-100">
+          <div className="flex justify-center items-center bg-[#EB3C7526] h-8 w-8 cursor-pointer hover:shadow-[0_0_15px_0px_#EB3C75] hover:border border-0 rounded border-[#EB3C752b] duration-100">
             <img src={facebookIcon.src} alt="twitterIcon" className="h-4 w-4" />
           </div>
-          <div className="flex justify-center items-center bg-[#EB3C7526] h-8 w-8 cursor-pointer hover:shadow-[0_0_50px_-4px_#EB3C75] hover:border border-0 rounded border-[#EB3C752b] duration-100">
+          <div className="flex justify-center items-center bg-[#EB3C7526] h-8 w-8 cursor-pointer hover:shadow-[0_0_15px_0px_#EB3C75] hover:border border-0 rounded border-[#EB3C752b] duration-100">
             <img
               src={instagramIcon.src}
               alt="twitterIcon"
               className="h-4 w-4"
             />
           </div>
-          <div className="flex justify-center items-center bg-[#EB3C7526] h-8 w-8 cursor-pointer hover:shadow-[0_0_50px_-4px_#EB3C75] hover:border border-0 rounded border-[#EB3C752b] duration-100">
+          <div className="flex justify-center items-center bg-[#EB3C7526] h-8 w-8 cursor-pointer hover:shadow-[0_0_15px_0px_#EB3C75] hover:border border-0 rounded border-[#EB3C752b] duration-100">
             <img src={ticktokIcon.src} alt="twitterIcon" className="h-4 w-4" />
           </div>
         </div>

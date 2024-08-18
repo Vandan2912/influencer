@@ -71,7 +71,7 @@ function SignUpForm({ setType }) {
                 id="first-name"
                 type="text"
                 name="fname"
-                className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
+                className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300 focus-visible:outline-none duration-300"
                 value={state.fname}
                 onChange={handleChange}
               />
@@ -82,7 +82,7 @@ function SignUpForm({ setType }) {
                 id="last-name"
                 type="text"
                 name="lname"
-                className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
+                className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300 focus-visible:outline-none duration-300"
                 value={state.lname}
                 onChange={handleChange}
               />
@@ -95,7 +95,7 @@ function SignUpForm({ setType }) {
               id="email"
               type="email"
               name="email"
-              className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
+              className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300 focus-visible:outline-none duration-300"
               value={state.email}
               onChange={handleChange}
             />
@@ -108,7 +108,7 @@ function SignUpForm({ setType }) {
                 id="password"
                 type={state.show ? "text" : "password"}
                 name="password"
-                className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
+                className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300 focus-visible:outline-none duration-300"
                 value={state.password}
                 onChange={handleChange}
               />
@@ -119,7 +119,7 @@ function SignUpForm({ setType }) {
                 id="confirm-password"
                 type={state.show ? "text" : "password"}
                 name="cpassword"
-                className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
+                className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300 focus-visible:outline-none duration-300"
                 value={state.cpassword}
                 onChange={handleChange}
               />
@@ -132,7 +132,7 @@ function SignUpForm({ setType }) {
               id="referral"
               type="text"
               name="referral"
-              className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300"
+              className="focus:shadow-md focus:bg-gray-50 hover:bg-gray-50 border-gray-200 hover:border-gray-300 focus:border-gray-300 focus-visible:outline-none duration-300"
               value={state.referral}
               onChange={handleChange}
             />
