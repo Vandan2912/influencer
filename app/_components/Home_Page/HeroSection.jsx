@@ -74,7 +74,7 @@ const HeroSection = () => {
             <div
               className={`${
                 index === 1 ? "opacity-100" : "opacity-40 hover:opacity-100"
-              }`}
+              } duration-300`}
             >
               <img
                 src="/carousel_image2.png"
@@ -89,7 +89,7 @@ const HeroSection = () => {
             <div
               className={`${
                 index === 2 ? "opacity-100" : "opacity-40 hover:opacity-80"
-              }`}
+              } duration-300`}
             >
               <img
                 src="/carousel_image3.jpg"
@@ -104,7 +104,7 @@ const HeroSection = () => {
             <div
               className={`${
                 index === 3 ? "opacity-100" : "opacity-40 hover:opacity-80"
-              }`}
+              } duration-300`}
             >
               <img
                 src="/carousel_image4.jpg"

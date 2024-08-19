@@ -30,7 +30,7 @@ export default function Page() {
                 To keep connected with us please login with your personal info
               </p>
               <button
-                className="ghost abc !bg-white !text-[#EB3C75] hover:shadow-[0_0_11px_rgba(33,33,33,.2)]  border-0 duration-300"
+                className="ghost !bg-[#EB3C75] !text-white hover:shadow-[0_0_11px_rgba(33,33,33,.2)] hover:!bg-white hover:!text-[#EB3C75] border border-white duration-300"
                 id="signIn"
                 onClick={() => handleOnClick("signIn")}
               >
@@ -43,7 +43,7 @@ export default function Page() {
                 Enter your personal details and start journey with us
               </p>
               <button
-                className="ghost abc !bg-white !text-[#EB3C75] hover:shadow-[0_0_11px_rgba(33,33,33,.2)]  border-0 duration-300"
+                className="ghost !bg-[#EB3C75] !text-white hover:shadow-[0_0_11px_rgba(33,33,33,.2)] hover:!bg-white hover:!text-[#EB3C75] border border-white duration-300"
                 id="signUp"
                 onClick={() => handleOnClick("signUp")}
               >
