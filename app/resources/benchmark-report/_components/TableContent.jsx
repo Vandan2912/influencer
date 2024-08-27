@@ -61,7 +61,7 @@ const TableContent = () => {
                   behavior: "smooth",
                 });
               }}
-              className="hover:!font-bold"
+              className="hover:!font-bold duration-200"
               style={{
                 fontWeight: activeId === heading.id ? "bold" : "normal",
                 height: "100%",

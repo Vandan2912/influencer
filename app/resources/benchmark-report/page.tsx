@@ -6,10 +6,10 @@ export default function Page({ params }: { params: { slug: string } }) {
   return (
     <main className="font-Gotham">
       <section className="py-8 px-5 md:py-20 md:px-16 grid grid-cols-4 gap-10">
-        <div className="col-span-1 hidden md:block">
+        <div className="col-span-1 hidden lg:block">
           <TableContent />
         </div>
-        <div className="col-span-4 md:col-span-3">
+        <div className="col-span-4 lg:col-span-3">
           <ArticleDetail />
         </div>
       </section>

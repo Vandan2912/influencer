@@ -133,7 +133,7 @@ const TextContainer = ({ number, type = "jpg" }) => {
         backgroundSize: "cover",
       }}
     >
-      <div className="w-full lg:w-1/2 text-white text-left ms-5">
+      <div className="w-full lg:w-1/2 text-white lg:text-left ms-5 -translate-y-8 text-center">
         <p className="text-2xl lg:text-6xl font-bold">
           The leading Social Media resource for Brands
         </p>
@@ -142,7 +142,7 @@ const TextContainer = ({ number, type = "jpg" }) => {
           efficitur lorem, ut condimentum nisi. Integer molestie tellus vel nunc
           sagittis dignissim
         </p>
-        <div className="flex gap-0 sm:gap-8 flex-col sm:flex-row">
+        <div className="flex gap-0 sm:gap-8 flex-col sm:flex-row items-center lg:justify-start justify-center">
           <Button className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white mt-5 flex items-center gap-3">
             About Us
             <ArrowLongRightIcon className="h-5 w-5" />

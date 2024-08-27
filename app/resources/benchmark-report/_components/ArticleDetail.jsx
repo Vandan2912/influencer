@@ -64,7 +64,10 @@ const ArticleDetail = () => {
         survey collating data related to the influencer marketing industry, the
         Influencer Marketing Benchmark Report 2024 also incorporates data from
         HypeAuditor, and our{" "}
-        <a href="#" className="text-[#EB3C75]">
+        <a
+          href="#"
+          className="text-[#EB3C75] hover:text-[#860e35] duration-300"
+        >
           Diversity, Equity & Inclusion (DEI) in Influencer Marketing: Racial
           and Gender Inequalities Report.
         </a>

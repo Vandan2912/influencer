@@ -16,8 +16,8 @@ const Footer = () => {
         display: pathname == "/login" && "none",
       }}
     >
-      <div className="px-6 py-12 lg:px-28 lg:py-16 grid grid-cols-12 gap-6">
-        <div className="col-span-6 md:col-span-3 flex flex-col gap-3">
+      <div className="pe-6 py-12 lg:px-28 lg:py-16 grid grid-cols-12 gap-6 ps-8 sm:ps-14 md:ps-6">
+        <div className="col-span-6 sm:col-span-7 md:col-span-3 flex flex-col gap-3">
           <p className="text-lg mb-3">Company</p>
 
           <a className="cursor-default" href="/articles">
@@ -46,7 +46,7 @@ const Footer = () => {
             </p>
           </a>
         </div>
-        <div className="col-span-6 md:col-span-4 flex flex-col gap-3">
+        <div className="col-span-6 sm:col-span-5 md:col-span-4 flex flex-col gap-3">
           <p className="text-lg mb-3">Popular</p>
 
           <a className="cursor-default" href="/platforms/influencer">
@@ -81,7 +81,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="col-span-6 md:col-span-3 flex flex-col gap-3">
+        <div className="col-span-6 sm:col-span-7 md:col-span-3 flex flex-col gap-3">
           <p className="text-lg mb-3">Free Tools</p>
 
           <a className="cursor-default" href="/resources/tools">
@@ -111,7 +111,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="col-span-6 md:col-span-2 flex flex-col gap-3">
+        <div className="col-span-6 sm:col-span-5 md:col-span-2 flex flex-col gap-3">
           <p className="text-lg mb-3">Other Links</p>
 
           <a className="cursor-default" href="/cookies">

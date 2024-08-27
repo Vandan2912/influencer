@@ -24,6 +24,7 @@ import {
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
 import logo from "../../assets/logo.png";
+import logoBlack from "../../assets/logoBlack.svg";
 import {
   about,
   agencies,
@@ -36,6 +37,7 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { SearchBar } from "./SearchBar";
 import { SearchResultsList } from "./SearchResultsList";
+import { AnimatePresence, easeOut, motion } from "framer-motion";
 
 // const callsToAction = [
 //   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
@@ -281,144 +283,264 @@ const Header = () => {
           </Button>
         </PopoverGroup>
       </nav>
-      <Dialog
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-        className="lg:hidden"
-      >
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <Link href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img alt="logo" src={logo.src} className="h-8 w-auto" />
-            </Link>
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <Dialog
+            open={mobileMenuOpen}
+            onClose={setMobileMenuOpen}
+            className="lg:hidden"
+          >
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/30"
+            />
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 100 }}
+              transition={{ ease: "easeInOut" }}
+              className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
             >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon aria-hidden="true" className="h-6 w-6" />
-            </button>
-          </div>
-          <div className="mt-10 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                <Button
-                  className="bg-[#EB3C75] rounded-lg py-2 px-5 text-white w-full"
-                  onClick={() => {
-                    router.push("/resources/benchmark-report");
-                  }}
-                >
-                  Benchmark Report 2024
-                </Button>
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                    Articles
-                    <ChevronDownIcon
-                      aria-hidden="true"
-                      className="h-5 w-5 flex-none group-data-[open]:rotate-180"
+              <DialogPanel
+                as={motion.div}
+                initial={{ opacity: 0, scale: 0.95, x: 100 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0.95, x: 100 }}
+                className="w-full space-y-4 bg-white"
+              >
+                <div className="flex items-center justify-between">
+                  <Link href="#" className="-m-1.5 p-1.5">
+                    <span className="sr-only">Your Company</span>
+                    <img
+                      alt="logo"
+                      src={logoBlack.src}
+                      className="h-8 w-auto"
                     />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...articles].map((item) => (
-                      <DisclosureButton
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block rounded-lg py-2 pl-6 pr-3 text-sm  leading-7 text-gray-900 hover:bg-gray-50"
+                  </Link>
+                  <button
+                    type="button"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                  >
+                    <span className="sr-only">Close menu</span>
+                    <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+                  </button>
+                </div>
+                <div className="mt-10 flow-root">
+                  <div className="-my-6 divide-y divide-gray-500/10">
+                    <div className="space-y-2 py-6">
+                      <Button
+                        className="bg-[#EB3C75] rounded-lg py-2 px-5 text-white w-full"
+                        onClick={() => {
+                          router.push("/resources/benchmark-report");
+                        }}
                       >
-                        {item.name}
-                      </DisclosureButton>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                    Platforms
-                    <ChevronDownIcon
-                      aria-hidden="true"
-                      className="h-5 w-5 flex-none group-data-[open]:rotate-180"
-                    />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...platforms].map((item) => (
-                      <DisclosureButton
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block rounded-lg py-2 pl-6 pr-3 text-sm  leading-7 text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </DisclosureButton>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                    Agencies
-                    <ChevronDownIcon
-                      aria-hidden="true"
-                      className="h-5 w-5 flex-none group-data-[open]:rotate-180"
-                    />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...agencies].map((item) => (
-                      <DisclosureButton
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block rounded-lg py-2 pl-6 pr-3 text-sm  leading-7 text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </DisclosureButton>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                    Resources
-                    <ChevronDownIcon
-                      aria-hidden="true"
-                      className="h-5 w-5 flex-none group-data-[open]:rotate-180"
-                    />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...resources].map((item) => (
-                      <DisclosureButton
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block rounded-lg py-2 pl-6 pr-3 text-sm  leading-7 text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </DisclosureButton>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                    About Us
-                    <ChevronDownIcon
-                      aria-hidden="true"
-                      className="h-5 w-5 flex-none group-data-[open]:rotate-180"
-                    />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...about].map((item) => (
-                      <DisclosureButton
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block rounded-lg py-2 pl-6 pr-3 text-sm  leading-7 text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </DisclosureButton>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
-              </div>
-              {/* <div className="py-6">
+                        Benchmark Report 2024
+                      </Button>
+                      <Disclosure as="div" className="-mx-3">
+                        {({ open }) => (
+                          <>
+                            <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                              Articles
+                              <ChevronDownIcon
+                                aria-hidden="true"
+                                className="h-5 w-5 flex-none group-data-[open]:rotate-180"
+                              />
+                            </DisclosureButton>
+                            <AnimatePresence>
+                              {open && (
+                                <DisclosurePanel className="mt-2 space-y-2">
+                                  <motion.div
+                                    initial={{ opacity: 0, y: -24 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -24 }}
+                                    transition={{
+                                      duration: 0.2,
+                                      ease: easeOut,
+                                    }}
+                                    className="origin-top"
+                                  >
+                                    {[...articles].map((item) => (
+                                      <DisclosureButton
+                                        key={item.name}
+                                        as="a"
+                                        href={item.href}
+                                        className="block rounded-lg py-2 pl-6 pr-3 text-sm  leading-7 text-gray-900 hover:bg-gray-50"
+                                      >
+                                        {item.name}
+                                      </DisclosureButton>
+                                    ))}
+                                  </motion.div>
+                                </DisclosurePanel>
+                              )}
+                            </AnimatePresence>
+                          </>
+                        )}
+                      </Disclosure>
+                      <Disclosure as="div" className="-mx-3">
+                        {({ open }) => (
+                          <>
+                            <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                              Platforms
+                              <ChevronDownIcon
+                                aria-hidden="true"
+                                className="h-5 w-5 flex-none group-data-[open]:rotate-180"
+                              />
+                            </DisclosureButton>
+                            <AnimatePresence>
+                              {open && (
+                                <DisclosurePanel className="mt-2 space-y-2">
+                                  <motion.div
+                                    initial={{ opacity: 0, y: -24 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -24 }}
+                                    transition={{
+                                      duration: 0.2,
+                                      ease: easeOut,
+                                    }}
+                                    className="origin-top"
+                                  >
+                                    {[...platforms].map((item) => (
+                                      <DisclosureButton
+                                        key={item.name}
+                                        as="a"
+                                        href={item.href}
+                                        className="block rounded-lg py-2 pl-6 pr-3 text-sm  leading-7 text-gray-900 hover:bg-gray-50"
+                                      >
+                                        {item.name}
+                                      </DisclosureButton>
+                                    ))}
+                                  </motion.div>
+                                </DisclosurePanel>
+                              )}
+                            </AnimatePresence>
+                          </>
+                        )}
+                      </Disclosure>
+                      <Disclosure as="div" className="-mx-3">
+                        {({ open }) => (
+                          <>
+                            <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                              Agencies
+                              <ChevronDownIcon
+                                aria-hidden="true"
+                                className="h-5 w-5 flex-none group-data-[open]:rotate-180"
+                              />
+                            </DisclosureButton>
+                            <AnimatePresence>
+                              {open && (
+                                <DisclosurePanel className="mt-2 space-y-2">
+                                  <motion.div
+                                    initial={{ opacity: 0, y: -24 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -24 }}
+                                    transition={{
+                                      duration: 0.2,
+                                      ease: easeOut,
+                                    }}
+                                    className="origin-top"
+                                  >
+                                    {[...agencies].map((item) => (
+                                      <DisclosureButton
+                                        key={item.name}
+                                        as="a"
+                                        href={item.href}
+                                        className="block rounded-lg py-2 pl-6 pr-3 text-sm  leading-7 text-gray-900 hover:bg-gray-50"
+                                      >
+                                        {item.name}
+                                      </DisclosureButton>
+                                    ))}
+                                  </motion.div>
+                                </DisclosurePanel>
+                              )}
+                            </AnimatePresence>
+                          </>
+                        )}
+                      </Disclosure>
+                      <Disclosure as="div" className="-mx-3">
+                        {({ open }) => (
+                          <>
+                            <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                              Resources
+                              <ChevronDownIcon
+                                aria-hidden="true"
+                                className="h-5 w-5 flex-none group-data-[open]:rotate-180"
+                              />
+                            </DisclosureButton>
+                            <AnimatePresence>
+                              {open && (
+                                <DisclosurePanel className="mt-2 space-y-2">
+                                  <motion.div
+                                    initial={{ opacity: 0, y: -24 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -24 }}
+                                    transition={{
+                                      duration: 0.2,
+                                      ease: easeOut,
+                                    }}
+                                    className="origin-top"
+                                  >
+                                    {[...resources].map((item) => (
+                                      <DisclosureButton
+                                        key={item.name}
+                                        as="a"
+                                        href={item.href}
+                                        className="block rounded-lg py-2 pl-6 pr-3 text-sm  leading-7 text-gray-900 hover:bg-gray-50"
+                                      >
+                                        {item.name}
+                                      </DisclosureButton>
+                                    ))}
+                                  </motion.div>
+                                </DisclosurePanel>
+                              )}
+                            </AnimatePresence>
+                          </>
+                        )}
+                      </Disclosure>
+                      <Disclosure as="div" className="-mx-3">
+                        {({ open }) => (
+                          <>
+                            <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                              About Us
+                              <ChevronDownIcon
+                                aria-hidden="true"
+                                className="h-5 w-5 flex-none group-data-[open]:rotate-180"
+                              />
+                            </DisclosureButton>
+                            <AnimatePresence>
+                              {open && (
+                                <DisclosurePanel className="mt-2 space-y-2">
+                                  <motion.div
+                                    initial={{ opacity: 0, y: -24 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -24 }}
+                                    transition={{
+                                      duration: 0.2,
+                                      ease: easeOut,
+                                    }}
+                                    className="origin-top"
+                                  >
+                                    {[...about].map((item) => (
+                                      <DisclosureButton
+                                        key={item.name}
+                                        as="a"
+                                        href={item.href}
+                                        className="block rounded-lg py-2 pl-6 pr-3 text-sm  leading-7 text-gray-900 hover:bg-gray-50"
+                                      >
+                                        {item.name}
+                                      </DisclosureButton>
+                                    ))}
+                                  </motion.div>
+                                </DisclosurePanel>
+                              )}
+                            </AnimatePresence>
+                          </>
+                        )}
+                      </Disclosure>
+                    </div>
+                    {/* <div className="py-6">
                 <a
                   // biome-ignore lint/a11y/useValidAnchor: <explanation>
                   href="#"
@@ -427,10 +549,13 @@ const Header = () => {
                   Log in
                 </a>
               </div> */}
-            </div>
-          </div>
-        </DialogPanel>
-      </Dialog>
+                  </div>
+                </div>
+              </DialogPanel>
+            </motion.div>
+          </Dialog>
+        )}
+      </AnimatePresence>
       <Dialog
         open={searchbar}
         as="div"

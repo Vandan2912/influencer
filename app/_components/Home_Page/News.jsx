@@ -38,7 +38,7 @@ const News = () => {
             are still…
           </p>
           <Button
-            className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3"
+            className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3 mx-auto md:mx-0"
             onClick={() => {
               router.push("/resources/tools/123");
             }}

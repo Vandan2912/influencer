@@ -119,9 +119,9 @@ export default Page;
 const ArticleSections = ({ title, data }) => {
   return (
     <div className="">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center mb-5">
         <p className="text-2xl font-bold">{title}</p>
-        <Button className="hover:bg-[#EB3C75] duration-300 border border-[#EB3C75] bg-white b rounded-full py-1 px-8 text-[#EB3C75] hover:text-white mt-5 flex items-center gap-3">
+        <Button className="hover:bg-[#EB3C75] duration-300 border border-[#EB3C75] bg-white b rounded-full py-1 px-8 text-[#EB3C75] hover:text-white flex items-center gap-3">
           See all
         </Button>
       </div>

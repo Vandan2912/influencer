@@ -8,19 +8,19 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
 
 const Marketing = () => {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <section className="px-6 py-12 lg:px-28 lg:py-40 bg-[#EFEBEB] w-full min-h-[80vh] flex flex-col gap-16">
-      <div className="flex flex-col md:flex-row flex-wrap w-full justify-center max-h-[unset] lg:max-h-[60vh] gap-0 lg:gap-16">
+      <div className="flex flex-col md:flex-row flex-wrap w-full justify-center max-h-[unset] lg:max-h-[60vh] gap-0 md:gap-6 lg:gap-16">
         <div className="flex-1 shrink-0">
           <div className="w-full rounded-3xl overflow-hidden mb-7">
-          <img
-            src={ima.src}
-            alt=""
-            className=" w-full hover:scale-105 duration-300 max-h-[30vh] lg:max-h-[unset] h-[60vh] object-cover rounded-[20px]"
-          />
-        </div>
+            <img
+              src={ima.src}
+              alt=""
+              className=" w-full hover:scale-105 duration-300 max-h-[30vh] lg:max-h-[unset] h-[60vh] object-cover rounded-[20px]"
+            />
+          </div>
         </div>
         <div className="flex-1 shrink-0 ">
           <p className="text-2xl lg:text-5xl font-semibold mt-7">
@@ -30,15 +30,18 @@ const Marketing = () => {
             View a collection of the globe&apos;s leading marketing agencies all
             in one place
           </p>
-          <Button className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3" 
-          onClick={() => { router.push("/agencies") }}
+          <Button
+            className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3 mx-auto md:mx-0"
+            onClick={() => {
+              router.push("/agencies");
+            }}
           >
             View Agencies
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>
         </div>
       </div>
-      <div className="flex flex-col-reverse md:flex-row flex-wrap-reverse w-full justify-center items-center max-h-[unset] lg:max-h-[60vh] gap-0 lg:gap-16">
+      <div className="flex flex-col-reverse md:flex-row flex-wrap-reverse w-full justify-center items-center max-h-[unset] lg:max-h-[60vh] gap-0 md:gap-6 lg:gap-16">
         <div className="flex-1 shrink-0 w-full ">
           <p className="text-2xl lg:text-5xl font-semibold mt-7">
             Influencer Marketing Platforms
@@ -46,19 +49,24 @@ const Marketing = () => {
           <p className="text-base mt-5">
             All the leading influencer marketing platforms rated and reviewed
           </p>
-          <Button className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3" onClick={() => { router.push("/platforms") }}>
+          <Button
+            className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 rounded-full py-3 px-7 text-white mt-5 flex items-center gap-3 mx-auto md:mx-0"
+            onClick={() => {
+              router.push("/platforms");
+            }}
+          >
             View Platforms
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>
         </div>
         <div className="flex-1 shrink-0 w-full">
           <div className="w-full rounded-3xl overflow-hidden mb-7">
-          <img
-            src={imp.src}
-            alt=""
-            className="w-full hover:scale-105 duration-300 max-h-[30vh] lg:max-h-[unset] h-[60vh] object-cover rounded-[20px]"
-          />
-        </div>
+            <img
+              src={imp.src}
+              alt=""
+              className="w-full hover:scale-105 duration-300 max-h-[30vh] lg:max-h-[unset] h-[60vh] object-cover rounded-[20px]"
+            />
+          </div>
         </div>
       </div>
     </section>

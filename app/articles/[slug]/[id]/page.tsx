@@ -6,7 +6,7 @@ import ArticleDetail from "../../_components/ArticleDetail";
 
 export default function Page({ params }: { params: { slug: string } }) {
   return (
-    <main className="font-Gotham">
+    <main className="font-Gothm">
       <BreadCrumb />
       <section className="py-5 px-5 md:py-11 md:px-16 grid grid-cols-4 gap-10">
         <div className="col-span-4 md:col-span-3">
