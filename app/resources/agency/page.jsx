@@ -67,7 +67,7 @@ const Page = () => {
         });
 
   return (
-    <main className="font-Gotha">
+    <main className="font-Gotham">
       <section
         className="py-20 px-5 pt-28 md:px-16 flex flex-col text-center gap-10 align-middle"
         style={{
