@@ -67,7 +67,7 @@ const Page = () => {
         });
 
   return (
-    <main className="font-Gotham">
+    <main className="font-Gotha">
       <section
         className="py-20 px-5 pt-28 md:px-16 flex flex-col text-center gap-10 align-middle"
         style={{
@@ -81,13 +81,14 @@ const Page = () => {
           and more.
         </h3>
         <Button
-          className="bg-[#EB3C75] w-fit flex gap-3 px-5 mx-auto items-center hover:bg-[#860e35] duration-300 rounded-full p-3 text-white"
+          className="bg-[#EB3C75] w-56 flex gap-3 px-5 mx-auto items-center justify-center hover:bg-[#860e35] duration-300 rounded-full p-3 text-white"
           onClick={() => {
             setSearchbar(true);
           }}
         >
           <MagnifyingGlassIcon className="text-white h-5 w-5" />
-          <span className="text-base">Search</span>
+          <span className="text-base self-center">Search</span>
+          {/* <div className=" h-5 w-5" /> */}
         </Button>
         <Dialog
           open={searchbar}
