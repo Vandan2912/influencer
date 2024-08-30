@@ -81,7 +81,7 @@ const Page = () => {
           and more.
         </h3>
         <Button
-          className="bg-[#EB3C75] w-fit flex gap-10 mx-auto items-center hover:bg-[#860e35] duration-300 rounded-full p-3 text-white"
+          className="bg-[#EB3C75] w-fit flex gap-3 px-5 mx-auto items-center hover:bg-[#860e35] duration-300 rounded-full p-3 text-white"
           onClick={() => {
             setSearchbar(true);
           }}
@@ -138,6 +138,7 @@ const Page = () => {
                 value={selected}
                 onChange={(value) => setSelected(value)}
                 onClose={() => setQuery("")}
+                immediate
               >
                 <div className="relative mt-5">
                   <ComboboxInput
@@ -211,6 +212,7 @@ const Page = () => {
                 value={selected1}
                 onChange={(value) => setSelected1(value)}
                 onClose={() => setQuery("")}
+                immediate
               >
                 <div className="relative mt-5">
                   <ComboboxInput
