@@ -83,7 +83,7 @@ const TextContainer = ({ data }) => {
       <div className="w-full lg:w-2/3 text-white lg:text-left ms-5 lg:-translate-y-8 text-center">
         <p className="text-2xl lg:text-6xl font-bold">Contact Us</p>
         <p className="text-base lg:text-lg mt-5">
-          Whatever your question, we’re here to help. Whether you're
+          Whatever your question, we&apos;re here to help. Whether you&apos;re
           an Influencer, an Agency or an Influencer Marketing Platform wishing
           to work with us or contribute to our Case Studies and educational
           pieces, please get in touch.
