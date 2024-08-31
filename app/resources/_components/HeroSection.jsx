@@ -79,7 +79,7 @@ const TextContainer = ({ data }) => {
         backgroundSize: "cover",
       }}
     >
-      <div className="w-full lg:w-1/2 text-white lg:text-left ms-5 -translate-y-8 text-center">
+      <div className="w-full lg:w-1/2 text-white lg:text-left ms-5 lg:-translate-y-8 text-center">
         <p className="text-2xl lg:text-6xl font-bold">
           The leading Social Media resource for Brands
         </p>
