@@ -8,13 +8,13 @@ const page = () => {
       image: "/articles_carousel_1.jpeg",
     },
     {
-      image: "/articles_carousel_1.jpeg",
+      image: "/carousel_image2.png",
     },
     {
-      image: "/articles_carousel_1.jpeg",
+      image: "/carousel_image3.jpg",
     },
     {
-      image: "/articles_carousel_1.jpeg",
+      image: "/carousel_image4.jpg",
     },
   ];
 

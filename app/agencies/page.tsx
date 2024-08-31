@@ -10,18 +10,18 @@ const Page = () => {
       image: "/agencies/carousel.jpeg",
     },
     {
-      image: "/agencies/carousel.jpeg",
+      image: "/carousel_image2.png",
     },
     {
-      image: "/agencies/carousel.jpeg",
+      image: "/carousel_image3.jpg",
     },
     {
-      image: "/agencies/carousel.jpeg",
+      image: "/carousel_image4.jpg",
     },
   ];
 
   return (
-    <main className="font-Gotham">
+    <main className="font-Gotha">
       <HeroSection data={carouselData} />
       <Agencies />
       <AgencyIndex />

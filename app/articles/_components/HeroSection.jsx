@@ -87,12 +87,12 @@ const TextContainer = ({ data }) => {
     >
       <div className="w-full lg:w-1/2 text-white lg:text-left ms-5 lg:-translate-y-8 text-center">
         <p className="text-2xl lg:text-6xl font-bold">
-          The leading Social Media resource for Brands
+          Marketing News and Resources
         </p>
         <p className="text-base lg:text-lg mt-5">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
-          efficitur lorem, ut condimentum nisi. Integer molestie tellus vel nunc
-          sagittis dignissim
+          Influencer Marketing Hub offers you all the latest Marketing news,
+          tools and resources to enable influencers, agencies and platforms to
+          connect and harness the power of Marketing.
         </p>
         <div className="flex gap-0 sm:gap-8 flex-col sm:flex-row items-center lg:justify-start justify-center">
           <Button className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white mt-5">

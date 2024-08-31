@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { Button } from "@headlessui/react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const HeroSection = ({ data }) => {
   const [index, setIndex] = useState(0);
@@ -83,12 +84,16 @@ const TextContainer = ({ data }) => {
     >
       <div className="w-full lg:w-1/2 text-white lg:text-left ms-5 lg:-translate-y-8 text-center">
         <p className="text-2xl lg:text-6xl font-bold">
-          The leading Social Media resource for Brands
+          Influencer Marketing Agencies
         </p>
         <p className="text-base lg:text-lg mt-5">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
-          efficitur lorem, ut condimentum nisi. Integer molestie tellus vel nunc
-          sagittis dignissim
+          Find the Leading Influencer Marketing Agency to Manage your Influencer
+          Campaigns across the board. <br />
+          For Influencers: If you are looking for agencies to represent you{" "}
+          <a href={"/agencies/influencer"} className="text-[#EB3C75]">
+            click here
+          </a>
+          .
         </p>
         <div className="flex gap-0 sm:gap-8 flex-col sm:flex-row items-center lg:justify-start justify-center">
           <Button className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white mt-5 flex items-center gap-3">

@@ -8,22 +8,21 @@ const page = () => {
       image: "/carousel_image3.jpg",
     },
     {
-      image: "/carousel_image3.jpg",
+      image: "/carousel_image2.png",
     },
     {
-      image: "/carousel_image3.jpg",
+      image: "/carousel_image1.jpg",
     },
     {
-      image: "/carousel_image3.jpg",
+      image: "/carousel_image4.jpg",
     },
   ];
-  
+
   return (
     <main className="font-Gotham">
       <HeroSection data={carouselData} />
       <div className="px-5 sm:px-10 md:px-20">
-
-      <Platforms />
+        <Platforms />
       </div>
     </main>
   );

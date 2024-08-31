@@ -3,23 +3,22 @@
 import { Button } from "@headlessui/react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import React from "react";
-import avatar from "../../../assets/avatar.png";
-import HeroSection from "../_components/HeroSection";
 import { useRouter } from "next/navigation";
+import HeroSection from "./HeroSection";
 
 const Page = () => {
   const carouselData = [
     {
-      image: "/resources/carousel.png",
+      image: "/resources/carouselebook.jpg",
     },
     {
-      image: "/resources/carousel.png",
+      image: "/carousel_image2.png",
     },
     {
-      image: "/resources/carousel.png",
+      image: "/carousel_image1.jpg",
     },
     {
-      image: "/resources/carousel.png",
+      image: "/carousel_image4.jpg",
     },
   ];
 

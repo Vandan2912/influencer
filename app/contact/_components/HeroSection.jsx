@@ -2,11 +2,11 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 import { Button } from "@headlessui/react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
@@ -25,16 +25,13 @@ const HeroSection = ({ data }) => {
         onSlideNextTransitionStart={(e) => setIndex(e.realIndex)}
         onSlidePrevTransitionStart={(e) => setIndex(e.realIndex)}
       >
-        {
-          data.map((item, i) => {
-            return (
-              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-              <SwiperSlide key={i} className="relative">
-                <TextContainer data={item} />
-              </SwiperSlide>
-            )
-          })
-        }
+        {data.map((item, i) => {
+          return (
+            <SwiperSlide key={i} className="relative">
+              <TextContainer data={item} />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
       <div className="absolute bottom-10 right-10 z-10 hidden lg:flex gap-5 items-end w-4/5">
         <Swiper
@@ -46,19 +43,26 @@ const HeroSection = ({ data }) => {
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper"
         >
-          {
-            data.map((item, i) => {
-              return (
-                // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-                <SwiperSlide key={i} className="!w-36 !h-[20vh]">
-                  <img src={item.image} className={`object-cover cursor-pointer rounded-md border border-white ${index === i ? "!h-28 !w-40" : "!h-24 !w-36"}`} alt="" />
-                </SwiperSlide>
-              )
-            })
-          }
+          {data.map((item, i) => {
+            return (
+              <SwiperSlide key={i} className={`!w-36 !h-[20vh]`}>
+                <div
+                  className={`${
+                    index === i ? "opacity-100" : "opacity-40 hover:opacity-80"
+                  } duration-300`}
+                >
+                  <img
+                    src={item.image}
+                    className={`object-cover cursor-pointer rounded-md duration-300 border border-white ${
+                      index === i ? "!h-28 !w-40" : "!h-24 !w-36"
+                    }`}
+                  />
+                </div>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
-
     </div>
   );
 };
@@ -73,28 +77,27 @@ const TextContainer = ({ data }) => {
         background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${data.image})`,
         backgroundRepeat: "inherit",
         backgroundSize: "cover",
+        backgroundPosition: "50% 50%",
       }}
-
     >
-      <div className="w-full lg:w-1/2 text-white text-left ms-5">
-        <p className="text-2xl lg:text-6xl font-bold">
-          The leading Social Media resource for Brands
-        </p>
+      <div className="w-full lg:w-2/3 text-white lg:text-left ms-5 lg:-translate-y-8 text-center">
+        <p className="text-2xl lg:text-6xl font-bold">Contact Us</p>
         <p className="text-base lg:text-lg mt-5">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
-          efficitur lorem, ut condimentum nisi. Integer molestie tellus vel nunc
-          sagittis dignissim
+          Whatever your question, we’re here to help. Whether you're
+          an Influencer, an Agency or an Influencer Marketing Platform wishing
+          to work with us or contribute to our Case Studies and educational
+          pieces, please get in touch.
         </p>
-        <div className="flex gap-0 sm:gap-8 flex-col sm:flex-row">
-          <Button className="bg-[#EB3C75] w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white mt-5 flex items-center gap-3">
+        {/* <div className="flex gap-0 sm:gap-8 flex-col sm:flex-row items-center lg:justify-start justify-center">
+          <Button className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white mt-5 flex items-center gap-3">
             About Us
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>
-          <Button className="hover:bg-white w-fit bg-white sm:bg-transparent border border-white text-sm sm:text-base rounded-full py-3 px-7 text-black sm:text-white hover:text-black mt-5 flex items-center gap-3">
+          <Button className="hover:bg-white w-fit duration-300 bg-white sm:bg-transparent border border-white text-sm sm:text-base rounded-full py-3 px-7 text-black sm:text-white hover:text-black mt-5 flex items-center gap-3">
             Contact Us
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

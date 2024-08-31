@@ -1,6 +1,6 @@
 import { latest, more } from "@/Constants/articles-category-contants";
-import HeroSection from "../_components/HeroSection";
 import ArticleSection from "./ArticleSection";
+import HeroSection from "./HeroSection";
 
 export default function Page({ params }: { params: { slug: string } }) {
   const carouselData = [
@@ -8,13 +8,13 @@ export default function Page({ params }: { params: { slug: string } }) {
       image: "/articleSlugimage.jpeg",
     },
     {
-      image: "/articleSlugimage.jpeg",
+      image: "/carousel_image2.png",
     },
     {
-      image: "/articleSlugimage.jpeg",
+      image: "/carousel_image3.jpg",
     },
     {
-      image: "/articleSlugimage.jpeg",
+      image: "/carousel_image4.jpg",
     },
   ];
 

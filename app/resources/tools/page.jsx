@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-import HeroSection from "../_components/HeroSection";
 import CalculatorCarousel from "../_components/CalculatorCarousel";
 import Filter from "./_components/Filter";
 import { Button } from "@headlessui/react";
@@ -12,6 +11,7 @@ import {
   ArrowLongLeftIcon,
   ArrowLongRightIcon,
 } from "@heroicons/react/24/outline";
+import HeroSection from "./HeroSection";
 
 const Page = () => {
   const carouselData = [
@@ -19,13 +19,13 @@ const Page = () => {
       image: "/resources/tools-carousel.jpg",
     },
     {
-      image: "/resources/tools-carousel.jpg",
+      image: "/carousel_image2.png",
     },
     {
-      image: "/resources/tools-carousel.jpg",
+      image: "/carousel_image1.jpg",
     },
     {
-      image: "/resources/tools-carousel.jpg",
+      image: "/carousel_image4.jpg",
     },
   ];
 

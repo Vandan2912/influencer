@@ -1,20 +1,20 @@
 import React from "react";
-import HeroSection from "../_components/HeroSection";
 import Course from "../_components/Course";
+import HeroSection from "./HeroSection";
 
 const Page = () => {
   const carouselData = [
     {
-      image: "/resources/carousel.png",
+      image: "/resources/carouselcources.png",
     },
     {
-      image: "/resources/carousel.png",
+      image: "/carousel_image2.png",
     },
     {
-      image: "/resources/carousel.png",
+      image: "/carousel_image1.jpg",
     },
     {
-      image: "/resources/carousel.png",
+      image: "/carousel_image4.jpg",
     },
   ];
 
@@ -54,7 +54,7 @@ const Page = () => {
   return (
     <main className="font-Gotham">
       <HeroSection data={carouselData} />
-      <Course title='Available Courses' cources={cources} />
+      <Course title="Available Courses" cources={cources} />
     </main>
   );
 };

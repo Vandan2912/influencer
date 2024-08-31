@@ -79,15 +79,15 @@ const TextContainer = ({ data }) => {
         backgroundSize: "cover",
       }}
     >
-      <div className="w-full lg:w-1/2 text-white lg:text-left ms-5 lg:-translate-y-8 text-center">
+      <div className="w-full lg:w-2/3 text-white lg:text-left ms-5 lg:-translate-y-8 text-center">
         <p className="text-2xl lg:text-6xl font-bold">
           Influencer Resource Library
         </p>
         <p className="text-base lg:text-lg mt-5">
-          Guides, templates, insights and tools. Everything you need to run the
-          world’s best influencer programs
+          Guides, templates, insights and tools.Everything you need to run the
+          world’s best influencer programs.
         </p>
-        <div className="flex gap-0 sm:gap-8 flex-col sm:flex-row items-center lg:justify-start justify-center">
+        {/* <div className="flex gap-0 sm:gap-8 flex-col sm:flex-row items-center lg:justify-start justify-center">
           <Button className="bg-[#EB3C75] hover:bg-[#860e35] duration-300 w-fit rounded-full py-3 px-7 text-sm sm:text-base text-white mt-5 flex items-center gap-3">
             About Us
             <ArrowLongRightIcon className="h-5 w-5" />
@@ -96,7 +96,7 @@ const TextContainer = ({ data }) => {
             Contact Us
             <ArrowLongRightIcon className="h-5 w-5" />
           </Button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

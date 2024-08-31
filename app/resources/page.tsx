@@ -10,13 +10,13 @@ const Page = () => {
       image: "/resources/carousel.png",
     },
     {
-      image: "/resources/carousel.png",
+      image: "/carousel_image2.png",
     },
     {
-      image: "/resources/carousel.png",
+      image: "/carousel_image1.jpg",
     },
     {
-      image: "/resources/carousel.png",
+      image: "/carousel_image4.jpg",
     },
   ];
 
